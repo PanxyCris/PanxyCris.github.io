@@ -17,7 +17,7 @@
       <link>https://panxycris.github.io/project/whaleword/</link>
       <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
       <guid>https://panxycris.github.io/project/whaleword/</guid>
-      <description>&lt;p&gt;&lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;featured.png&#34;/&gt;
+      <description>&lt;p&gt;&lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;homepage.png&#34;/&gt;
 &lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;屏幕快照 2019-06-28 下午3.48.10.png&#34; /&gt;
 &lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;屏幕快照 2019-06-25 下午4.56.49.png&#34; /&gt;
 &lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;屏幕快照 2019-06-28 下午3.52.59.png&#34; /&gt;&lt;/p&gt;
@@ -28,6 +28,32 @@
 &lt;li&gt;&lt;p&gt;It helps the customers manage words and scientifically makes a study plan according to The Ebbinghaus Forgetting Curve.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;It is a coursework for Human-Computer Interaction Systems. And I completed the part of making the study plans.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IPNET</title>
+      <link>https://panxycris.github.io/project/ipnet/</link>
+      <pubDate>Sat, 03 Nov 2018 18:33:07 +0800</pubDate>
+      <guid>https://panxycris.github.io/project/ipnet/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;A platform for patent trading based on blockchain.&lt;/li&gt;
+&lt;li&gt;It provides services including patent trade, patent loan and insurance and patent automated evaluation.&lt;/li&gt;
+&lt;li&gt;It is a competition project. The group of the project consists of 23 people and I am the product manager, who is responsible for the requirement design and the development of blockchain structure.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>UTag</title>
+      <link>https://panxycris.github.io/project/utag/</link>
+      <pubDate>Sun, 24 Jun 2018 18:54:05 +0800</pubDate>
+      <guid>https://panxycris.github.io/project/utag/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;A platform for data annotation labeling.&lt;/li&gt;
+&lt;li&gt;The data annotation requester publishes images and videos on the platform, and the platform automatically labels, and then sends the lower recognition rate data to the workers to label.&lt;/li&gt;
+&lt;li&gt;It is a coursework for Software Engineering and Computing III. And I completed front-end and optimize the recognition algorithm.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yu Ge | PanxyCris</title>
+    <link>https://panxycris.github.io/authors/yu-ge/</link>
+      <atom:link href="https://panxycris.github.io/authors/yu-ge/index.xml" rel="self" type="application/rss+xml" />
+    <description>Yu Ge</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 03 Nov 2018 18:33:07 +0800</lastBuildDate>
+    <image>
+      <url>https://panxycris.github.io/img/icon-192.png</url>
+      <title>Yu Ge</title>
+      <link>https://panxycris.github.io/authors/yu-ge/</link>
+    </image>
+    
+    <item>
+      <title>IPNET</title>
+      <link>https://panxycris.github.io/project/ipnet/</link>
+      <pubDate>Sat, 03 Nov 2018 18:33:07 +0800</pubDate>
+      <guid>https://panxycris.github.io/project/ipnet/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;A platform for patent trading based on blockchain.&lt;/li&gt;
+&lt;li&gt;It provides services including patent trade, patent loan and insurance and patent automated evaluation.&lt;/li&gt;
+&lt;li&gt;It is a competition project. The group of the project consists of 23 people and I am the product manager, who is responsible for the requirement design and the development of blockchain structure.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
