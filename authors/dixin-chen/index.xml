@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PanxyCris</title>
-    <link>https://panxycris.github.io/</link>
-      <atom:link href="https://panxycris.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <description>PanxyCris</description>
+    <title>Dixin Chen | PanxyCris</title>
+    <link>https://panxycris.github.io/authors/dixin-chen/</link>
+      <atom:link href="https://panxycris.github.io/authors/dixin-chen/index.xml" rel="self" type="application/rss+xml" />
+    <description>Dixin Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 24 Jun 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://panxycris.github.io/img/icon-192.png</url>
-      <title>PanxyCris</title>
-      <link>https://panxycris.github.io/</link>
+      <title>Dixin Chen</title>
+      <link>https://panxycris.github.io/authors/dixin-chen/</link>
     </image>
     
     <item>

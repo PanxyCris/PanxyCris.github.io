@@ -3,8 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://panxycris.github.io/authors/</loc>
+    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://panxycris.github.io/zh/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://panxycris.github.io/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/authors/dixin-chen/</loc>
+    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/authors/ning-li/</loc>
+    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://panxycris.github.io/</loc>
-    <lastmod>2019-11-18T14:58:35+08:00</lastmod>
+    <lastmod>2019-11-18T13:32:08+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -19,16 +44,27 @@
   
   <url>
     <loc>https://panxycris.github.io/project/</loc>
-    <lastmod>2019-11-18T14:58:35+08:00</lastmod>
+    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://panxycris.github.io/project/whaleword/</loc>
-    <lastmod>2019-11-18T14:58:35+08:00</lastmod>
+    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/authors/xingyu-pan/</loc>
+    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/authors/yu-pan/</loc>
+    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://panxycris.github.io/authors/admin/</loc>
+    <lastmod>2019-11-18T13:32:08+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -38,20 +74,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://panxycris.github.io/authors/admin/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://panxycris.github.io/authors/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/authors/"
                 />
   </url>
   
@@ -71,6 +93,7 @@
   
   <url>
     <loc>https://panxycris.github.io/post/</loc>
+    <lastmod>2019-11-18T13:32:08+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -99,6 +122,7 @@
   
   <url>
     <loc>https://panxycris.github.io/publication/</loc>
+    <lastmod>2019-11-18T13:32:08+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -113,6 +137,7 @@
   
   <url>
     <loc>https://panxycris.github.io/talk/</loc>
+    <lastmod>2019-11-18T13:32:08+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
