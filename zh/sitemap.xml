@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://panxycris.github.io/zh/authors/admin/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://panxycris.github.io/authors/admin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://panxycris.github.io/zh/authors/admin/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/zh/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://panxycris.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://panxycris.github.io/zh/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/zh/authors/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://panxycris.github.io/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://panxycris.github.io/zh/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/zh/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://panxycris.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://panxycris.github.io/zh/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/zh/post/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://panxycris.github.io/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://panxycris.github.io/zh/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/zh/publication_types/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://panxycris.github.io/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://panxycris.github.io/zh/publication_types/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/zh/publication/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://panxycris.github.io/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://panxycris.github.io/zh/publication/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/zh/talk/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://panxycris.github.io/talk/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://panxycris.github.io/zh/talk/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/zh/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://panxycris.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://panxycris.github.io/zh/tags/"
+                />
+  </url>
+  
+</urlset>
