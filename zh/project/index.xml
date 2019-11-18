@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | PanxyCris</title>
+    <link>https://panxycris.github.io/zh/project/</link>
+      <atom:link href="https://panxycris.github.io/zh/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><lastBuildDate>Mon, 24 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://panxycris.github.io/img/icon-192.png</url>
+      <title>Projects</title>
+      <link>https://panxycris.github.io/zh/project/</link>
+    </image>
+    
+    <item>
+      <title>WhaleWord</title>
+      <link>https://panxycris.github.io/zh/project/whaleword/</link>
+      <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/zh/project/whaleword/</guid>
+      <description>&lt;p&gt;&lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;homepage.png&#34;/&gt;
+&lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;屏幕快照 2019-06-28 下午3.48.10.png&#34; /&gt;
+&lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;屏幕快照 2019-06-25 下午4.56.49.png&#34; /&gt;
+&lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;屏幕快照 2019-06-28 下午3.52.59.png&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;背GRE单词的安卓App&lt;/li&gt;
+&lt;li&gt;帮助用户管理单词并根据艾宾浩斯遗忘曲线制定学习计划&lt;/li&gt;
+&lt;li&gt;人机交互课程大作业，我负责完成学习计划的开发部分&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IPNET</title>
+      <link>https://panxycris.github.io/zh/project/ipnet/</link>
+      <pubDate>Sat, 03 Nov 2018 18:33:07 +0800</pubDate>
+      <guid>https://panxycris.github.io/zh/project/ipnet/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;基于区块链的专利交易平台&lt;/li&gt;
+&lt;li&gt;包含专利交易、专利质押贷款、专利质押贷款保证保险以及专利自动化评估等服务&lt;/li&gt;
+&lt;li&gt;这是一个竞赛项目，整个小组有23人组成，我主要负责需求设计和区块链的开发部分&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>UTag</title>
+      <link>https://panxycris.github.io/zh/project/utag/</link>
+      <pubDate>Sun, 24 Jun 2018 18:54:05 +0800</pubDate>
+      <guid>https://panxycris.github.io/zh/project/utag/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;给图像和视频进行标注&lt;/li&gt;
+&lt;li&gt;数据需求者发布图像或视频，平台可进行自动化标注并将识别率低的发给数据工人进行手动标注&lt;/li&gt;
+&lt;li&gt;软件过程与计算III的大作业，我负责我完成了前端的开发部分&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
