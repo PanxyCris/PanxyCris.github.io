@@ -13,11 +13,14 @@
     </image>
     
     <item>
-      <title>My Article Name</title>
+      <title>Leetcode Algorithm</title>
       <link>https://panxycris.github.io/post/my-article-name/</link>
       <pubDate>Sun, 05 Dec 2021 16:57:00 -0500</pubDate>
       <guid>https://panxycris.github.io/post/my-article-name/</guid>
-      <description></description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Binary search&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
