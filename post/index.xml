@@ -12,5 +12,13 @@
       <link>https://panxycris.github.io/post/</link>
     </image>
     
+    <item>
+      <title>My Article Name</title>
+      <link>https://panxycris.github.io/post/my-article-name/</link>
+      <pubDate>Sun, 05 Dec 2021 16:57:00 -0500</pubDate>
+      <guid>https://panxycris.github.io/post/my-article-name/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
