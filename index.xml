@@ -5,23 +5,12 @@
     <link>https://panxycris.github.io/</link>
       <atom:link href="https://panxycris.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>PanxyCris</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 05 Dec 2021 16:57:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 24 Jun 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://panxycris.github.io/img/icon-192.png</url>
       <title>PanxyCris</title>
       <link>https://panxycris.github.io/</link>
     </image>
-    
-    <item>
-      <title>Leetcode Algorithm</title>
-      <link>https://panxycris.github.io/post/my-article-name/</link>
-      <pubDate>Sun, 05 Dec 2021 16:57:00 -0500</pubDate>
-      <guid>https://panxycris.github.io/post/my-article-name/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Binary search&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
     
     <item>
       <title>WhaleWord</title>
