@@ -13,18 +13,14 @@
     </image>
     
     <item>
-      <title>Leetcode Algorithm</title>
-      <link>https://panxycris.github.io/post/my-article-name/</link>
+      <title>Binary Search</title>
+      <link>https://panxycris.github.io/post/leetcode/binary-search/</link>
       <pubDate>Sun, 05 Dec 2021 16:57:00 -0500</pubDate>
-      <guid>https://panxycris.github.io/post/my-article-name/</guid>
+      <guid>https://panxycris.github.io/post/leetcode/binary-search/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;Binary search
-
-&lt;ul&gt;
 &lt;li&gt;Due to the time complexity of binary search is O(nlogn), which greatly improves the efficiency of algorithm, it appears in the problems frequently.&lt;/li&gt;
 &lt;li&gt;The data always keeps some sequence, like the number order.
 &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

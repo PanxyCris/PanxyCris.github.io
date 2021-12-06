@@ -3,7 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://panxycris.github.io/post/my-article-name/</loc>
+    <loc>https://panxycris.github.io/post/leetcode/binary-search/</loc>
+    <lastmod>2021-12-05T16:57:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://panxycris.github.io/post/leetcode/</loc>
     <lastmod>2021-12-05T16:57:00-05:00</lastmod>
   </url>
   

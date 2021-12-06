@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leetcode | PanxyCris</title>
+    <link>https://panxycris.github.io/post/leetcode/</link>
+      <atom:link href="https://panxycris.github.io/post/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <description>Leetcode</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 05 Dec 2021 16:57:00 -0500</lastBuildDate>
+    <image>
+      <url>https://panxycris.github.io/img/icon-192.png</url>
+      <title>Leetcode</title>
+      <link>https://panxycris.github.io/post/leetcode/</link>
+    </image>
+    
+    <item>
+      <title>Binary Search</title>
+      <link>https://panxycris.github.io/post/leetcode/binary-search/</link>
+      <pubDate>Sun, 05 Dec 2021 16:57:00 -0500</pubDate>
+      <guid>https://panxycris.github.io/post/leetcode/binary-search/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Due to the time complexity of binary search is O(nlogn), which greatly improves the efficiency of algorithm, it appears in the problems frequently.&lt;/li&gt;
+&lt;li&gt;The data always keeps some sequence, like the number order.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
