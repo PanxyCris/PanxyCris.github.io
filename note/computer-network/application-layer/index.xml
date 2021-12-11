@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Application Layer | PanxyCris</title>
+    <link>https://panxycris.github.io/note/computer-network/application-layer/</link>
+      <atom:link href="https://panxycris.github.io/note/computer-network/application-layer/index.xml" rel="self" type="application/rss+xml" />
+    <description>Application Layer</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 10 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Application Layer</title>
+      <link>https://panxycris.github.io/note/computer-network/application-layer/</link>
+    </image>
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://panxycris.github.io/note/computer-network/application-layer/http/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/computer-network/application-layer/http/</guid>
+      <description>&lt;p&gt;In this topic, we introduced a simple history of HTTP evolvation. And we compare the pros and cons of each of them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HTTP Transfer progress&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;When TCP connection has already initiated, HTTP begins to be transferred.&lt;/p&gt;
+&lt;h3 id=&#34;http-10&#34;&gt;HTTP 1.0&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Non-persistant HTTP
+&lt;ul&gt;
+&lt;li&gt;At most one object sent over TCP connection&lt;/li&gt;
+&lt;li&gt;Multiple Objects required multiple connections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Response Time
+&lt;ul&gt;
+&lt;li&gt;2RTT + file transmission Time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../HTTP%201.0.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;http-11&#34;&gt;HTTP 1.1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Persistant HTTP
+&lt;ul&gt;
+&lt;li&gt;Subsequent HTTP messages sent over the open connection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;FCFS
+&lt;ul&gt;
+&lt;li&gt;HOL Blocking Problem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../HTTP%201.1.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;http2&#34;&gt;HTTP/2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Stream
+&lt;ul&gt;
+&lt;li&gt;Multiplexed&lt;/li&gt;
+&lt;li&gt;Prioritized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Binary Framing Layer
+&lt;ul&gt;
+&lt;li&gt;A Layer in the application layer&lt;/li&gt;
+&lt;li&gt;Help HTTP Multiplexed to the frame, each frame can contain only header or data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../HTTP%202.0.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;http3&#34;&gt;HTTP/3&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;QUIC(Quick UDP Internet Congestion)
+&lt;ul&gt;
+&lt;li&gt;Based on UDP&lt;/li&gt;
+&lt;li&gt;Adopts approaches of TCP connection establishment
+&lt;ul&gt;
+&lt;li&gt;Reliability, congestion control, authentication, encryption&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is a comparison of TLS and QUIC&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../TLS%20vs%20QUIC.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cookie</title>
+      <link>https://panxycris.github.io/note/computer-network/application-layer/cookie/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/computer-network/application-layer/cookie/</guid>
+      <description>&lt;p&gt;Maintain user/server state&lt;/p&gt;
+&lt;p&gt;HTTP GET/response is stateless, so in the server, we always create a cookie for each client, so that in following transactions, the server can track the request state of each client.&lt;/p&gt;
+&lt;h3 id=&#34;privacy&#34;&gt;Privacy&lt;/h3&gt;
+&lt;p&gt;In each website, it always asks for your sancation for the cookies, you can browse a new webpage that you never browsed before to try it.&lt;/p&gt;
+&lt;h3 id=&#34;components&#34;&gt;Components&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;cookie header line of HTTP response message&lt;/li&gt;
+&lt;li&gt;cookie header line in next HTTP request message&lt;/li&gt;
+&lt;li&gt;cookie file kept on user’s host, managed by user’s browser&lt;/li&gt;
+&lt;li&gt;back-end database at website&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;what-a-site-creates-for-cookie&#34;&gt;What a site creates for cookie&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;unique ID (aka “cookie”)&lt;/li&gt;
+&lt;li&gt;entry in backend database for ID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;working-process&#34;&gt;Working process&lt;/h3&gt;
+&lt;p&gt;Here is a graph to show how a cookie works&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../cookie.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>CDN</title>
+      <link>https://panxycris.github.io/note/computer-network/application-layer/cdn/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/computer-network/application-layer/cdn/</guid>
+      <description>&lt;p&gt;Content Delivery Network&lt;/p&gt;
+&lt;p&gt;A geographically distributed network of servers and their data centers that help in web content distribution to users with minimal delay.&lt;/p&gt;
+&lt;h3 id=&#34;how-does-cdn-work&#34;&gt;How does CDN work&lt;/h3&gt;
+&lt;p&gt;CDN works by bringing content closer to the geographic location of the end users.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Located data centers situated around the world&lt;/li&gt;
+&lt;li&gt;Within each Points of Presence (PoPs) are thousands of caching servers&lt;/li&gt;
+&lt;li&gt;Improve connectivity and accelerate the speed at which content is delivered to the end user.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../CDN.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;work-process&#34;&gt;Work process&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;The user sends a request to the business’ web server to retrieve all the page’s components&lt;/li&gt;
+&lt;li&gt;The assets are retrieved from the origin server and once delivered are stored in the PoP edge caching server close to the end user.&lt;/li&gt;
+&lt;li&gt;When &lt;strong&gt;the same user&lt;/strong&gt; requests &lt;strong&gt;the same assets&lt;/strong&gt; the next time, the requests don’t go to the origin server. Instead the requests go to the cached files from the &lt;strong&gt;PoP server&lt;/strong&gt; to see if the stored assets are still available and deliver them to the user.
+&lt;ul&gt;
+&lt;li&gt;If they are not available or the caching server has not cached the assets yet, the request is sent to the origin server again.&lt;/li&gt;
+&lt;li&gt;Once your static assets are cached on all the CDN servers for a particular location, all &lt;strong&gt;subsequent website visitor requests&lt;/strong&gt; for static assets will be delivered from these edge servers instead of the origin server.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;benefits&#34;&gt;Benefits&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Faster delivery&lt;/li&gt;
+&lt;li&gt;Optimize bandwidth and latency&lt;/li&gt;
+&lt;li&gt;Improve website security
+&lt;ul&gt;
+&lt;li&gt;Offer Distributed Denial of Service or DDoS protection by distributing the malicious requests across the network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Help control access to different regions
+&lt;ul&gt;
+&lt;li&gt;Delegate authentication tasks to the edge&lt;/li&gt;
+&lt;li&gt;Help in collecting logs and analyzing user-generated data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;The content cited from &lt;a href=&#34;https://www.cdnetworks.com/web-performance-blog/how-content-delivery-networks-work/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CDNetworks&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DHCP</title>
+      <link>https://panxycris.github.io/note/computer-network/application-layer/dhcp/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/computer-network/application-layer/dhcp/</guid>
+      <description>&lt;p&gt;Dynamic Host Configuration Protocol&lt;/p&gt;
+&lt;p&gt;Designed to dynamically configure TCP/IP hosts in a centralized manner from DHCP server.&lt;/p&gt;
+&lt;h3 id=&#34;function&#34;&gt;Function&lt;/h3&gt;
+&lt;p&gt;Configure parameters in a subnet dynamically&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IP Address, Subnet mask, default gateway IP address&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;process&#34;&gt;Process&lt;/h3&gt;
+&lt;p&gt;Here is a graph to show how DHCP works&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../DHCP.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;A client first broadcasts a &lt;strong&gt;DHCP DISCOVERY&lt;/strong&gt; message on its local physical network&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The message has 0.0.0.0 as the source IP address&lt;/li&gt;
+&lt;li&gt;The message may be forwarded by relay agents to servers in other physical networks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Each server may respond with a &lt;strong&gt;DHCPOFFER&lt;/strong&gt; message with an available network
+address in the Your IP Address field&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The client may receives more than one DHCPOFFER messages&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It chooses one server from all responding servers based on the offered IP address and the lease duration.&lt;/li&gt;
+&lt;li&gt;The client then broadcasts a &lt;strong&gt;DHCPREQUEST&lt;/strong&gt; message with the Server Identifier option to indicated the selected server.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When the DHCPREQUEST message is received, only the chosen server responds with a &lt;strong&gt;DHCPACK&lt;/strong&gt; message carrying a full set of configuration parameters to the client.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When the client receives, it checks the parameters and configures its TCP/IP modules using the parameters.&lt;/li&gt;
+&lt;li&gt;The message specifies the duration of the lease. When the lease expires, the client may ask the server to renew it. Otherwise, the address will be put back in the pool or assigned to other hosts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(When two DHCP servers are used) The client may send a &lt;strong&gt;DHCPRELEASE&lt;/strong&gt; message to the server to relinquish the lease on the network address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;dhcp-message-format&#34;&gt;DHCP Message Format&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../DHCP%20Header.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;Opcode: 1 – a boot request from client; 2 – a boot reply from server&lt;/li&gt;
+&lt;li&gt;Hardware Address Type
+&lt;ul&gt;
+&lt;li&gt;The value is 1 for an Ethernet MAC address&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hop count
+&lt;ul&gt;
+&lt;li&gt;Optionally used by relay agents&lt;/li&gt;
+&lt;li&gt;A DHCP relay agent is a host or router that forwards DHCP messages between
+DHCP clients and servers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Transaction ID
+&lt;ul&gt;
+&lt;li&gt;Randomly assigned to link requests and replies between a client and a server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Client HW address
+&lt;ul&gt;
+&lt;li&gt;The hardware address of the client&lt;/li&gt;
+&lt;li&gt;For an Ethernet address, the first 6 bytes are filled and the remaining bytes are set to 0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Server hostname: Hostname of the DHCP server&lt;/li&gt;
+&lt;li&gt;Boot filename
+&lt;ul&gt;
+&lt;li&gt;Use in a DHCPOFFER message to specify the fully qualified, null
+terminated path name of a file to bootstrap from&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dhcp-relay-information-option&#34;&gt;DHCP Relay Information Option&lt;/h3&gt;
+&lt;p&gt;Assign IP address based on its location. DHCP client in a Residential Gateway (RG) will send a DHCP request to an ISP Broadband Network Gateway. A network access node, such as an IP DSLAM, aggregates traffic from many users.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>NTP</title>
+      <link>https://panxycris.github.io/note/computer-network/application-layer/ntp/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/computer-network/application-layer/ntp/</guid>
+      <description>&lt;p&gt;Network Time Protocol&lt;/p&gt;
+&lt;p&gt;Provide accurate timing in the network and synchronize routers, hosts,
+and other network devices.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../NTP.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;structure&#34;&gt;Structure&lt;/h3&gt;
+&lt;p&gt;NTP timing service uses a hierarchical architecture organized into 16 stratums&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An NTP primary server, or stratum-1, is synchronized with a high precision clock&lt;/li&gt;
+&lt;li&gt;At least 175,000 hosts running NTP in the Internet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;operation-mode&#34;&gt;Operation Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Clients and servers can operate in the multicast or broadcast mode.&lt;/li&gt;
+&lt;li&gt;NTP client synchronize with a server in two ways
+&lt;ul&gt;
+&lt;li&gt;Query time information from and synchronize to a remote NTP server, use &lt;strong&gt;rdate&lt;/strong&gt; or &lt;strong&gt;ntpdate&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Synchronize with a remote server continuously and automatically, use &lt;strong&gt;ntpd&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Network Translator</title>
+      <link>https://panxycris.github.io/note/computer-network/application-layer/network-translator/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/computer-network/application-layer/network-translator/</guid>
+      <description>&lt;p&gt;Network Address and Port Address Translator&lt;/p&gt;
+&lt;h3 id=&#34;nat&#34;&gt;NAT&lt;/h3&gt;
+&lt;p&gt;Network Address Translator&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mapping one set of IP addresses (usually private) to another set of IP
+addresses (usually public).&lt;/li&gt;
+&lt;li&gt;Used for
+&lt;ul&gt;
+&lt;li&gt;Reuse IP address: Share a small pool of IP addresses with a large number of hosts&lt;/li&gt;
+&lt;li&gt;Security: internal network is invisible to the outside&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;pat&#34;&gt;PAT&lt;/h3&gt;
+&lt;p&gt;Port Address Translator&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Translate transport identifiers
+&lt;ul&gt;
+&lt;li&gt;TCP and UDP port numbers, ICMP query identifiers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+&lt;p&gt;Here is an example that shows how NAT and PAT works:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../NAT.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

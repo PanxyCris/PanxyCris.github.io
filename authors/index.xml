@@ -5,101 +5,12 @@
     <link>https://panxycris.github.io/authors/</link>
       <atom:link href="https://panxycris.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 24 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Jun 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://panxycris.github.io/img/icon-192.png</url>
+      <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Authors</title>
       <link>https://panxycris.github.io/authors/</link>
     </image>
-    
-    <item>
-      <title>Dixin Chen</title>
-      <link>https://panxycris.github.io/authors/dixin-chen/</link>
-      <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://panxycris.github.io/authors/dixin-chen/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ning Li</title>
-      <link>https://panxycris.github.io/authors/ning-li/</link>
-      <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://panxycris.github.io/authors/ning-li/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Xingyu Pan</title>
-      <link>https://panxycris.github.io/authors/xingyu-pan/</link>
-      <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://panxycris.github.io/authors/xingyu-pan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Yu Pan</title>
-      <link>https://panxycris.github.io/authors/yu-pan/</link>
-      <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://panxycris.github.io/authors/yu-pan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jiewen Ran</title>
-      <link>https://panxycris.github.io/authors/jiewen-ran/</link>
-      <pubDate>Sat, 03 Nov 2018 18:33:07 +0800</pubDate>
-      <guid>https://panxycris.github.io/authors/jiewen-ran/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nan Liang</title>
-      <link>https://panxycris.github.io/authors/nan-liang/</link>
-      <pubDate>Sat, 03 Nov 2018 18:33:07 +0800</pubDate>
-      <guid>https://panxycris.github.io/authors/nan-liang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ping Zhang</title>
-      <link>https://panxycris.github.io/authors/ping-zhang/</link>
-      <pubDate>Sat, 03 Nov 2018 18:33:07 +0800</pubDate>
-      <guid>https://panxycris.github.io/authors/ping-zhang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Yu Ge</title>
-      <link>https://panxycris.github.io/authors/yu-ge/</link>
-      <pubDate>Sat, 03 Nov 2018 18:33:07 +0800</pubDate>
-      <guid>https://panxycris.github.io/authors/yu-ge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Zhenfei Cao</title>
-      <link>https://panxycris.github.io/authors/zhenfei-cao/</link>
-      <pubDate>Sat, 03 Nov 2018 18:33:07 +0800</pubDate>
-      <guid>https://panxycris.github.io/authors/zhenfei-cao/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Zhong jie</title>
-      <link>https://panxycris.github.io/authors/zhong-jie/</link>
-      <pubDate>Sat, 03 Nov 2018 18:33:07 +0800</pubDate>
-      <guid>https://panxycris.github.io/authors/zhong-jie/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://panxycris.github.io/authors/admin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://panxycris.github.io/authors/admin/</guid>
-      <description>&lt;p&gt;Xingyu Pan is a graduate student of computer engineering at New York University.&lt;/p&gt;
-</description>
-    </item>
     
   </channel>
 </rss>

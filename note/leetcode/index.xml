@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leetcode | PanxyCris</title>
+    <link>https://panxycris.github.io/note/leetcode/</link>
+      <atom:link href="https://panxycris.github.io/note/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <description>Leetcode</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 07 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Leetcode</title>
+      <link>https://panxycris.github.io/note/leetcode/</link>
+    </image>
+    
+    <item>
+      <title>Binary Search</title>
+      <link>https://panxycris.github.io/note/leetcode/binary-search/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/leetcode/binary-search/</guid>
+      <description>&lt;p&gt;A method in Time complexity of $O(nlogn)$&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Due to the time complexity of binary search is $O(nlogn)$ , which greatly improves the efficiency of algorithm, it appears in the problems frequently.&lt;/li&gt;
+&lt;li&gt;The data always keeps some sequence, like the number order.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;situation&#34;&gt;Situation&lt;/h2&gt;
+&lt;p&gt;The data sequence always have a special order, like number: 1, 2, 3&amp;hellip;（So we can choose either left or right part to find the target）&lt;/p&gt;
+&lt;h2 id=&#34;time-complexity&#34;&gt;Time complexity&lt;/h2&gt;
+&lt;p&gt;$O(nlogn)$&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

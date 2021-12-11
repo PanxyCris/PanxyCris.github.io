@@ -1,257 +1,171 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   
   <url>
-    <loc>https://panxycris.github.io/post/leetcode/binary-search/</loc>
-    <lastmod>2021-12-05T16:57:00-05:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/note/computer-network/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/post/leetcode/</loc>
-    <lastmod>2021-12-05T16:57:00-05:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/note/leetcode/</loc><lastmod>2021-12-07T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/</loc>
-    <lastmod>2021-12-05T16:57:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/note/system-design/</loc><lastmod>2021-12-07T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/authors/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/authors/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/note/computer-network/application-layer/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/authors/dixin-chen/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/note/leetcode/binary-search/</loc><lastmod>2021-12-07T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/authors/ning-li/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/note/system-design/scalability/</loc><lastmod>2021-12-07T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/project/whaleword/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/project/whaleword/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/project/whaleword/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/note/computer-network/application-layer/http/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/authors/xingyu-pan/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/note/computer-network/application-layer/cookie/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/authors/yu-pan/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/note/computer-network/application-layer/cdn/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/project/ipnet/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/project/ipnet/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/project/ipnet/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/note/computer-network/application-layer/dhcp/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/authors/jiewen-ran/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/note/computer-network/application-layer/ntp/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/authors/nan-liang/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/note/computer-network/application-layer/network-translator/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/authors/ping-zhang/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/"
+    /></url>
   <url>
-    <loc>https://panxycris.github.io/authors/yu-ge/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/note/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/authors/zhenfei-cao/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/authors/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/authors/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/authors/"
+    /></url>
   <url>
-    <loc>https://panxycris.github.io/authors/zhong-jie/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-  </url>
-  
+    <loc>https://panxycris.github.io/authors/dixin-chen/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/project/utag/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/project/utag/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/project/utag/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/authors/ning-li/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/authors/admin/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/authors/admin/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/authors/admin/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/project/whaleword/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/project/whaleword/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/project/whaleword/"
+    /></url>
   <url>
-    <loc>https://panxycris.github.io/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/categories/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/authors/xingyu-pan/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/post/</loc>
-    <lastmod>2019-11-18T13:32:08+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/post/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/authors/yu-pan/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/project/</loc>
-    <lastmod>2021-09-14T20:46:50-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/project/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/project/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/project/ipnet/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/project/ipnet/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/project/ipnet/"
+    /></url>
   <url>
-    <loc>https://panxycris.github.io/publication_types/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/publication_types/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/publication_types/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/authors/jiewen-ran/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/publication/</loc>
-    <lastmod>2019-11-18T13:32:08+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/publication/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/publication/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/authors/nan-liang/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/talk/</loc>
-    <lastmod>2019-11-18T13:32:08+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/talk/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/talk/"
-                />
-  </url>
-  
+    <loc>https://panxycris.github.io/authors/ping-zhang/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://panxycris.github.io/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://panxycris.github.io/tags/"
-                />
-  </url>
-  
-</urlset>
+    <loc>https://panxycris.github.io/authors/yu-ge/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod></url>
+  <url>
+    <loc>https://panxycris.github.io/authors/zhenfei-cao/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod></url>
+  <url>
+    <loc>https://panxycris.github.io/authors/zhong-jie/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod></url>
+  <url>
+    <loc>https://panxycris.github.io/project/utag/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/project/utag/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/project/utag/"
+    /></url>
+  <url>
+    <loc>https://panxycris.github.io/authors/admin/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/authors/admin/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/authors/admin/"
+    /></url>
+  <url>
+    <loc>https://panxycris.github.io/categories/</loc><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/categories/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/categories/"
+    /></url>
+  <url>
+    <loc>https://panxycris.github.io/project/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/project/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/project/"
+    /></url>
+  <url>
+    <loc>https://panxycris.github.io/publication_types/</loc><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/publication_types/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/publication_types/"
+    /></url>
+  <url>
+    <loc>https://panxycris.github.io/publication/</loc><lastmod>2019-11-18T13:32:08+08:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/publication/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/publication/"
+    /></url>
+  <url>
+    <loc>https://panxycris.github.io/talk/</loc><lastmod>2019-11-18T13:32:08+08:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/talk/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/talk/"
+    /></url>
+  <url>
+    <loc>https://panxycris.github.io/tags/</loc><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/tags/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/tags/"
+    /></url></urlset>

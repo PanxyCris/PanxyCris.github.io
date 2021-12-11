@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>📊 System Design | PanxyCris</title>
+    <link>https://panxycris.github.io/note/system-design/</link>
+      <atom:link href="https://panxycris.github.io/note/system-design/index.xml" rel="self" type="application/rss+xml" />
+    <description>📊 System Design</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 07 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>📊 System Design</title>
+      <link>https://panxycris.github.io/note/system-design/</link>
+    </image>
+    
+    <item>
+      <title>Scalability</title>
+      <link>https://panxycris.github.io/note/system-design/scalability/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/system-design/scalability/</guid>
+      <description>&lt;p&gt;Handle an amount of work that resources can be added to the system.&lt;/p&gt;
+&lt;h2 id=&#34;two-modes&#34;&gt;Two modes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Vertical scale&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;add more computing power -&amp;gt; single node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Horizontal scale&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;add more machines or resources -&amp;gt; more nodes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;load-balancing&#34;&gt;Load Balancing&lt;/h2&gt;
+&lt;h3 id=&#34;target&#34;&gt;Target&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Minimize server response time&lt;/li&gt;
+&lt;li&gt;Maximize throughput&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Random&lt;/li&gt;
+&lt;li&gt;Round Robin&lt;/li&gt;
+&lt;li&gt;Least Connection&lt;/li&gt;
+&lt;li&gt;Least Response Time&lt;/li&gt;
+&lt;li&gt;Least Bandwith&lt;/li&gt;
+&lt;li&gt;Hashing
+&lt;ul&gt;
+&lt;li&gt;Hash various data including connection or header information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Custom Load
+&lt;ul&gt;
+&lt;li&gt;Query the load on individual servers via SNMP&lt;/li&gt;
+&lt;li&gt;CPU usage, memory and response time&lt;/li&gt;
+&lt;li&gt;Combine to suit their requests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;DNS&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DNS adopts &lt;strong&gt;Round Robin&lt;/strong&gt; algorithm to return DNS Lookup response.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../nslookup_google.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;In this lookup search, we can see that multiple times search &lt;code&gt;www.google.com&lt;/code&gt; we can get different IP addresses from DNS servers. It permutes the servers in the list one by one.&lt;/p&gt;
+&lt;p&gt;But also, load balancer for DNS attempts to re-order the list to give priority to numerically &amp;ldquo;closer&amp;rdquo; networks according to different locations.&lt;/p&gt;
+&lt;h2 id=&#34;caching&#34;&gt;Caching&lt;/h2&gt;
+&lt;p&gt;Cache is lightning-fast, and helps record the most frequent data query, request or object. It holds every dataset in RAM and requests are handled as fast as technically possible.&lt;/p&gt;
+&lt;h3 id=&#34;the-data-for-caching&#34;&gt;The data for caching&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cached Database Queries&lt;/li&gt;
+&lt;li&gt;Cahced Object&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tool&#34;&gt;Tool&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://redis.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Redis&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Advantages
+&lt;ul&gt;
+&lt;li&gt;Extra database-features like persistence&lt;/li&gt;
+&lt;li&gt;Lots of Data Types&lt;/li&gt;
+&lt;li&gt;Both clients and servers cache the data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AOF Log(Append Only File)
+&lt;ul&gt;
+&lt;li&gt;Appending all write operations received by the server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;RDB Snapshot
+&lt;ul&gt;
+&lt;li&gt;Backup file, take a full snapshot of the current Redis state&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Memcached&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MultiThreaded&lt;/li&gt;
+&lt;li&gt;Simplicity, ease of use, easy setup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;database&#34;&gt;Database&lt;/h2&gt;
+&lt;h3 id=&#34;partitionsharding&#34;&gt;Partition/Sharding&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A horizontal partitioning method&lt;/li&gt;
+&lt;li&gt;The data is partitioned accross multiple servers&lt;/li&gt;
+&lt;li&gt;Procsessing workload against a large table can be spread&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;replication&#34;&gt;Replication&lt;/h3&gt;
+&lt;p&gt;Setting up a separate copy of the data on a different node.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Read the database logs&lt;/li&gt;
+&lt;li&gt;Each change of the database is replicated to other copies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A replication engine can be used.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Easy to setup&lt;/li&gt;
+&lt;li&gt;On-going administration and management&lt;/li&gt;
+&lt;li&gt;Additional storage for each replication&lt;/li&gt;
+&lt;li&gt;Additional I/O and CPU usage to support the data replication process&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;asynchronism&#34;&gt;Asynchronism&lt;/h2&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,9 +5,9 @@
     <link>https://panxycris.github.io/authors/ning-li/</link>
       <atom:link href="https://panxycris.github.io/authors/ning-li/index.xml" rel="self" type="application/rss+xml" />
     <description>Ning Li</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 24 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Jun 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://panxycris.github.io/img/icon-192.png</url>
+      <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Ning Li</title>
       <link>https://panxycris.github.io/authors/ning-li/</link>
     </image>
@@ -17,17 +17,17 @@
       <link>https://panxycris.github.io/project/whaleword/</link>
       <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
       <guid>https://panxycris.github.io/project/whaleword/</guid>
-      <description>&lt;p&gt;&lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;homepage.png&#34;/&gt;
-&lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;屏幕快照 2019-06-28 下午3.48.10.png&#34; /&gt;
-&lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;屏幕快照 2019-06-25 下午4.56.49.png&#34; /&gt;
-&lt;img style=&#34;display:inline-block&#34; width=&#34;20%&#34; height=&#34;20%&#34; src=&#34;屏幕快照 2019-06-28 下午3.52.59.png&#34; /&gt;&lt;/p&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;An Android App that recites GRE vocabulary.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;It helps the customers manage words and scientifically makes a study plan according to The Ebbinghaus Forgetting Curve.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;It is a coursework for Human-Computer Interaction Systems. And I completed the part of making the study plans.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An Android App that recites GRE vocabulary.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It helps the customers manage words and scientifically makes a study plan according to The Ebbinghaus Forgetting Curve.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It is a coursework for Human-Computer Interaction Systems. And I completed the part of making the study plans.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

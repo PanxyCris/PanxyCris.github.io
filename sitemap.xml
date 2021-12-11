@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	
-	<sitemap>
-	   	<loc>https://panxycris.github.io/en/sitemap.xml</loc>
-		
-	   	<lastmod>2021-12-05T16:57:00-05:00</lastmod>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://panxycris.github.io/zh/sitemap.xml</loc>
-		
-	   	<lastmod>2021-09-14T20:46:50-04:00</lastmod>
-		
-	</sitemap>
-	
+  
+  <sitemap>
+    <loc>https://panxycris.github.io/en/sitemap.xml</loc>
+    
+      <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://panxycris.github.io/zh/sitemap.xml</loc>
+    
+      <lastmod>2021-09-14T20:46:50-04:00</lastmod>
+    
+  </sitemap>
+  
 </sitemapindex>
