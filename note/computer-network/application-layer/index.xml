@@ -50,7 +50,14 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../HTTP%201.0.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/http/HTTP%201.0_hu01d27e33e883dec6028d423bb514d024_160203_da8085695593672e3d7fa21bb46c59fb.png 400w,
+               /note/computer-network/application-layer/http/HTTP%201.0_hu01d27e33e883dec6028d423bb514d024_160203_18ce8bc437b682613eca4cf9c6692752.png 760w,
+               /note/computer-network/application-layer/http/HTTP%201.0_hu01d27e33e883dec6028d423bb514d024_160203_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/http/HTTP%201.0_hu01d27e33e883dec6028d423bb514d024_160203_da8085695593672e3d7fa21bb46c59fb.png&#34;
+               width=&#34;760&#34;
+               height=&#34;607&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;http-11&#34;&gt;HTTP 1.1&lt;/h3&gt;
 &lt;ul&gt;
@@ -81,7 +88,14 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../HTTP%201.1.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/http/HTTP%201.1_hudc80dc6d9dfaf95317bfb6566464cea5_293312_e92ad06d71c0978da22628b2bb552e2b.png 400w,
+               /note/computer-network/application-layer/http/HTTP%201.1_hudc80dc6d9dfaf95317bfb6566464cea5_293312_ccd1f57a0e1216d0432cf69f8819465b.png 760w,
+               /note/computer-network/application-layer/http/HTTP%201.1_hudc80dc6d9dfaf95317bfb6566464cea5_293312_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/http/HTTP%201.1_hudc80dc6d9dfaf95317bfb6566464cea5_293312_e92ad06d71c0978da22628b2bb552e2b.png&#34;
+               width=&#34;760&#34;
+               height=&#34;345&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;http2&#34;&gt;HTTP/2&lt;/h3&gt;
 &lt;ul&gt;
@@ -114,7 +128,14 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../HTTP%202.0.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/http/HTTP%202.0_hu57404a164243915960cb4cf0f15bdb62_321931_5245748c10207e7ee13d9915ee065d84.png 400w,
+               /note/computer-network/application-layer/http/HTTP%202.0_hu57404a164243915960cb4cf0f15bdb62_321931_0b0fd9bbd520f9732d3abc4d483596fe.png 760w,
+               /note/computer-network/application-layer/http/HTTP%202.0_hu57404a164243915960cb4cf0f15bdb62_321931_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/http/HTTP%202.0_hu57404a164243915960cb4cf0f15bdb62_321931_5245748c10207e7ee13d9915ee065d84.png&#34;
+               width=&#34;760&#34;
+               height=&#34;355&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;http3&#34;&gt;HTTP/3&lt;/h3&gt;
 &lt;ul&gt;
@@ -146,7 +167,14 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../TLS%20vs%20QUIC.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/http/TLS%20vs%20QUIC_hue4a094707c7ff35e578be77688e7bff1_262852_89e4669950369d6dc2931acaaf304a00.png 400w,
+               /note/computer-network/application-layer/http/TLS%20vs%20QUIC_hue4a094707c7ff35e578be77688e7bff1_262852_ac9930dbd273e1eba75a8c2d57c8f39c.png 760w,
+               /note/computer-network/application-layer/http/TLS%20vs%20QUIC_hue4a094707c7ff35e578be77688e7bff1_262852_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/http/TLS%20vs%20QUIC_hue4a094707c7ff35e578be77688e7bff1_262852_89e4669950369d6dc2931acaaf304a00.png&#34;
+               width=&#34;760&#34;
+               height=&#34;345&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;</description>
     </item>
     
@@ -189,7 +217,14 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../cookie.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/cookie/cookie_hu83ed41a0a1e489b71ddc81a02d3f33fd_410707_848cd33ed4b28c5f923b327be0c9a6c3.png 400w,
+               /note/computer-network/application-layer/cookie/cookie_hu83ed41a0a1e489b71ddc81a02d3f33fd_410707_14a8e841a731efe7cb746d44894fa9e3.png 760w,
+               /note/computer-network/application-layer/cookie/cookie_hu83ed41a0a1e489b71ddc81a02d3f33fd_410707_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/cookie/cookie_hu83ed41a0a1e489b71ddc81a02d3f33fd_410707_848cd33ed4b28c5f923b327be0c9a6c3.png&#34;
+               width=&#34;760&#34;
+               height=&#34;390&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;</description>
     </item>
     
@@ -223,7 +258,14 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../CDN.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/cdn/CDN_hu72427bd34d3a2522517a4e3e3a6c312a_208523_f6be9962ab902337089254e013fe4ec7.png 400w,
+               /note/computer-network/application-layer/cdn/CDN_hu72427bd34d3a2522517a4e3e3a6c312a_208523_e33e58b2db4126e9a593d4d298e36df8.png 760w,
+               /note/computer-network/application-layer/cdn/CDN_hu72427bd34d3a2522517a4e3e3a6c312a_208523_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/cdn/CDN_hu72427bd34d3a2522517a4e3e3a6c312a_208523_f6be9962ab902337089254e013fe4ec7.png&#34;
+               width=&#34;760&#34;
+               height=&#34;510&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;work-process&#34;&gt;Work process&lt;/h3&gt;
 &lt;ol&gt;
@@ -285,7 +327,14 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../DHCP.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/dhcp/DHCP_hud663d6abf2db500a1190a4428fea0580_117949_62f11cfb055590a9986be2bc638fa04c.png 400w,
+               /note/computer-network/application-layer/dhcp/DHCP_hud663d6abf2db500a1190a4428fea0580_117949_f596218a4de3dbc80db3c8b32e1b6790.png 760w,
+               /note/computer-network/application-layer/dhcp/DHCP_hud663d6abf2db500a1190a4428fea0580_117949_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/dhcp/DHCP_hud663d6abf2db500a1190a4428fea0580_117949_62f11cfb055590a9986be2bc638fa04c.png&#34;
+               width=&#34;760&#34;
+               height=&#34;224&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -334,7 +383,14 @@ address in the Your IP Address field&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../DHCP%20Header.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/dhcp/DHCP%20Header_hu5b7cc96fd4b093541ae6f5cf3addd6af_198894_78319e4a0bde2ccf8ebd11df2ecce3b5.png 400w,
+               /note/computer-network/application-layer/dhcp/DHCP%20Header_hu5b7cc96fd4b093541ae6f5cf3addd6af_198894_8e2eb6984baecf2576134675c18e31c6.png 760w,
+               /note/computer-network/application-layer/dhcp/DHCP%20Header_hu5b7cc96fd4b093541ae6f5cf3addd6af_198894_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/dhcp/DHCP%20Header_hu5b7cc96fd4b093541ae6f5cf3addd6af_198894_78319e4a0bde2ccf8ebd11df2ecce3b5.png&#34;
+               width=&#34;760&#34;
+               height=&#34;472&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;ul&gt;
 &lt;li&gt;Opcode: 1 – a boot request from client; 2 – a boot reply from server&lt;/li&gt;
@@ -397,7 +453,14 @@ and other network devices.&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../NTP.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/ntp/NTP_hua7755a23f74aece6fdce52eaa24c39e2_482807_7381ff6a14250fb747cdc49cbe538ba5.png 400w,
+               /note/computer-network/application-layer/ntp/NTP_hua7755a23f74aece6fdce52eaa24c39e2_482807_c0c5b13157dd188e87553eeeb646b006.png 760w,
+               /note/computer-network/application-layer/ntp/NTP_hua7755a23f74aece6fdce52eaa24c39e2_482807_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/ntp/NTP_hua7755a23f74aece6fdce52eaa24c39e2_482807_7381ff6a14250fb747cdc49cbe538ba5.png&#34;
+               width=&#34;760&#34;
+               height=&#34;394&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;structure&#34;&gt;Structure&lt;/h3&gt;
 &lt;p&gt;NTP timing service uses a hierarchical architecture organized into 16 stratums&lt;/p&gt;
@@ -462,8 +525,104 @@ addresses (usually public).&lt;/li&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../NAT.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/network-translator/NAT_hu4ff8046c06eb34f39266bd8704a793e2_442149_70f402d2291b72a7a215851d7a66c232.png 400w,
+               /note/computer-network/application-layer/network-translator/NAT_hu4ff8046c06eb34f39266bd8704a793e2_442149_92c78ad351796b7a0fdc935a01920553.png 760w,
+               /note/computer-network/application-layer/network-translator/NAT_hu4ff8046c06eb34f39266bd8704a793e2_442149_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/network-translator/NAT_hu4ff8046c06eb34f39266bd8704a793e2_442149_70f402d2291b72a7a215851d7a66c232.png&#34;
+               width=&#34;760&#34;
+               height=&#34;387&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>SNMP</title>
+      <link>https://panxycris.github.io/note/computer-network/application-layer/snmp/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/computer-network/application-layer/snmp/</guid>
+      <description>&lt;p&gt;Simple Network Management Protocol&lt;/p&gt;
+&lt;p&gt;Exchange management information between network devices&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each Managed Device, a host or a router, maintains a number of &lt;strong&gt;Management Information Bases (MIBs)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Each managed device has an &lt;strong&gt;SNMP Agent&lt;/strong&gt; to provide interface between MIBs and an SNMP Manager&lt;/li&gt;
+&lt;li&gt;An SNMP manager, usually implemented in &lt;strong&gt;Network Management System (NMS)&lt;/strong&gt;, can work with multiple SNMP agents&lt;/li&gt;
+&lt;li&gt;Uses well-known &lt;strong&gt;UDP&lt;/strong&gt; port number 161/162 at the agent/manager&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;snmp-message-format&#34;&gt;SNMP Message Format&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/snmp/SNMP%20Message%20Format_hu92bcf277dfefb76a8ebe9b8a12c2ba91_76854_fdca34bb588e4ca38831f402230e13b7.png 400w,
+               /note/computer-network/application-layer/snmp/SNMP%20Message%20Format_hu92bcf277dfefb76a8ebe9b8a12c2ba91_76854_cdd1e9477b9ecc174003a4a77e40ff1a.png 760w,
+               /note/computer-network/application-layer/snmp/SNMP%20Message%20Format_hu92bcf277dfefb76a8ebe9b8a12c2ba91_76854_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/snmp/SNMP%20Message%20Format_hu92bcf277dfefb76a8ebe9b8a12c2ba91_76854_fdca34bb588e4ca38831f402230e13b7.png&#34;
+               width=&#34;760&#34;
+               height=&#34;223&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;Community Name
+&lt;ul&gt;
+&lt;li&gt;Access scope for SNMP managers and agents&lt;/li&gt;
+&lt;li&gt;A different community name will be discarded&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Protocol Data Unit (PDU) Type specifies the SNMP message type&lt;/li&gt;
+&lt;li&gt;Request ID: match an SNMP request with the corresponding response&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mib-management-information-bases&#34;&gt;MIB (Management Information Bases)&lt;/h3&gt;
+&lt;p&gt;A managed device maintains a large number of SNMP objects to store management information. The Structure of Management Information (SMI) defines the rules for describing management information and the data types used in SNMP.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tree Structure
+&lt;ul&gt;
+&lt;li&gt;Each level of the tree consists of groups&lt;/li&gt;
+&lt;li&gt;Each group has its name and the associated numerical identifier&lt;/li&gt;
+&lt;li&gt;Leaves in the mib-2 subtree are MIB objects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is an example for MIB Tree Structure:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/application-layer/snmp/MIB_hu19b8396c353a12fd7220e3112328ffb3_187982_f93a20ac91a6c368e02a5a8bf6e2506e.png 400w,
+               /note/computer-network/application-layer/snmp/MIB_hu19b8396c353a12fd7220e3112328ffb3_187982_77ff4fd5d622d2fabb122677d8f4661f.png 760w,
+               /note/computer-network/application-layer/snmp/MIB_hu19b8396c353a12fd7220e3112328ffb3_187982_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/application-layer/snmp/MIB_hu19b8396c353a12fd7220e3112328ffb3_187982_f93a20ac91a6c368e02a5a8bf6e2506e.png&#34;
+               width=&#34;760&#34;
+               height=&#34;497&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;The leaf &lt;em&gt;tcpMaxConn&lt;/em&gt; can be defined as &lt;strong&gt;1.3.6.1.2.1.6.4&lt;/strong&gt; or &lt;strong&gt;iso.org.dod.internet.mgmt.mib-2.tcp.tcpMaxConn&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>
