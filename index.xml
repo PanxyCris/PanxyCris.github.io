@@ -5,7 +5,7 @@
     <link>https://panxycris.github.io/</link>
       <atom:link href="https://panxycris.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>PanxyCris</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 12 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>PanxyCris</title>
@@ -770,6 +770,232 @@ addresses (usually public).&lt;/li&gt;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;The leaf &lt;em&gt;tcpMaxConn&lt;/em&gt; can be defined as &lt;strong&gt;1.3.6.1.2.1.6.4&lt;/strong&gt; or &lt;strong&gt;iso.org.dod.internet.mgmt.mib-2.tcp.tcpMaxConn&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TCP</title>
+      <link>https://panxycris.github.io/note/computer-network/transport-layer/tcp/</link>
+      <pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/computer-network/transport-layer/tcp/</guid>
+      <description>&lt;p&gt;Transport Control Protocol&lt;/p&gt;
+&lt;h3 id=&#34;feature&#34;&gt;Feature&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Connection-oriented, reliable&lt;/li&gt;
+&lt;li&gt;Unicast only&lt;/li&gt;
+&lt;li&gt;Error Control, Flow Control, Congestion Control&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tcp-header&#34;&gt;TCP Header&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/transport-layer/tcp/TCP%20Header_hua3d9dce47e5b42c0179df68bbfbdba33_46648_2c07b13bfee7ff6f325ab01a8c9f1462.png 400w,
+               /note/computer-network/transport-layer/tcp/TCP%20Header_hua3d9dce47e5b42c0179df68bbfbdba33_46648_021ca28d9a382ac97fa54c0808fe751d.png 760w,
+               /note/computer-network/transport-layer/tcp/TCP%20Header_hua3d9dce47e5b42c0179df68bbfbdba33_46648_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/transport-layer/tcp/TCP%20Header_hua3d9dce47e5b42c0179df68bbfbdba33_46648_2c07b13bfee7ff6f325ab01a8c9f1462.png&#34;
+               width=&#34;570&#34;
+               height=&#34;298&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;Sequence number: Identifies the byte in the stream of data from the sending TCP to the receiving TCP that the first byte of data in this segment represents(offset)&lt;/li&gt;
+&lt;li&gt;Acknowledgement Number: The next sequence number that the host wants to receive&lt;/li&gt;
+&lt;li&gt;Flags
+&lt;ul&gt;
+&lt;li&gt;URG: an urgent message is being carried.&lt;/li&gt;
+&lt;li&gt;ACK: the acknowledgment number is valid.&lt;/li&gt;
+&lt;li&gt;PSH: a notification from the sender to the receiver that it should pass all the data received to the application as soon as possible.&lt;/li&gt;
+&lt;li&gt;RST: signals a request to reset the TCP connection.&lt;/li&gt;
+&lt;li&gt;SYN: set when initiating a connection.&lt;/li&gt;
+&lt;li&gt;FIN: set to terminate a connection.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tcp-connection&#34;&gt;TCP Connection&lt;/h3&gt;
+&lt;h4 id=&#34;establishment&#34;&gt;Establishment&lt;/h4&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/transport-layer/tcp/TCP%20Establishment_hu66203eec0205b708c60acc647ae66ee5_47122_bc4e972b1f0574fe14e6437bda0603f8.png 400w,
+               /note/computer-network/transport-layer/tcp/TCP%20Establishment_hu66203eec0205b708c60acc647ae66ee5_47122_43c1c87887aa0f2ce22067d1f502d470.png 760w,
+               /note/computer-network/transport-layer/tcp/TCP%20Establishment_hu66203eec0205b708c60acc647ae66ee5_47122_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/transport-layer/tcp/TCP%20Establishment_hu66203eec0205b708c60acc647ae66ee5_47122_bc4e972b1f0574fe14e6437bda0603f8.png&#34;
+               width=&#34;562&#34;
+               height=&#34;478&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;termination&#34;&gt;Termination&lt;/h4&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/transport-layer/tcp/TCP%20Termination_hu032c00bd0e2850496a99e3cfa1605c5e_78513_c32abfc067aae8e1b4fe109ae7b6e521.png 400w,
+               /note/computer-network/transport-layer/tcp/TCP%20Termination_hu032c00bd0e2850496a99e3cfa1605c5e_78513_0017411ffa4453d86fd6c218f1ee9a3a.png 760w,
+               /note/computer-network/transport-layer/tcp/TCP%20Termination_hu032c00bd0e2850496a99e3cfa1605c5e_78513_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/transport-layer/tcp/TCP%20Termination_hu032c00bd0e2850496a99e3cfa1605c5e_78513_c32abfc067aae8e1b4fe109ae7b6e521.png&#34;
+               width=&#34;554&#34;
+               height=&#34;536&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;error-control&#34;&gt;Error Control&lt;/h3&gt;
+&lt;p&gt;Each data byte has a unique sequence number. The receiver uses &lt;strong&gt;cumulative acknowledgments&lt;/strong&gt;(by default) to inform the sender of the last correctly received byte &lt;strong&gt;in order&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Error detection is performed in each layer of the TCP/IP stack by means of header checksums, and errored packets are dropped.&lt;/p&gt;
+&lt;h4 id=&#34;selective-acknowledgment-sack&#34;&gt;Selective acknowledgment (SACK)&lt;/h4&gt;
+&lt;p&gt;SACK is used to report multiple lost segments. The receiver uses the TCP SACK option to acknowledge all segments that has been successfully received in the last window of segments, and the sender can retransmit more than one lost segment at a time.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/transport-layer/tcp/SACK_hu8c5fb22782cc185c16bdd144bbae0fd8_41653_e3badf4c1f5caafc3e79b78ba4787a71.png 400w,
+               /note/computer-network/transport-layer/tcp/SACK_hu8c5fb22782cc185c16bdd144bbae0fd8_41653_975245b4ed155834b59a768a6ca47857.png 760w,
+               /note/computer-network/transport-layer/tcp/SACK_hu8c5fb22782cc185c16bdd144bbae0fd8_41653_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/transport-layer/tcp/SACK_hu8c5fb22782cc185c16bdd144bbae0fd8_41653_e3badf4c1f5caafc3e79b78ba4787a71.png&#34;
+               width=&#34;582&#34;
+               height=&#34;215&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;In this example, left edge of SACK is seq=1126009, which means that seq = 1126009 is received, but seq = 1126009-1448 = 1124561 is lost, so the sender will retransmit this datagram.&lt;/p&gt;
+&lt;h4 id=&#34;retransmisson-timer&#34;&gt;Retransmisson Timer&lt;/h4&gt;
+&lt;p&gt;TCP will also set a Timer to measure whether the sended message will be received. If no ack received when the timer expires, this segment will be retransmitted.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Timer value should be larger than but of the same order of magnitude as a measurement of the &lt;strong&gt;Round Trip Time (RTT)&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;TCP continuously measure the RTT and updates the retransmission timer value, defined as &lt;strong&gt;Retransmission TimeOut (RTO)&lt;/strong&gt;, dynamically.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;interactive-data-flow&#34;&gt;Interactive data flow&lt;/h3&gt;
+&lt;p&gt;TCP supports interactive data flow for interactive user applications, such as &lt;strong&gt;telnet&lt;/strong&gt; and &lt;strong&gt;ssh&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;To reduce the number of small segments to be more efficient:&lt;/p&gt;
+&lt;h4 id=&#34;delayed-ack&#34;&gt;Delayed ACK&lt;/h4&gt;
+&lt;p&gt;Set a Timer: goes off every K ms. Send all acks every K ms.&lt;/p&gt;
+&lt;h4 id=&#34;nagle-algorithm&#34;&gt;Nagle Algorithm&lt;/h4&gt;
+&lt;p&gt;Set a Window: when reach MSS, all buffered bytes are sent in a single segment.&lt;/p&gt;
+&lt;h3 id=&#34;congestion-control&#34;&gt;Congestion Control&lt;/h3&gt;
+&lt;p&gt;Sliding window buffer for both sender(cwnd) and receiver(awnd/rwnd).&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/transport-layer/tcp/Congestion%20Sliding%20Window_hu8dfc25bd627be4d083284fd8d528f796_60626_fb7f10ac7835f50a8ff845a6e9d3b41b.png 400w,
+               /note/computer-network/transport-layer/tcp/Congestion%20Sliding%20Window_hu8dfc25bd627be4d083284fd8d528f796_60626_d581b52facff6eb51bdb4eddc434f30e.png 760w,
+               /note/computer-network/transport-layer/tcp/Congestion%20Sliding%20Window_hu8dfc25bd627be4d083284fd8d528f796_60626_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/transport-layer/tcp/Congestion%20Sliding%20Window_hu8dfc25bd627be4d083284fd8d528f796_60626_fb7f10ac7835f50a8ff845a6e9d3b41b.png&#34;
+               width=&#34;760&#34;
+               height=&#34;282&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;Here is a graph to show that the process of congestion control(for sender).&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/transport-layer/tcp/Congestion%20Control_huaa8940d965e19db238c3014e96b6d1fc_93525_529b12dc80022e7085c9d23393d141ea.png 400w,
+               /note/computer-network/transport-layer/tcp/Congestion%20Control_huaa8940d965e19db238c3014e96b6d1fc_93525_bdecdcaa9c881596960913c5e3ce02dc.png 760w,
+               /note/computer-network/transport-layer/tcp/Congestion%20Control_huaa8940d965e19db238c3014e96b6d1fc_93525_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/transport-layer/tcp/Congestion%20Control_huaa8940d965e19db238c3014e96b6d1fc_93525_529b12dc80022e7085c9d23393d141ea.png&#34;
+               width=&#34;760&#34;
+               height=&#34;578&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;Serveral phases:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Slow Start(cwnd $\leq$ ssthresh):
+&lt;ul&gt;
+&lt;li&gt;cwnd = cwnd + segsize(= MSS)&lt;/li&gt;
+&lt;li&gt;Exponentially increases&lt;/li&gt;
+&lt;li&gt;When timeout, it enters this phase again&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Congestion Avoidance(cwnd &amp;gt; ssthresh):
+&lt;ul&gt;
+&lt;li&gt;cwnd = cwnd + segsize x segsize / cwnd + segsize / 8&lt;/li&gt;
+&lt;li&gt;Linearly increases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fast Recovery(Three duplicate ACKs are received)
+&lt;ul&gt;
+&lt;li&gt;ssthresh = max [ 2 segsize, min (cwnd, awnd)/2 ]&lt;/li&gt;
+&lt;li&gt;Retransmit a segment if allowed by the window size&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
