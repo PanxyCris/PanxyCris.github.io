@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network Layer | PanxyCris</title>
+    <link>https://panxycris.github.io/note/computer-network/network-layer/</link>
+      <atom:link href="https://panxycris.github.io/note/computer-network/network-layer/index.xml" rel="self" type="application/rss+xml" />
+    <description>Network Layer</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 17 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Network Layer</title>
+      <link>https://panxycris.github.io/note/computer-network/network-layer/</link>
+    </image>
+    
+    <item>
+      <title>DHCP</title>
+      <link>https://panxycris.github.io/note/computer-network/network-layer/dhcp/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/computer-network/network-layer/dhcp/</guid>
+      <description>&lt;p&gt;Dynamic Host Configuration Protocol&lt;/p&gt;
+&lt;p&gt;Designed to dynamically configure TCP/IP hosts in a centralized manner from DHCP server.&lt;/p&gt;
+&lt;h3 id=&#34;function&#34;&gt;Function&lt;/h3&gt;
+&lt;p&gt;Configure parameters in a subnet dynamically&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IP Address, Subnet mask, default gateway IP address&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;process&#34;&gt;Process&lt;/h3&gt;
+&lt;p&gt;Here is a graph to show how DHCP works&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/network-layer/dhcp/DHCP_hud663d6abf2db500a1190a4428fea0580_117949_62f11cfb055590a9986be2bc638fa04c.png 400w,
+               /note/computer-network/network-layer/dhcp/DHCP_hud663d6abf2db500a1190a4428fea0580_117949_f596218a4de3dbc80db3c8b32e1b6790.png 760w,
+               /note/computer-network/network-layer/dhcp/DHCP_hud663d6abf2db500a1190a4428fea0580_117949_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/network-layer/dhcp/DHCP_hud663d6abf2db500a1190a4428fea0580_117949_62f11cfb055590a9986be2bc638fa04c.png&#34;
+               width=&#34;760&#34;
+               height=&#34;224&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;A client first broadcasts a &lt;strong&gt;DHCP DISCOVERY&lt;/strong&gt; message on its local physical network&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The message has 0.0.0.0 as the source IP address&lt;/li&gt;
+&lt;li&gt;The message may be forwarded by relay agents to servers in other physical networks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Each server may respond with a &lt;strong&gt;DHCPOFFER&lt;/strong&gt; message with an available network
+address in the Your IP Address field&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The client may receives more than one DHCPOFFER messages&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It chooses one server from all responding servers based on the offered IP address and the lease duration.&lt;/li&gt;
+&lt;li&gt;The client then broadcasts a &lt;strong&gt;DHCPREQUEST&lt;/strong&gt; message with the Server Identifier option to indicated the selected server.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When the DHCPREQUEST message is received, only the chosen server responds with a &lt;strong&gt;DHCPACK&lt;/strong&gt; message carrying a full set of configuration parameters to the client.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When the client receives, it checks the parameters and configures its TCP/IP modules using the parameters.&lt;/li&gt;
+&lt;li&gt;The message specifies the duration of the lease. When the lease expires, the client may ask the server to renew it. Otherwise, the address will be put back in the pool or assigned to other hosts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(When two DHCP servers are used) The client may send a &lt;strong&gt;DHCPRELEASE&lt;/strong&gt; message to the server to relinquish the lease on the network address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;dhcp-message-format&#34;&gt;DHCP Message Format&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/network-layer/dhcp/DHCP%20Header_hu5b7cc96fd4b093541ae6f5cf3addd6af_198894_78319e4a0bde2ccf8ebd11df2ecce3b5.png 400w,
+               /note/computer-network/network-layer/dhcp/DHCP%20Header_hu5b7cc96fd4b093541ae6f5cf3addd6af_198894_8e2eb6984baecf2576134675c18e31c6.png 760w,
+               /note/computer-network/network-layer/dhcp/DHCP%20Header_hu5b7cc96fd4b093541ae6f5cf3addd6af_198894_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/network-layer/dhcp/DHCP%20Header_hu5b7cc96fd4b093541ae6f5cf3addd6af_198894_78319e4a0bde2ccf8ebd11df2ecce3b5.png&#34;
+               width=&#34;760&#34;
+               height=&#34;472&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;Opcode: 1 – a boot request from client; 2 – a boot reply from server&lt;/li&gt;
+&lt;li&gt;Hardware Address Type
+&lt;ul&gt;
+&lt;li&gt;The value is 1 for an Ethernet MAC address&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hop count
+&lt;ul&gt;
+&lt;li&gt;Optionally used by relay agents&lt;/li&gt;
+&lt;li&gt;A DHCP relay agent is a host or router that forwards DHCP messages between
+DHCP clients and servers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Transaction ID
+&lt;ul&gt;
+&lt;li&gt;Randomly assigned to link requests and replies between a client and a server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Client HW address
+&lt;ul&gt;
+&lt;li&gt;The hardware address of the client&lt;/li&gt;
+&lt;li&gt;For an Ethernet address, the first 6 bytes are filled and the remaining bytes are set to 0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Server hostname: Hostname of the DHCP server&lt;/li&gt;
+&lt;li&gt;Boot filename
+&lt;ul&gt;
+&lt;li&gt;Use in a DHCPOFFER message to specify the fully qualified, null
+terminated path name of a file to bootstrap from&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dhcp-relay-information-option&#34;&gt;DHCP Relay Information Option&lt;/h3&gt;
+&lt;p&gt;Assign IP address based on its location. DHCP client in a Residential Gateway (RG) will send a DHCP request to an ISP Broadband Network Gateway. A network access node, such as an IP DSLAM, aggregates traffic from many users.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Network Translator</title>
+      <link>https://panxycris.github.io/note/computer-network/network-layer/network-translator/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/computer-network/network-layer/network-translator/</guid>
+      <description>&lt;p&gt;Network Address and Port Address Translator&lt;/p&gt;
+&lt;h3 id=&#34;nat&#34;&gt;NAT&lt;/h3&gt;
+&lt;p&gt;Network Address Translator&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mapping one set of IP addresses (usually private) to another set of IP
+addresses (usually public).&lt;/li&gt;
+&lt;li&gt;Used for
+&lt;ul&gt;
+&lt;li&gt;Reuse IP address: Share a small pool of IP addresses with a large number of hosts&lt;/li&gt;
+&lt;li&gt;Security: internal network is invisible to the outside&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;pat&#34;&gt;PAT&lt;/h3&gt;
+&lt;p&gt;Port Address Translator&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Translate transport identifiers
+&lt;ul&gt;
+&lt;li&gt;TCP and UDP port numbers, ICMP query identifiers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+&lt;p&gt;Here is an example that shows how NAT and PAT works:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/network-layer/network-translator/NAT_hu4ff8046c06eb34f39266bd8704a793e2_442149_70f402d2291b72a7a215851d7a66c232.png 400w,
+               /note/computer-network/network-layer/network-translator/NAT_hu4ff8046c06eb34f39266bd8704a793e2_442149_92c78ad351796b7a0fdc935a01920553.png 760w,
+               /note/computer-network/network-layer/network-translator/NAT_hu4ff8046c06eb34f39266bd8704a793e2_442149_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/network-layer/network-translator/NAT_hu4ff8046c06eb34f39266bd8704a793e2_442149_70f402d2291b72a7a215851d7a66c232.png&#34;
+               width=&#34;760&#34;
+               height=&#34;387&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

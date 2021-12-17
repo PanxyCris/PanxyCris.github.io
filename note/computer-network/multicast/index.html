@@ -60,10 +60,10 @@
   
     
   
-  <meta name="description" content="Transport Control Protocol" />
+  <meta name="description" content="Master" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/computer-network/transport-layer/tcp/" />
+  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/computer-network/multicast/" />
 
   
   
@@ -269,6 +269,8 @@
   
 
   
+    <link rel="alternate" href="/note/computer-network/multicast/index.xml" type="application/rss+xml" title="PanxyCris" />
+  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -277,7 +279,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://panxycris.github.io/note/computer-network/transport-layer/tcp/" />
+  <link rel="canonical" href="https://panxycris.github.io/note/computer-network/multicast/" />
 
   
   
@@ -300,18 +302,14 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="PanxyCris" />
-  <meta property="og:url" content="https://panxycris.github.io/note/computer-network/transport-layer/tcp/" />
-  <meta property="og:title" content="TCP | PanxyCris" />
-  <meta property="og:description" content="Transport Control Protocol" /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://panxycris.github.io/note/computer-network/multicast/" />
+  <meta property="og:title" content="Multicast | PanxyCris" />
+  <meta property="og:description" content="Master" /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta
-        property="article:published_time"
-        content="2021-12-12T00:00:00&#43;00:00"
-      />
+      <meta property="og:updated_time" content="2021-12-17T00:00:00&#43;00:00" />
     
-    <meta property="article:modified_time" content="2021-12-12T00:00:00&#43;00:00">
   
 
   
@@ -322,17 +320,15 @@
 
   
 
-  
 
 
 
 
-
-  <title>TCP | PanxyCris</title>
+  <title>Multicast | PanxyCris</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="c2aa9920fb1cbbe271d8826b67116eab" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="03a4eb9dc3c0020269edb71ca7c8d36b" >
 
   
   
@@ -638,7 +634,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          Transport Layer
+          Computer Network
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -764,7 +760,7 @@
       
 
 
-  <li class="active"><a href="/note/computer-network/transport-layer/tcp/">TCP</a></li>
+  <li class=""><a href="/note/computer-network/transport-layer/tcp/">TCP</a></li>
 
 
 
@@ -827,7 +823,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/note/computer-network/multicast/">Multicast</a>
+        <a class="docs-toc-link  active" href="/note/computer-network/multicast/">Multicast</a>
     
 
     
@@ -863,11 +859,10 @@
     <li>
       <ul>
         <li><a href="#feature">Feature</a></li>
-        <li><a href="#tcp-header">TCP Header</a></li>
-        <li><a href="#tcp-connection">TCP Connection</a></li>
-        <li><a href="#error-control">Error Control</a></li>
-        <li><a href="#interactive-data-flow">Interactive data flow</a></li>
-        <li><a href="#congestion-control">Congestion Control</a></li>
+        <li><a href="#multicast-addressing">Multicast addressing</a></li>
+        <li><a href="#multicast-group-management">Multicast group management</a></li>
+        <li><a href="#multicast-routing">Multicast routing</a></li>
+        <li><a href="#multicast-application">Multicast application</a></li>
       </ul>
     </li>
   </ul>
@@ -887,7 +882,6 @@
   <nav class="d-none d-md-flex" aria-label="breadcrumb">
     <ol class="breadcrumb">
       
-  
   
   
   
@@ -919,17 +913,8 @@
   </li>
 
 
-  <li class="breadcrumb-item">
-    <a href="/note/computer-network/transport-layer/">
-      
-        Transport Layer
-      
-    </a>
-  </li>
-
-
       <li class="breadcrumb-item active" aria-current="page">
-        TCP
+        Multicast
       </li>
     </ol>
   </nav>
@@ -937,156 +922,62 @@
 
           
 
-          <h1>TCP</h1>
+          <h1>Multicast</h1>
 
           <div class="article-style">
-            <p>Transport Control Protocol</p>
+            <p>One-to-many or many-to-many communications</p>
 <h3 id="feature">Feature</h3>
 <ul>
-<li>Connection-oriented, reliable</li>
-<li>Unicast only</li>
-<li>Stream oriented</li>
-<li>Error Control, Flow Control, Congestion Control</li>
+<li>Use less network resources</li>
+<li>Implement with the help of IGMP and additional routing protocols</li>
 </ul>
-<h3 id="tcp-header">TCP Header</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="" srcset="
-               /note/computer-network/transport-layer/tcp/TCP%20Header_hua3d9dce47e5b42c0179df68bbfbdba33_46648_2c07b13bfee7ff6f325ab01a8c9f1462.png 400w,
-               /note/computer-network/transport-layer/tcp/TCP%20Header_hua3d9dce47e5b42c0179df68bbfbdba33_46648_021ca28d9a382ac97fa54c0808fe751d.png 760w,
-               /note/computer-network/transport-layer/tcp/TCP%20Header_hua3d9dce47e5b42c0179df68bbfbdba33_46648_1200x1200_fit_lanczos_3.png 1200w"
-               src="/note/computer-network/transport-layer/tcp/TCP%20Header_hua3d9dce47e5b42c0179df68bbfbdba33_46648_2c07b13bfee7ff6f325ab01a8c9f1462.png"
-               width="570"
-               height="298"
-               loading="lazy" data-zoomable /></div>
-  </div></figure>
+<h3 id="multicast-addressing">Multicast addressing</h3>
 <ul>
-<li>Sequence number: Identifies the byte in the stream of data from the sending TCP to the receiving TCP that the first byte of data in this segment represents(offset)</li>
-<li>Acknowledgement Number: The next sequence number that the host wants to receive</li>
-<li>Flags
+<li>Defined by a class D IP address
 <ul>
-<li>URG: an urgent message is being carried.</li>
-<li>ACK: the acknowledgment number is valid.</li>
-<li>PSH: a notification from the sender to the receiver that it should pass all the data received to the application as soon as possible.</li>
-<li>RST: signals a request to reset the TCP connection.</li>
-<li>SYN: set when initiating a connection.</li>
-<li>FIN: set to terminate a connection.</li>
+<li>Leading bits: 1110 → 224.0.0.0 I – 239.255.255.255</li>
+</ul>
+</li>
+<li>Ethernet multicast address(48-bit)
+<ul>
+<li>(1-bit) set if the address is an Ethernet multicast address</li>
+<li>(23-bit) vendor component</li>
+<li>(24-bit) group identifier: assigned by vendor</li>
 </ul>
 </li>
 </ul>
-<h3 id="tcp-connection">TCP Connection</h3>
-<h4 id="establishment">Establishment</h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="" srcset="
-               /note/computer-network/transport-layer/tcp/TCP%20Establishment_hu66203eec0205b708c60acc647ae66ee5_47122_bc4e972b1f0574fe14e6437bda0603f8.png 400w,
-               /note/computer-network/transport-layer/tcp/TCP%20Establishment_hu66203eec0205b708c60acc647ae66ee5_47122_43c1c87887aa0f2ce22067d1f502d470.png 760w,
-               /note/computer-network/transport-layer/tcp/TCP%20Establishment_hu66203eec0205b708c60acc647ae66ee5_47122_1200x1200_fit_lanczos_3.png 1200w"
-               src="/note/computer-network/transport-layer/tcp/TCP%20Establishment_hu66203eec0205b708c60acc647ae66ee5_47122_bc4e972b1f0574fe14e6437bda0603f8.png"
-               width="562"
-               height="478"
-               loading="lazy" data-zoomable /></div>
-  </div></figure>
-<h4 id="termination">Termination</h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="" srcset="
-               /note/computer-network/transport-layer/tcp/TCP%20Termination_hu032c00bd0e2850496a99e3cfa1605c5e_78513_c32abfc067aae8e1b4fe109ae7b6e521.png 400w,
-               /note/computer-network/transport-layer/tcp/TCP%20Termination_hu032c00bd0e2850496a99e3cfa1605c5e_78513_0017411ffa4453d86fd6c218f1ee9a3a.png 760w,
-               /note/computer-network/transport-layer/tcp/TCP%20Termination_hu032c00bd0e2850496a99e3cfa1605c5e_78513_1200x1200_fit_lanczos_3.png 1200w"
-               src="/note/computer-network/transport-layer/tcp/TCP%20Termination_hu032c00bd0e2850496a99e3cfa1605c5e_78513_c32abfc067aae8e1b4fe109ae7b6e521.png"
-               width="554"
-               height="536"
-               loading="lazy" data-zoomable /></div>
-  </div></figure>
-<h3 id="error-control">Error Control</h3>
-<p>Each data byte has a unique sequence number. The receiver uses <strong>cumulative acknowledgments</strong>(by default) to inform the sender of the last correctly received byte <strong>in order</strong>.</p>
-<p>Error detection is performed in each layer of the TCP/IP stack by means of header checksums, and errored packets are dropped.</p>
-<h4 id="selective-acknowledgment-sack">Selective acknowledgment (SACK)</h4>
-<p>SACK is used to report multiple lost segments. The receiver uses the TCP SACK option to acknowledge all segments that has been successfully received in the last window of segments, and the sender can retransmit more than one lost segment at a time.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="" srcset="
-               /note/computer-network/transport-layer/tcp/SACK_hu8c5fb22782cc185c16bdd144bbae0fd8_41653_e3badf4c1f5caafc3e79b78ba4787a71.png 400w,
-               /note/computer-network/transport-layer/tcp/SACK_hu8c5fb22782cc185c16bdd144bbae0fd8_41653_975245b4ed155834b59a768a6ca47857.png 760w,
-               /note/computer-network/transport-layer/tcp/SACK_hu8c5fb22782cc185c16bdd144bbae0fd8_41653_1200x1200_fit_lanczos_3.png 1200w"
-               src="/note/computer-network/transport-layer/tcp/SACK_hu8c5fb22782cc185c16bdd144bbae0fd8_41653_e3badf4c1f5caafc3e79b78ba4787a71.png"
-               width="582"
-               height="215"
-               loading="lazy" data-zoomable /></div>
-  </div></figure>
-<p>In this example, left edge of SACK is seq=1126009, which means that seq = 1126009 is received, but seq = 1126009-1448 = 1124561 is lost, so the sender will retransmit this datagram.</p>
-<h4 id="retransmisson-timer">Retransmisson Timer</h4>
-<p>TCP will also set a Timer to measure whether the sended message will be received. If no ack received when the timer expires, this segment will be retransmitted.</p>
+<p><strong>Multicast address mapping</strong></p>
 <ul>
-<li>The Timer value should be larger than but of the same order of magnitude as a measurement of the <strong>Round Trip Time (RTT)</strong>.</li>
-<li>TCP continuously measure the RTT and updates the retransmission timer value, defined as <strong>Retransmission TimeOut (RTO)</strong>, dynamically.</li>
+<li>For sender, IP multicasting directly mapped to an Ethernet multicast address
+<ul>
+<li>Range → 01:00:5e:00:00:00 - 01:00:5e:7f:ff:ff</li>
+<li>No need for ARP request and reply</li>
+<li>Only the last 23 bits of the IP address is mapped into the multicast MAC address</li>
 </ul>
-<h3 id="interactive-data-flow">Interactive data flow</h3>
-<p>TCP supports interactive data flow for interactive user applications, such as <strong>telnet</strong> and <strong>ssh</strong>.</p>
-<p>To reduce the number of small segments to be more efficient:</p>
-<h4 id="delayed-ack">Delayed ACK</h4>
-<p>Set a Timer: goes off every K ms. Send all acks every K ms.</p>
-<h4 id="nagle-algorithm">Nagle Algorithm</h4>
-<p>Set a Window: when reach MSS, all buffered bytes are sent in a single segment.</p>
-<h3 id="congestion-control">Congestion Control</h3>
-<p>Sliding window buffer for both sender(cwnd) and receiver(awnd/rwnd).</p>
+</li>
+<li>For receiver, the interface should then be able to receive all the multicast IP datagrams
+<ul>
+<li>The IP module maintains a list of group memberships, which is updated when an upper layer process joins or leaves a group.</li>
+<li>Packet filtering: the interface card may receive multicast frames in which the host is really not interested.</li>
+</ul>
+</li>
+</ul>
+<h3 id="multicast-group-management">Multicast group management</h3>
+<ul>
+<li>Dynamic: Users may join and leave the group during the multicast session</li>
+<li>For router: Keep track of the memberships of all the multicast groups</li>
+<li>For participant host: Know who else is in the group</li>
+</ul>
+<p><strong>IGMP</strong></p>
+<p>Internet Group Management Protocol</p>
+<p>Used by multicast routers to keep track of membership in a multicast group</p>
+<h4 id="function">Function</h4>
+<ul>
+<li>Joining a multicast group</li>
+<li>Query membership</li>
+<li>Send membership reports</li>
+</ul>
+<h4 id="igmp-packet-format">IGMP Packet Format</h4>
 
 
 
@@ -1104,15 +995,20 @@
 <figure  >
   <div class="d-flex justify-content-center">
     <div class="w-100" ><img alt="" srcset="
-               /note/computer-network/transport-layer/tcp/Congestion%20Sliding%20Window_hu8dfc25bd627be4d083284fd8d528f796_60626_fb7f10ac7835f50a8ff845a6e9d3b41b.png 400w,
-               /note/computer-network/transport-layer/tcp/Congestion%20Sliding%20Window_hu8dfc25bd627be4d083284fd8d528f796_60626_d581b52facff6eb51bdb4eddc434f30e.png 760w,
-               /note/computer-network/transport-layer/tcp/Congestion%20Sliding%20Window_hu8dfc25bd627be4d083284fd8d528f796_60626_1200x1200_fit_lanczos_3.png 1200w"
-               src="/note/computer-network/transport-layer/tcp/Congestion%20Sliding%20Window_hu8dfc25bd627be4d083284fd8d528f796_60626_fb7f10ac7835f50a8ff845a6e9d3b41b.png"
+               /note/computer-network/multicast/IGMP%20v1-v2_hucf9484aefec3cea3495c065efe9ff5b7_125001_d94b39f6ecdcc322e1a8901ca29a0648.png 400w,
+               /note/computer-network/multicast/IGMP%20v1-v2_hucf9484aefec3cea3495c065efe9ff5b7_125001_98993b7f598e1766ac01a304698d1d58.png 760w,
+               /note/computer-network/multicast/IGMP%20v1-v2_hucf9484aefec3cea3495c065efe9ff5b7_125001_1200x1200_fit_lanczos_3.png 1200w"
+               src="/note/computer-network/multicast/IGMP%20v1-v2_hucf9484aefec3cea3495c065efe9ff5b7_125001_d94b39f6ecdcc322e1a8901ca29a0648.png"
                width="760"
-               height="282"
+               height="238"
                loading="lazy" data-zoomable /></div>
   </div></figure>
-<p>Here is a graph to show that the process of congestion control(for sender).</p>
+<ul>
+<li>IGMP messages are carried in IP datagrams with protocol number.</li>
+<li>IGMPv1 and IGMPv2 messages are only 8 bytes long.</li>
+<li>Max Response Time: applicable only to membership query messages, specifying the maximum allowed time before sending report message in units of 1/10 sec.</li>
+</ul>
+<p>IGMPv3:</p>
 
 
 
@@ -1130,36 +1026,155 @@
 <figure  >
   <div class="d-flex justify-content-center">
     <div class="w-100" ><img alt="" srcset="
-               /note/computer-network/transport-layer/tcp/Congestion%20Control_huaa8940d965e19db238c3014e96b6d1fc_93525_529b12dc80022e7085c9d23393d141ea.png 400w,
-               /note/computer-network/transport-layer/tcp/Congestion%20Control_huaa8940d965e19db238c3014e96b6d1fc_93525_bdecdcaa9c881596960913c5e3ce02dc.png 760w,
-               /note/computer-network/transport-layer/tcp/Congestion%20Control_huaa8940d965e19db238c3014e96b6d1fc_93525_1200x1200_fit_lanczos_3.png 1200w"
-               src="/note/computer-network/transport-layer/tcp/Congestion%20Control_huaa8940d965e19db238c3014e96b6d1fc_93525_529b12dc80022e7085c9d23393d141ea.png"
+               /note/computer-network/multicast/IGMP%20v3_huac10b3fa86bece5d21e3215029e99618_94344_aa1b2a3361a87742723791e1f1c9549e.png 400w,
+               /note/computer-network/multicast/IGMP%20v3_huac10b3fa86bece5d21e3215029e99618_94344_98ce55de837d27f12e388ddf38ba432d.png 760w,
+               /note/computer-network/multicast/IGMP%20v3_huac10b3fa86bece5d21e3215029e99618_94344_1200x1200_fit_lanczos_3.png 1200w"
+               src="/note/computer-network/multicast/IGMP%20v3_huac10b3fa86bece5d21e3215029e99618_94344_aa1b2a3361a87742723791e1f1c9549e.png"
                width="760"
-               height="578"
+               height="269"
                loading="lazy" data-zoomable /></div>
   </div></figure>
-<p>Serveral phases:</p>
-<ol>
-<li>Slow Start(cwnd $\leq$ ssthresh):
+<p>For IGMPv3, it allows hosts to specify a list of hosts from which they want to receive traffic from. Traffic from other hosts is then blocked.</p>
+<p>Three type of queries:</p>
 <ul>
-<li>cwnd = cwnd + segsize(= MSS), when receives an ACK</li>
-<li>Exponentially increases</li>
-<li>When timeout, it enters this phase again</li>
+<li>General Query: Group address set to 0 when sent; group address is specified when replied</li>
+<li>Group-Specific Query: Group address set to the address being queried – introduced by IGMPv2</li>
+<li>Group-and-Source-Specific Query: Both group address and source address(es) being queried are specified – introduced by IGMPv3</li>
+</ul>
+<h4 id="igmp-working-process">IGMP Working Process</h4>
+<p>Router</p>
+<ul>
+<li>Periodically send host membership queries to discover which multicast groups have members on their attached local networks.
+<ul>
+<li>Interval: 60 second by default.</li>
+<li>Queries are sent to the class D address <strong>224.0.0.1</strong> (all host in the subnet) with a <strong>TTL of 1</strong>.</li>
+<li>Use <strong>0.0.0.0</strong> as the Group Address for all multicast groups</li>
 </ul>
 </li>
-<li>Congestion Avoidance(cwnd &gt; ssthresh):
+<li>Maintains a multicast group membership table
 <ul>
-<li>cwnd = cwnd + segsize x segsize / cwnd + segsize / 8</li>
-<li>Linearly increases</li>
+<li>Record which groups have members in the local networks attached to each interface of the router</li>
+<li>Decide which ports to forward a multicast datagram to</li>
 </ul>
 </li>
-<li>Fast Recovery(Three duplicate ACKs are received)
+</ul>
+<p>Host</p>
 <ul>
-<li>ssthresh = max [ 2 segsize, min (cwnd, awnd)/2 ]</li>
-<li>Retransmit a segment if allowed by the window size</li>
+<li>Responds to a IGMP query with one IGMP report for each multicast group in which it is a member
+<ul>
+<li>The destination IP address is identical to the multicast group it is reporting on</li>
+<li>Avoid of a flood of reports: delay an IGMP report for a random amount of time</li>
+<li>Overhears a report reporting on the same group address: cancel the reports</li>
 </ul>
 </li>
-</ol>
+<li>Leaves a multicast group
+<ul>
+<li>IGMPv1: Do nothing, membership in router will be removed when expires</li>
+<li>Later version: Report to all routers (with Type value of 0x17)</li>
+</ul>
+</li>
+</ul>
+<h3 id="multicast-routing">Multicast routing</h3>
+<h4 id="two-modes-of-multicast-routing-protocol">Two modes of multicast routing protocol</h4>
+<ul>
+<li>Source-Tree
+<ul>
+<li>Dijkstra’s algorithm to find Shortest Path Tree</li>
+<li>Pro: Multicast datagrams from a source are distributed in the shortest path tree → a better delay performance</li>
+<li>Con: Each multicast router has to maintain state for all sources in all the multicast groups. Too costly for a large number of multicast sessions</li>
+</ul>
+</li>
+<li>Shared-Tree
+<ul>
+<li>The performance depends on how the Rendezvous Point (RP) is chosen</li>
+<li>Pro: Greatly reduce the number of states in the routers</li>
+<li>Con: Traffic concentration problem, large delay and jitter</li>
+</ul>
+</li>
+</ul>
+<h4 id="protocols">Protocols</h4>
+<ul>
+<li>DVMRP(Distance Vector Multicast Routing Protocol)
+<ul>
+<li>Distance vector based multicast, count-to-infinity as RIP</li>
+<li>Source-Tree</li>
+<li>Flood-and-prune approach</li>
+<li>TTL Threshold: TTL &lt; Threshold → A router will not forward a multicast/broadcast datagram</li>
+</ul>
+</li>
+<li>MOSPF(Multicast Extension to OSPF)
+<ul>
+<li>Link State algorithm for intra-domain multicast routing protocol, like OSPF</li>
+<li>Source-Tree</li>
+<li>A new group membership LSA (Link–State Advertisement): include group membership in link information</li>
+</ul>
+</li>
+<li>CBT(Core Based Tree)
+<ul>
+<li>Shared-Tree</li>
+<li>An hierarchical structure: Core router First, All other tree routers request to join the core to build the routing table for each multicast group</li>
+<li>Not broadcast the first datagram
+<ul>
+<li>Traffic load is greatly reduced</li>
+<li>Suitable for large-scale and dense system</li>
+</ul>
+</li>
+<li>Routing Table size is reduced
+<ul>
+<li>A router only needs to store information for each multicast group</li>
+<li>The number of CBT router entries is the same as the number of active groups</li>
+</ul>
+</li>
+<li>Traffic Concentration Problem</li>
+</ul>
+</li>
+<li>PIM(Protocol Independent Multicast)
+<ul>
+<li>Two Modes
+<ul>
+<li>Dense mode: Source-based trees used, works like DVMRP</li>
+<li>Sparse mode: A group-shared tree built from a RP (with backups), like CBT</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="multicast-application">Multicast application</h3>
+<ul>
+<li>DNS multicast query
+<ul>
+<li>provides a way to locate nearby domain name servers without knowing their IP addresses. The Recursion Desired bit should not be set in order to avoid excessive load on both network and DNS servers.</li>
+</ul>
+</li>
+<li>RIPv2
+<ul>
+<li>multicast RIP messages only to RIP routers (224.0.0.9) instead of to all routers in RIPv1.</li>
+</ul>
+</li>
+<li><a href="../application-layer/snmp/">SNMP</a>
+<ul>
+<li>support group communication between managers and broker agents.</li>
+</ul>
+</li>
+<li>ICMP
+<ul>
+<li>router solicitation and router advertisement: a host can multicast an ICMP router solicitation massage to all routers in this subnet (specified by 224.0.0.2) after bootstrapping to build its routing table.</li>
+</ul>
+</li>
+<li>IP Multimedia Streaming for video teleconferencing, Internet audio, IPTV, and video streaming.</li>
+<li>IPTV
+<ul>
+<li>Leverage household access and existing IP network to provide bundled phone, internet, TV (triple play) services</li>
+<li>IGMP Snooping → for broadcast
+<ul>
+<li>Learn the multicast group membership</li>
+<li>Only forwarded to ports that have members of that group(no need for broadcast)</li>
+<li>Significantly reduce multicast traffic delivered to or passing through downstream devices</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
           </div>
 
           
@@ -1173,12 +1188,6 @@
 <div class="post-nav">
   
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/note/computer-network/transport-layer/udp/" rel="prev">UDP</a>
-  </div>
-  
 </div>
 
           </div>
@@ -1186,7 +1195,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Dec 12, 2021</p>
+          <p>Last updated on Dec 17, 2021</p>
 
           
 

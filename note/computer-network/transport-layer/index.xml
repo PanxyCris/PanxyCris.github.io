@@ -22,6 +22,7 @@
 &lt;ul&gt;
 &lt;li&gt;Connection-oriented, reliable&lt;/li&gt;
 &lt;li&gt;Unicast only&lt;/li&gt;
+&lt;li&gt;Stream oriented&lt;/li&gt;
 &lt;li&gt;Error Control, Flow Control, Congestion Control&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;tcp-header&#34;&gt;TCP Header&lt;/h3&gt;
@@ -218,7 +219,7 @@
 &lt;ol&gt;
 &lt;li&gt;Slow Start(cwnd $\leq$ ssthresh):
 &lt;ul&gt;
-&lt;li&gt;cwnd = cwnd + segsize(= MSS)&lt;/li&gt;
+&lt;li&gt;cwnd = cwnd + segsize(= MSS), when receives an ACK&lt;/li&gt;
 &lt;li&gt;Exponentially increases&lt;/li&gt;
 &lt;li&gt;When timeout, it enters this phase again&lt;/li&gt;
 &lt;/ul&gt;
@@ -236,6 +237,56 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>UDP</title>
+      <link>https://panxycris.github.io/note/computer-network/transport-layer/udp/</link>
+      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/computer-network/transport-layer/udp/</guid>
+      <description>&lt;p&gt;User Datagram Protocol&lt;/p&gt;
+&lt;h3 id=&#34;feature&#34;&gt;Feature&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Connectionless, unreliable&lt;/li&gt;
+&lt;li&gt;Unicast and multicast&lt;/li&gt;
+&lt;li&gt;Datagram oriented&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;udp-format&#34;&gt;UDP Format&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/computer-network/transport-layer/udp/UDP%20Format_hu89ef0a656cae8465cce5751e160b22d8_91531_a0209e157267e9a5b6824c52eb84ec10.png 400w,
+               /note/computer-network/transport-layer/udp/UDP%20Format_hu89ef0a656cae8465cce5751e160b22d8_91531_c9fba1d2bbe2e46e2198a1208a02388d.png 760w,
+               /note/computer-network/transport-layer/udp/UDP%20Format_hu89ef0a656cae8465cce5751e160b22d8_91531_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/computer-network/transport-layer/udp/UDP%20Format_hu89ef0a656cae8465cce5751e160b22d8_91531_a0209e157267e9a5b6824c52eb84ec10.png&#34;
+               width=&#34;760&#34;
+               height=&#34;283&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;Port numbers
+&lt;ul&gt;
+&lt;li&gt;Identify sending and receiving applications (processes). The maximum value for a port number is 216-1= 65535&lt;/li&gt;
+&lt;li&gt;1-1023: Well-known, used by servers, fixed&lt;/li&gt;
+&lt;li&gt;1024-49151: Registered, used by ordinary user processes&lt;/li&gt;
+&lt;li&gt;$&amp;gt;$49151: Dynamic/private, used by clients, randomly picked&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>
