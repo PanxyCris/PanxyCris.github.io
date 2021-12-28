@@ -5,29 +5,12 @@
     <link>https://panxycris.github.io/</link>
       <atom:link href="https://panxycris.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>PanxyCris</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 17 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 28 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>PanxyCris</title>
       <link>https://panxycris.github.io/</link>
     </image>
-    
-    <item>
-      <title>Binary Search</title>
-      <link>https://panxycris.github.io/note/leetcode/binary-search/</link>
-      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://panxycris.github.io/note/leetcode/binary-search/</guid>
-      <description>&lt;p&gt;A method in Time complexity of $O(nlogn)$&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Due to the time complexity of binary search is $O(nlogn)$ , which greatly improves the efficiency of algorithm, it appears in the problems frequently.&lt;/li&gt;
-&lt;li&gt;The data always keeps some sequence, like the number order.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;situation&#34;&gt;Situation&lt;/h2&gt;
-&lt;p&gt;The data sequence always have a special order, like number: 1, 2, 3&amp;hellip;（So we can choose either left or right part to find the target）&lt;/p&gt;
-&lt;h2 id=&#34;time-complexity&#34;&gt;Time complexity&lt;/h2&gt;
-&lt;p&gt;$O(nlogn)$&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Scalability</title>
@@ -93,7 +76,14 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../nslookup_google.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /note/system-design/scalability/nslookup_google_hu15bd37a2029b33082ba983a1806f93bd_95881_3e02cf999951f569633ab8a8a768a443.png 400w,
+               /note/system-design/scalability/nslookup_google_hu15bd37a2029b33082ba983a1806f93bd_95881_1cded85855b11767b478f4e3ec7e18f9.png 760w,
+               /note/system-design/scalability/nslookup_google_hu15bd37a2029b33082ba983a1806f93bd_95881_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://panxycris.github.io/note/system-design/scalability/nslookup_google_hu15bd37a2029b33082ba983a1806f93bd_95881_3e02cf999951f569633ab8a8a768a443.png&#34;
+               width=&#34;760&#34;
+               height=&#34;473&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;In this lookup search, we can see that multiple times search &lt;code&gt;www.google.com&lt;/code&gt; we can get different IP addresses from DNS servers. It permutes the servers in the list one by one.&lt;/p&gt;
 &lt;p&gt;But also, load balancer for DNS attempts to re-order the list to give priority to numerically &amp;ldquo;closer&amp;rdquo; networks according to different locations.&lt;/p&gt;
@@ -157,6 +147,42 @@
 &lt;li&gt;Additional I/O and CPU usage to support the data replication process&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;asynchronism&#34;&gt;Asynchronism&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>Consistency</title>
+      <link>https://panxycris.github.io/note/system-design/cap/consistency/</link>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/system-design/cap/consistency/</guid>
+      <description>&lt;p&gt;In order to have a consistent data, we always have to synchronize multiple copies of the same data.&lt;/p&gt;
+&lt;h3 id=&#34;weak-consistency&#34;&gt;Weak Consistency&lt;/h3&gt;
+&lt;p&gt;After a write, reads may or may not see it.&lt;/p&gt;
+&lt;h3 id=&#34;eventual-consistency&#34;&gt;Eventual Consistency&lt;/h3&gt;
+&lt;p&gt;After a write, reads eventually will see it.&lt;/p&gt;
+&lt;h3 id=&#34;strong-consistency&#34;&gt;Strong Consistency&lt;/h3&gt;
+&lt;p&gt;After a write, reads will see it.&lt;/p&gt;
+&lt;p&gt;|| Weak Consistency | Eventual Consistency | Strong Consistency |
+|| &amp;mdash;- | &amp;mdash;- | &amp;mdash;- |
+| After a write | reads may or may not see it | reads eventually will see it | reads will see it |
+| Scenario | Real time cases such as VoIP, video chat | DNS and Email | Need Transactions system: file systems and RDBMSes |&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Binary Search</title>
+      <link>https://panxycris.github.io/note/leetcode/binary-search/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/leetcode/binary-search/</guid>
+      <description>&lt;p&gt;A method in Time complexity of $O(nlogn)$&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Due to the time complexity of binary search is $O(nlogn)$ , which greatly improves the efficiency of algorithm, it appears in the problems frequently.&lt;/li&gt;
+&lt;li&gt;The data always keeps some sequence, like the number order.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;situation&#34;&gt;Situation&lt;/h2&gt;
+&lt;p&gt;The data sequence always have a special order, like number: 1, 2, 3&amp;hellip;（So we can choose either left or right part to find the target）&lt;/p&gt;
+&lt;h2 id=&#34;time-complexity&#34;&gt;Time complexity&lt;/h2&gt;
+&lt;p&gt;$O(nlogn)$&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -587,7 +613,7 @@ and other network devices.&lt;/p&gt;
     <item>
       <title>TCP</title>
       <link>https://panxycris.github.io/note/computer-network/transport-layer/tcp/</link>
-      <pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://panxycris.github.io/note/computer-network/transport-layer/tcp/</guid>
       <description>&lt;p&gt;Transport Control Protocol&lt;/p&gt;
 &lt;h3 id=&#34;feature&#34;&gt;Feature&lt;/h3&gt;
@@ -761,7 +787,8 @@ and other network devices.&lt;/p&gt;
                height=&#34;282&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
-&lt;p&gt;Here is a graph to show that the process of congestion control(for sender).&lt;/p&gt;
+&lt;p&gt;For sender:&lt;/p&gt;
+&lt;p&gt;Here is a graph to show that the process of congestion control:&lt;/p&gt;
 
 
 
@@ -808,7 +835,34 @@ and other network devices.&lt;/p&gt;
 &lt;li&gt;Retransmit a segment if allowed by the window size&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</description>
+&lt;/ol&gt;
+&lt;p&gt;For receiver:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Event&lt;/th&gt;
+&lt;th&gt;Action&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;In-order segment, already ACKed&lt;/td&gt;
+&lt;td&gt;delayed ACK, wait up to 500ms for another segment, if not, send ACK&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;In-order segment, ACK pending&lt;/td&gt;
+&lt;td&gt;Immediately send single cumulative ACK&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Out-of-order, Gap detected&lt;/td&gt;
+&lt;td&gt;Immediately send &lt;strong&gt;duplicate ACK&lt;/strong&gt;, indicating next expected ACK&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Partially or completely fills gap&lt;/td&gt;
+&lt;td&gt;Immediately send ACK, provided that segment starts at lower end of gap&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
     </item>
     
     <item>

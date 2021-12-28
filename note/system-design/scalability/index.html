@@ -332,7 +332,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="0cc0484c6e1072fdd2c6f0aec2fddb44" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="ea6d7908827063c762308c6a06a5a9c9" >
 
   
   
@@ -701,6 +701,37 @@
 
   <li class="active"><a href="/note/system-design/scalability/">Scalability</a></li>
 
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/note/system-design/cap/">CAP</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/note/system-design/cap/consistency/">Consistency</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
       
         </ul>
       
@@ -867,7 +898,14 @@
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="../nslookup_google.png" alt="" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img alt="" srcset="
+               /note/system-design/scalability/nslookup_google_hu15bd37a2029b33082ba983a1806f93bd_95881_3e02cf999951f569633ab8a8a768a443.png 400w,
+               /note/system-design/scalability/nslookup_google_hu15bd37a2029b33082ba983a1806f93bd_95881_1cded85855b11767b478f4e3ec7e18f9.png 760w,
+               /note/system-design/scalability/nslookup_google_hu15bd37a2029b33082ba983a1806f93bd_95881_1200x1200_fit_lanczos_3.png 1200w"
+               src="/note/system-design/scalability/nslookup_google_hu15bd37a2029b33082ba983a1806f93bd_95881_3e02cf999951f569633ab8a8a768a443.png"
+               width="760"
+               height="473"
+               loading="lazy" data-zoomable /></div>
   </div></figure>
 <p>In this lookup search, we can see that multiple times search <code>www.google.com</code> we can get different IP addresses from DNS servers. It permutes the servers in the list one by one.</p>
 <p>But also, load balancer for DNS attempts to re-order the list to give priority to numerically &ldquo;closer&rdquo; networks according to different locations.</p>

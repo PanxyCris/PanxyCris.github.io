@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CAP | PanxyCris</title>
+    <link>https://panxycris.github.io/note/system-design/cap/</link>
+      <atom:link href="https://panxycris.github.io/note/system-design/cap/index.xml" rel="self" type="application/rss+xml" />
+    <description>CAP</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 28 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>CAP</title>
+      <link>https://panxycris.github.io/note/system-design/cap/</link>
+    </image>
+    
+    <item>
+      <title>Consistency</title>
+      <link>https://panxycris.github.io/note/system-design/cap/consistency/</link>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/system-design/cap/consistency/</guid>
+      <description>&lt;p&gt;In order to have a consistent data, we always have to synchronize multiple copies of the same data.&lt;/p&gt;
+&lt;h3 id=&#34;weak-consistency&#34;&gt;Weak Consistency&lt;/h3&gt;
+&lt;p&gt;After a write, reads may or may not see it.&lt;/p&gt;
+&lt;h3 id=&#34;eventual-consistency&#34;&gt;Eventual Consistency&lt;/h3&gt;
+&lt;p&gt;After a write, reads eventually will see it.&lt;/p&gt;
+&lt;h3 id=&#34;strong-consistency&#34;&gt;Strong Consistency&lt;/h3&gt;
+&lt;p&gt;After a write, reads will see it.&lt;/p&gt;
+&lt;p&gt;|| Weak Consistency | Eventual Consistency | Strong Consistency |
+|| &amp;mdash;- | &amp;mdash;- | &amp;mdash;- |
+| After a write | reads may or may not see it | reads eventually will see it | reads will see it |
+| Scenario | Real time cases such as VoIP, video chat | DNS and Email | Need Transactions system: file systems and RDBMSes |&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
