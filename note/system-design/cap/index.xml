@@ -24,10 +24,30 @@
 &lt;p&gt;After a write, reads eventually will see it.&lt;/p&gt;
 &lt;h3 id=&#34;strong-consistency&#34;&gt;Strong Consistency&lt;/h3&gt;
 &lt;p&gt;After a write, reads will see it.&lt;/p&gt;
-&lt;p&gt;|| Weak Consistency | Eventual Consistency | Strong Consistency |
-|| &amp;mdash;- | &amp;mdash;- | &amp;mdash;- |
-| After a write | reads may or may not see it | reads eventually will see it | reads will see it |
-| Scenario | Real time cases such as VoIP, video chat | DNS and Email | Need Transactions system: file systems and RDBMSes |&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Weak Consistency&lt;/th&gt;
+&lt;th&gt;Eventual Consistency&lt;/th&gt;
+&lt;th&gt;Strong Consistency&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;After a write&lt;/td&gt;
+&lt;td&gt;reads may or may not see it&lt;/td&gt;
+&lt;td&gt;reads eventually will see it&lt;/td&gt;
+&lt;td&gt;reads will see it&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Scenario&lt;/td&gt;
+&lt;td&gt;Real time cases such as VoIP, video chat&lt;/td&gt;
+&lt;td&gt;DNS and Email&lt;/td&gt;
+&lt;td&gt;Need Transactions system: file systems and RDBMSes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     

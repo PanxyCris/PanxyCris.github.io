@@ -150,25 +150,6 @@
     </item>
     
     <item>
-      <title>Consistency</title>
-      <link>https://panxycris.github.io/note/system-design/cap/consistency/</link>
-      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://panxycris.github.io/note/system-design/cap/consistency/</guid>
-      <description>&lt;p&gt;In order to have a consistent data, we always have to synchronize multiple copies of the same data.&lt;/p&gt;
-&lt;h3 id=&#34;weak-consistency&#34;&gt;Weak Consistency&lt;/h3&gt;
-&lt;p&gt;After a write, reads may or may not see it.&lt;/p&gt;
-&lt;h3 id=&#34;eventual-consistency&#34;&gt;Eventual Consistency&lt;/h3&gt;
-&lt;p&gt;After a write, reads eventually will see it.&lt;/p&gt;
-&lt;h3 id=&#34;strong-consistency&#34;&gt;Strong Consistency&lt;/h3&gt;
-&lt;p&gt;After a write, reads will see it.&lt;/p&gt;
-&lt;p&gt;|| Weak Consistency | Eventual Consistency | Strong Consistency |
-|| &amp;mdash;- | &amp;mdash;- | &amp;mdash;- |
-| After a write | reads may or may not see it | reads eventually will see it | reads will see it |
-| Scenario | Real time cases such as VoIP, video chat | DNS and Email | Need Transactions system: file systems and RDBMSes |&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Binary Search</title>
       <link>https://panxycris.github.io/note/leetcode/binary-search/</link>
       <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
@@ -183,6 +164,45 @@
 &lt;p&gt;The data sequence always have a special order, like number: 1, 2, 3&amp;hellip;（So we can choose either left or right part to find the target）&lt;/p&gt;
 &lt;h2 id=&#34;time-complexity&#34;&gt;Time complexity&lt;/h2&gt;
 &lt;p&gt;$O(nlogn)$&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Consistency</title>
+      <link>https://panxycris.github.io/note/system-design/cap/consistency/</link>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/system-design/cap/consistency/</guid>
+      <description>&lt;p&gt;In order to have a consistent data, we always have to synchronize multiple copies of the same data.&lt;/p&gt;
+&lt;h3 id=&#34;weak-consistency&#34;&gt;Weak Consistency&lt;/h3&gt;
+&lt;p&gt;After a write, reads may or may not see it.&lt;/p&gt;
+&lt;h3 id=&#34;eventual-consistency&#34;&gt;Eventual Consistency&lt;/h3&gt;
+&lt;p&gt;After a write, reads eventually will see it.&lt;/p&gt;
+&lt;h3 id=&#34;strong-consistency&#34;&gt;Strong Consistency&lt;/h3&gt;
+&lt;p&gt;After a write, reads will see it.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Weak Consistency&lt;/th&gt;
+&lt;th&gt;Eventual Consistency&lt;/th&gt;
+&lt;th&gt;Strong Consistency&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;After a write&lt;/td&gt;
+&lt;td&gt;reads may or may not see it&lt;/td&gt;
+&lt;td&gt;reads eventually will see it&lt;/td&gt;
+&lt;td&gt;reads will see it&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Scenario&lt;/td&gt;
+&lt;td&gt;Real time cases such as VoIP, video chat&lt;/td&gt;
+&lt;td&gt;DNS and Email&lt;/td&gt;
+&lt;td&gt;Need Transactions system: file systems and RDBMSes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
     <item>

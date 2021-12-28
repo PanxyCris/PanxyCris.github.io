@@ -64,7 +64,7 @@
 Weak Consistency After a write, reads may or may not see it.
 Eventual Consistency After a write, reads eventually will see it.
 Strong Consistency After a write, reads will see it.
-|| Weak Consistency | Eventual Consistency | Strong Consistency | || &mdash;- | &mdash;- | &mdash;- | | After a write | reads may or may not see it | reads eventually will see it | reads will see it | | Scenario | Real time cases such as VoIP, video chat | DNS and Email | Need Transactions system: file systems and RDBMSes |" />
+    Weak Consistency Eventual Consistency Strong Consistency     After a write reads may or may not see it reads eventually will see it reads will see it   Scenario Real time cases such as VoIP, video chat DNS and Email Need Transactions system: file systems and RDBMSes    " />
 
   
   <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/system-design/cap/consistency/" />
@@ -310,7 +310,7 @@ Strong Consistency After a write, reads will see it.
 Weak Consistency After a write, reads may or may not see it.
 Eventual Consistency After a write, reads eventually will see it.
 Strong Consistency After a write, reads will see it.
-|| Weak Consistency | Eventual Consistency | Strong Consistency | || &mdash;- | &mdash;- | &mdash;- | | After a write | reads may or may not see it | reads eventually will see it | reads will see it | | Scenario | Real time cases such as VoIP, video chat | DNS and Email | Need Transactions system: file systems and RDBMSes |" /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    Weak Consistency Eventual Consistency Strong Consistency     After a write reads may or may not see it reads eventually will see it reads will see it   Scenario Real time cases such as VoIP, video chat DNS and Email Need Transactions system: file systems and RDBMSes    " /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -850,10 +850,30 @@ Strong Consistency After a write, reads will see it.
 <p>After a write, reads eventually will see it.</p>
 <h3 id="strong-consistency">Strong Consistency</h3>
 <p>After a write, reads will see it.</p>
-<p>|| Weak Consistency | Eventual Consistency | Strong Consistency |
-|| &mdash;- | &mdash;- | &mdash;- |
-| After a write | reads may or may not see it | reads eventually will see it | reads will see it |
-| Scenario | Real time cases such as VoIP, video chat | DNS and Email | Need Transactions system: file systems and RDBMSes |</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Weak Consistency</th>
+<th>Eventual Consistency</th>
+<th>Strong Consistency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>After a write</td>
+<td>reads may or may not see it</td>
+<td>reads eventually will see it</td>
+<td>reads will see it</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>Real time cases such as VoIP, video chat</td>
+<td>DNS and Email</td>
+<td>Need Transactions system: file systems and RDBMSes</td>
+</tr>
+</tbody>
+</table>
 
           </div>
 
