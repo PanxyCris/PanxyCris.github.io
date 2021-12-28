@@ -18,12 +18,6 @@
       <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://panxycris.github.io/note/system-design/cap/consistency/</guid>
       <description>&lt;p&gt;In order to have a consistent data, we always have to synchronize multiple copies of the same data.&lt;/p&gt;
-&lt;h3 id=&#34;weak-consistency&#34;&gt;Weak Consistency&lt;/h3&gt;
-&lt;p&gt;After a write, reads may or may not see it.&lt;/p&gt;
-&lt;h3 id=&#34;eventual-consistency&#34;&gt;Eventual Consistency&lt;/h3&gt;
-&lt;p&gt;After a write, reads eventually will see it.&lt;/p&gt;
-&lt;h3 id=&#34;strong-consistency&#34;&gt;Strong Consistency&lt;/h3&gt;
-&lt;p&gt;After a write, reads will see it.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
