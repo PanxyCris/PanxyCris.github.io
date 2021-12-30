@@ -60,10 +60,10 @@
   
     
   
-  <meta name="description" content="Different types of problems and solutions from Leetcode." />
+  <meta name="description" content="Master" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/leetcode/" />
+  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/leetcode/design/" />
 
   
   
@@ -269,7 +269,7 @@
   
 
   
-    <link rel="alternate" href="/note/leetcode/index.xml" type="application/rss+xml" title="PanxyCris" />
+    <link rel="alternate" href="/note/leetcode/design/index.xml" type="application/rss+xml" title="PanxyCris" />
   
 
   
@@ -279,7 +279,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://panxycris.github.io/note/leetcode/" />
+  <link rel="canonical" href="https://panxycris.github.io/note/leetcode/design/" />
 
   
   
@@ -302,13 +302,13 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="PanxyCris" />
-  <meta property="og:url" content="https://panxycris.github.io/note/leetcode/" />
-  <meta property="og:title" content="Leetcode | PanxyCris" />
-  <meta property="og:description" content="Different types of problems and solutions from Leetcode." /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://panxycris.github.io/note/leetcode/design/" />
+  <meta property="og:title" content="Design | PanxyCris" />
+  <meta property="og:description" content="Master" /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2021-12-07T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2021-12-30T00:00:00&#43;00:00" />
     
   
 
@@ -324,11 +324,11 @@
 
 
 
-  <title>Leetcode | PanxyCris</title>
+  <title>Design | PanxyCris</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="a0df61517a4271b7a70501b5f70b22de" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="b0eed3e97c1f6c62aefed7285d9403fa" >
 
   
   
@@ -634,7 +634,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          📚 Notes
+          Leetcode
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -671,6 +671,10 @@
 
       
       
+        
+          
+        
+      
 
 
   
@@ -684,7 +688,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/note/leetcode/">Leetcode</a>
+        <a class="docs-toc-link " href="/note/leetcode/">Leetcode</a>
     
       
         <ul class="nav docs-sidenav">
@@ -706,7 +710,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/note/leetcode/design/">Design</a>
+        <a class="docs-toc-link  active" href="/note/leetcode/design/">Design</a>
     
       
         <ul class="nav docs-sidenav">
@@ -750,7 +754,7 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#topics">Topics</a></li>
+    <li><a href="#introduction">Introduction</a></li>
   </ul>
 </nav>
 
@@ -768,6 +772,7 @@
   <nav class="d-none d-md-flex" aria-label="breadcrumb">
     <ol class="breadcrumb">
       
+  
   
   
 
@@ -789,8 +794,17 @@
   </li>
 
 
-      <li class="breadcrumb-item active" aria-current="page">
+  <li class="breadcrumb-item">
+    <a href="/note/leetcode/">
+      
         Leetcode
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Design
       </li>
     </ol>
   </nav>
@@ -798,30 +812,23 @@
 
           
 
-          <h1>Leetcode</h1>
+          <h1>Design</h1>
 
           <div class="article-style">
-            <h2 id="topics">Topics</h2>
+            <p>Design a data structure to deal with the data, usually with special algorithm complexity.</p>
+<h2 id="introduction">Introduction</h2>
+<p>This sort of problems always require us to set a part of data structures to deal with the data. We usually uses like array, map, set, stack, queue&hellip;&hellip; to meet our design requirements. In most cases we always need to assure better time complexity so that we need to have more varieties of data structures. Here I will list several problems of this field.</p>
 
 
   <ul class="list-unstyled">
     
       <li>
-        <h5><a href="/note/leetcode/binary-search/">Binary Search</a></h5>
-        <p>A method in Time complexity of $O(nlogn)$
-</p>
-      </li>
-    
-      <li>
-        <h5><a href="/note/leetcode/design/">Design</a></h5>
-        <p>Design a data structure to deal with the data, usually with special algorithm complexity.
+        <h5><a href="/note/leetcode/design/design-a-leaderboard/">Design a Leaderboard</a></h5>
+        <p>3 functions addScore(playerId, score), top(K), reset(playerId).
 </p>
       </li>
     
   </ul>
-
-
-
           </div>
 
           
@@ -842,7 +849,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Dec 7, 2021</p>
+          <p>Last updated on Dec 30, 2021</p>
 
           
 

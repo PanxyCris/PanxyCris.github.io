@@ -5,12 +5,29 @@
     <link>https://panxycris.github.io/</link>
       <atom:link href="https://panxycris.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>PanxyCris</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 28 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 30 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>PanxyCris</title>
       <link>https://panxycris.github.io/</link>
     </image>
+    
+    <item>
+      <title>Binary Search</title>
+      <link>https://panxycris.github.io/note/leetcode/binary-search/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/leetcode/binary-search/</guid>
+      <description>&lt;p&gt;A method in Time complexity of $O(nlogn)$&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Due to the time complexity of binary search is $O(nlogn)$ , which greatly improves the efficiency of algorithm, it appears in the problems frequently.&lt;/li&gt;
+&lt;li&gt;The data always keeps some sequence, like the number order.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;situation&#34;&gt;Situation&lt;/h2&gt;
+&lt;p&gt;The data sequence always have a special order, like number: 1, 2, 3&amp;hellip;（So we can choose either left or right part to find the target）&lt;/p&gt;
+&lt;h2 id=&#34;time-complexity&#34;&gt;Time complexity&lt;/h2&gt;
+&lt;p&gt;$O(nlogn)$&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Scalability</title>
@@ -150,20 +167,75 @@
     </item>
     
     <item>
-      <title>Binary Search</title>
-      <link>https://panxycris.github.io/note/leetcode/binary-search/</link>
-      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://panxycris.github.io/note/leetcode/binary-search/</guid>
-      <description>&lt;p&gt;A method in Time complexity of $O(nlogn)$&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Due to the time complexity of binary search is $O(nlogn)$ , which greatly improves the efficiency of algorithm, it appears in the problems frequently.&lt;/li&gt;
-&lt;li&gt;The data always keeps some sequence, like the number order.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;situation&#34;&gt;Situation&lt;/h2&gt;
-&lt;p&gt;The data sequence always have a special order, like number: 1, 2, 3&amp;hellip;（So we can choose either left or right part to find the target）&lt;/p&gt;
-&lt;h2 id=&#34;time-complexity&#34;&gt;Time complexity&lt;/h2&gt;
-&lt;p&gt;$O(nlogn)$&lt;/p&gt;</description>
+      <title>Design a Leaderboard</title>
+      <link>https://panxycris.github.io/note/leetcode/design/design-a-leaderboard/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/leetcode/design/design-a-leaderboard/</guid>
+      <description>&lt;p&gt;3 functions &lt;code&gt;addScore(playerId, score)&lt;/code&gt;, &lt;code&gt;top(K)&lt;/code&gt;, &lt;code&gt;reset(playerId)&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;problem-description&#34;&gt;Problem description&lt;/h3&gt;
+&lt;p&gt;Design a Leaderboard class, which has 3 functions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;addScore(playerId, score)&lt;/code&gt;: Update the leaderboard by adding score to the given player&amp;rsquo;s score. If there is no player with such id in the leaderboard, add him to the leaderboard with the given score.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;top(K)&lt;/code&gt;: Return the score sum of the top K players.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reset(playerId)&lt;/code&gt;: Reset the score of the player with the given id to 0 (in other words erase it from the leaderboard). It is guaranteed that the player was added to the leaderboard before calling this function.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Initially, the leaderboard is empty.&lt;/p&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= playerId, K &amp;lt;= 10000&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s guaranteed that &lt;code&gt;K&lt;/code&gt; is less than or equal to the current number of players.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= score &amp;lt;= 100&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;There will be at most &lt;code&gt;1000&lt;/code&gt; function calls.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;It is easy to see that we need to have a &lt;strong&gt;map&lt;/strong&gt; to keep a key-value relationship of &lt;code&gt;playerId&lt;/code&gt; and &lt;code&gt;score&lt;/code&gt;. So whether for function &lt;code&gt;addScore(playerId, score)&lt;/code&gt; or &lt;code&gt;reset(playerId)&lt;/code&gt;, we can easily to set or erase(also we can set to 0, but for better performance) the score of each player.&lt;/li&gt;
+&lt;li&gt;The core problem is &lt;code&gt;top(K)&lt;/code&gt; function, which requires us to the sum score. Due to the contraints lots of function calls, we need to assure that &lt;code&gt;top(K)&lt;/code&gt; function $\leq O(logn)$ rather than a linear time complexity. This constraint requires us for another data structure of $O(logn)$ to store the scores. In most cases, this data structure needs to be another map for score and player, but multiple scores in this case, so the value of the map needs to be an array, which makes us to design an another data structure to store the index of players in this array(reduce search time complexity). So for the scores, we will have a sorted set to store it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;cpp&#34;&gt;Cpp&lt;/h3&gt;
+&lt;p&gt;There is a &lt;code&gt;multiset&lt;/code&gt; data structure that can save same values and also is a sorted data structure, which meets our requirements.&lt;/p&gt;
+&lt;p&gt;We keep an unordered_map &lt;code&gt;player_score&lt;/code&gt; to save the &lt;code&gt;playerId&lt;/code&gt; and &lt;code&gt;score&lt;/code&gt;. And for a sorted multiset to store the scores.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;unordered_map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; player_score;
+multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; scores;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For &lt;code&gt;reset(playerId)&lt;/code&gt; function, we set a &lt;code&gt;multiset.find&lt;/code&gt; to get the index of one of this score. And we erase this score and the player.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reset&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; playerId) {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scores.find(player_score[playerId]);
+    scores.erase(it);
+    player_score.erase(playerId);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For remnant part, it is quick and easy to see. Let&amp;rsquo;s show all of it.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Leaderboard&lt;/span&gt; {
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+    Leaderboard() {}
+    
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;addScore&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; playerId, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; score) {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(player_score.find(playerId)&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;player_score.end()){
+            score &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; player_score[playerId];
+            reset(playerId);
+        }
+        player_score[playerId] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; score;
+        scores.insert(score);
+    }
+    
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;top&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; K) {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;scores.rbegin();K&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;K&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;,it&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
+            sum &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;it;
+        }
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sum;
+    }
+    
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reset&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; playerId) {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scores.find(player_score[playerId]);
+        scores.erase(it);
+        player_score.erase(playerId);
+    }
+  
+&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+    unordered_map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; player_score;
+    multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; scores;
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The problem is cited from &lt;a href=&#34;https://leetcode.com/problems/design-a-leaderboard/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leetcode 1244. Design A Leaderboard&lt;/a&gt;. And the solution is cited from &lt;a href=&#34;https://leetcode.com/problems/design-a-leaderboard/discuss/845866/C%2B%2B-Multiset-%2B-Map-Solution&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mtobeiyf —— C++ Multiset + Map Solution&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>

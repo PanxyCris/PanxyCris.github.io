@@ -60,10 +60,10 @@
   
     
   
-  <meta name="description" content="Different types of problems and solutions from Leetcode." />
+  <meta name="description" content="3 functions addScore(playerId, score), top(K), reset(playerId)." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/leetcode/" />
+  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/leetcode/design/design-a-leaderboard/" />
 
   
   
@@ -269,8 +269,6 @@
   
 
   
-    <link rel="alternate" href="/note/leetcode/index.xml" type="application/rss+xml" title="PanxyCris" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -279,7 +277,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://panxycris.github.io/note/leetcode/" />
+  <link rel="canonical" href="https://panxycris.github.io/note/leetcode/design/design-a-leaderboard/" />
 
   
   
@@ -302,14 +300,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="PanxyCris" />
-  <meta property="og:url" content="https://panxycris.github.io/note/leetcode/" />
-  <meta property="og:title" content="Leetcode | PanxyCris" />
-  <meta property="og:description" content="Different types of problems and solutions from Leetcode." /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://panxycris.github.io/note/leetcode/design/design-a-leaderboard/" />
+  <meta property="og:title" content="Design a Leaderboard | PanxyCris" />
+  <meta property="og:description" content="3 functions addScore(playerId, score), top(K), reset(playerId)." /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2021-12-07T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2021-12-30T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2021-12-30T00:00:00&#43;00:00">
   
 
   
@@ -320,15 +322,17 @@
 
   
 
+  
 
 
 
 
-  <title>Leetcode | PanxyCris</title>
+
+  <title>Design a Leaderboard | PanxyCris</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="a0df61517a4271b7a70501b5f70b22de" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="ff150e26afa7a4026ae37c3646f20e60" >
 
   
   
@@ -634,7 +638,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          📚 Notes
+          Design
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -671,6 +675,10 @@
 
       
       
+        
+          
+        
+      
 
 
   
@@ -684,7 +692,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/note/leetcode/">Leetcode</a>
+        <a class="docs-toc-link " href="/note/leetcode/">Leetcode</a>
     
       
         <ul class="nav docs-sidenav">
@@ -713,7 +721,7 @@
       
 
 
-  <li class=""><a href="/note/leetcode/design/design-a-leaderboard/">Design a Leaderboard</a></li>
+  <li class="active"><a href="/note/leetcode/design/design-a-leaderboard/">Design a Leaderboard</a></li>
 
       
         </ul>
@@ -750,7 +758,14 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#topics">Topics</a></li>
+    <li>
+      <ul>
+        <li><a href="#problem-description">Problem description</a></li>
+        <li><a href="#constraints">Constraints</a></li>
+        <li><a href="#solution">Solution</a></li>
+        <li><a href="#cpp">Cpp</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -768,6 +783,8 @@
   <nav class="d-none d-md-flex" aria-label="breadcrumb">
     <ol class="breadcrumb">
       
+  
+  
   
   
 
@@ -789,8 +806,26 @@
   </li>
 
 
-      <li class="breadcrumb-item active" aria-current="page">
+  <li class="breadcrumb-item">
+    <a href="/note/leetcode/">
+      
         Leetcode
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/note/leetcode/design/">
+      
+        Design
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Design a Leaderboard
       </li>
     </ol>
   </nav>
@@ -798,30 +833,74 @@
 
           
 
-          <h1>Leetcode</h1>
+          <h1>Design a Leaderboard</h1>
 
           <div class="article-style">
-            <h2 id="topics">Topics</h2>
-
-
-  <ul class="list-unstyled">
+            <p>3 functions <code>addScore(playerId, score)</code>, <code>top(K)</code>, <code>reset(playerId)</code>.</p>
+<h3 id="problem-description">Problem description</h3>
+<p>Design a Leaderboard class, which has 3 functions:</p>
+<ol>
+<li><code>addScore(playerId, score)</code>: Update the leaderboard by adding score to the given player&rsquo;s score. If there is no player with such id in the leaderboard, add him to the leaderboard with the given score.</li>
+<li><code>top(K)</code>: Return the score sum of the top K players.</li>
+<li><code>reset(playerId)</code>: Reset the score of the player with the given id to 0 (in other words erase it from the leaderboard). It is guaranteed that the player was added to the leaderboard before calling this function.</li>
+</ol>
+<p>Initially, the leaderboard is empty.</p>
+<h3 id="constraints">Constraints</h3>
+<ol>
+<li><code>1 &lt;= playerId, K &lt;= 10000</code></li>
+<li>It&rsquo;s guaranteed that <code>K</code> is less than or equal to the current number of players.</li>
+<li><code>1 &lt;= score &lt;= 100</code></li>
+<li>There will be at most <code>1000</code> function calls.</li>
+</ol>
+<h3 id="solution">Solution</h3>
+<ol>
+<li>It is easy to see that we need to have a <strong>map</strong> to keep a key-value relationship of <code>playerId</code> and <code>score</code>. So whether for function <code>addScore(playerId, score)</code> or <code>reset(playerId)</code>, we can easily to set or erase(also we can set to 0, but for better performance) the score of each player.</li>
+<li>The core problem is <code>top(K)</code> function, which requires us to the sum score. Due to the contraints lots of function calls, we need to assure that <code>top(K)</code> function $\leq O(logn)$ rather than a linear time complexity. This constraint requires us for another data structure of $O(logn)$ to store the scores. In most cases, this data structure needs to be another map for score and player, but multiple scores in this case, so the value of the map needs to be an array, which makes us to design an another data structure to store the index of players in this array(reduce search time complexity). So for the scores, we will have a sorted set to store it.</li>
+</ol>
+<h3 id="cpp">Cpp</h3>
+<p>There is a <code>multiset</code> data structure that can save same values and also is a sorted data structure, which meets our requirements.</p>
+<p>We keep an unordered_map <code>player_score</code> to save the <code>playerId</code> and <code>score</code>. And for a sorted multiset to store the scores.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> player_score;
+multiset<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> scores;
+</code></pre></div><p>For <code>reset(playerId)</code> function, we set a <code>multiset.find</code> to get the index of one of this score. And we erase this score and the player.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">reset</span>(<span style="color:#66d9ef">int</span> playerId) {
+    <span style="color:#66d9ef">auto</span> it <span style="color:#f92672">=</span> scores.find(player_score[playerId]);
+    scores.erase(it);
+    player_score.erase(playerId);
+}
+</code></pre></div><p>For remnant part, it is quick and easy to see. Let&rsquo;s show all of it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Leaderboard</span> {
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    Leaderboard() {}
     
-      <li>
-        <h5><a href="/note/leetcode/binary-search/">Binary Search</a></h5>
-        <p>A method in Time complexity of $O(nlogn)$
-</p>
-      </li>
+    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addScore</span>(<span style="color:#66d9ef">int</span> playerId, <span style="color:#66d9ef">int</span> score) {
+        <span style="color:#66d9ef">if</span>(player_score.find(playerId)<span style="color:#f92672">!=</span>player_score.end()){
+            score <span style="color:#f92672">+=</span> player_score[playerId];
+            reset(playerId);
+        }
+        player_score[playerId] <span style="color:#f92672">=</span> score;
+        scores.insert(score);
+    }
     
-      <li>
-        <h5><a href="/note/leetcode/design/">Design</a></h5>
-        <p>Design a data structure to deal with the data, usually with special algorithm complexity.
-</p>
-      </li>
+    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">top</span>(<span style="color:#66d9ef">int</span> K) {
+        <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> it<span style="color:#f92672">=</span>scores.rbegin();K<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>;K<span style="color:#f92672">--</span>,it<span style="color:#f92672">++</span>){
+            sum <span style="color:#f92672">+=</span> <span style="color:#f92672">*</span>it;
+        }
+        <span style="color:#66d9ef">return</span> sum;
+    }
     
-  </ul>
-
-
-
+    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">reset</span>(<span style="color:#66d9ef">int</span> playerId) {
+        <span style="color:#66d9ef">auto</span> it <span style="color:#f92672">=</span> scores.find(player_score[playerId]);
+        scores.erase(it);
+        player_score.erase(playerId);
+    }
+  
+<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+    unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> player_score;
+    multiset<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> scores;
+};
+</code></pre></div><p>The problem is cited from <a href="https://leetcode.com/problems/design-a-leaderboard/" target="_blank" rel="noopener">Leetcode 1244. Design A Leaderboard</a>. And the solution is cited from <a href="https://leetcode.com/problems/design-a-leaderboard/discuss/845866/C%2B%2B-Multiset-%2B-Map-Solution" target="_blank" rel="noopener">mtobeiyf —— C++ Multiset + Map Solution</a>.</p>
           </div>
 
           
@@ -842,7 +921,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Dec 7, 2021</p>
+          <p>Last updated on Dec 30, 2021</p>
 
           
 
