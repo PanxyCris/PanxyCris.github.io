@@ -438,6 +438,62 @@ multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span 
     </item>
     
     <item>
+      <title>Randomly pick an element</title>
+      <link>https://panxycris.github.io/note/leetcode/design/randomly-pick-an-element/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/leetcode/design/randomly-pick-an-element/</guid>
+      <description>&lt;p&gt;3 functions &lt;code&gt;add(element)&lt;/code&gt;, &lt;code&gt;delete(element)&lt;/code&gt;, &lt;code&gt;getRandom()&lt;/code&gt; in $O(1)$ time complexity.&lt;/p&gt;
+&lt;h3 id=&#34;problem-description&#34;&gt;Problem description&lt;/h3&gt;
+&lt;p&gt;Design a data structure, which has 3 functions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;add(element)&lt;/code&gt;: Update the data structure by adding an integer.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;delete(element)&lt;/code&gt;: Update the data structure by deleting an integer, if there are lots of integers, just delete one, if this element does not exist, do nothing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;getRandom()&lt;/code&gt;: Return an element of the data structure randomly, the probability of each element should be equal.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
+&lt;p&gt;3 functions in $O(1)$ time complexity.&lt;/p&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+&lt;p&gt;The difficulty of this problem is $O(1)$ time complexity. Due to multiple same values in this problem, we can design a set that can save same values.&lt;/p&gt;
+&lt;h3 id=&#34;cpp&#34;&gt;Cpp&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;unordered_multiset&lt;/code&gt; can be used. Not only for function &lt;code&gt;add(element)&lt;/code&gt;, &lt;code&gt;delete(element)&lt;/code&gt;, we can add and delete the element in $O(1)$ time complexity, but also for function &lt;code&gt;getRandom()&lt;/code&gt;, we can easily use its size to return a value randomly.&lt;/p&gt;
+&lt;p&gt;The data strcture is like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;unordered_multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; elements;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For &lt;code&gt;delete(element)&lt;/code&gt; function, we can find one of this element and delete it.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;delete&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; element){
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; elements.find(element);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(it&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;elements.end())
+        elements.erase(it);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For &lt;code&gt;getRandom()&lt;/code&gt; function, we can use the size of multiset to get a random one.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;getRandom&lt;/span&gt;(){
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(elements.begin()&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;rand()&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;elements.size());
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Let&amp;rsquo;s show all of the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MagicSet&lt;/span&gt;{
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+    MagicSet(){}
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; element){
+        elements.insert(element);
+    }
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;delete&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; element){
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; elements.find(element);
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(it&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;elements.end())
+            elements.erase(it);
+    }
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;getRandom&lt;/span&gt;(){
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(elements.begin()&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;rand()&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;elements.size());
+    }
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+    unordered_multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; elements;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
       <title>Cookie</title>
       <link>https://panxycris.github.io/note/computer-network/application-layer/cookie/</link>
       <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
