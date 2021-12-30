@@ -17,8 +17,7 @@
       <link>https://panxycris.github.io/note/leetcode/design/design-a-leaderboard/</link>
       <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://panxycris.github.io/note/leetcode/design/design-a-leaderboard/</guid>
-      <description>&lt;p&gt;3 functions &lt;code&gt;addScore(playerId, score)&lt;/code&gt;, &lt;code&gt;top(K)&lt;/code&gt;, &lt;code&gt;reset(playerId)&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;problem-description&#34;&gt;Problem description&lt;/h3&gt;
+      <description>&lt;h3 id=&#34;problem-description&#34;&gt;Problem description&lt;/h3&gt;
 &lt;p&gt;Design a Leaderboard class, which has 3 functions:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;addScore(playerId, score)&lt;/code&gt;: Update the leaderboard by adding score to the given player&amp;rsquo;s score. If there is no player with such id in the leaderboard, add him to the leaderboard with the given score.&lt;/li&gt;
@@ -89,8 +88,7 @@ multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span 
       <link>https://panxycris.github.io/note/leetcode/design/randomly-pick-an-element/</link>
       <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://panxycris.github.io/note/leetcode/design/randomly-pick-an-element/</guid>
-      <description>&lt;p&gt;3 functions &lt;code&gt;add(element)&lt;/code&gt;, &lt;code&gt;delete(element)&lt;/code&gt;, &lt;code&gt;getRandom()&lt;/code&gt; in $O(1)$ time complexity.&lt;/p&gt;
-&lt;h3 id=&#34;problem-description&#34;&gt;Problem description&lt;/h3&gt;
+      <description>&lt;h3 id=&#34;problem-description&#34;&gt;Problem description&lt;/h3&gt;
 &lt;p&gt;Design a data structure, which has 3 functions:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;add(element)&lt;/code&gt;: Update the data structure by adding an integer.&lt;/li&gt;
