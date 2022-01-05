@@ -19,8 +19,13 @@
       <guid>https://panxycris.github.io/project/ipnet/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;A platform for patent trading based on blockchain.&lt;/li&gt;
-&lt;li&gt;It provides services including patent trade, patent loan and insurance and patent automated evaluation.&lt;/li&gt;
-&lt;li&gt;It is a competition project. The group of the project consists of 23 people and I am the product manager, who is responsible for the requirement design and the development of blockchain structure.&lt;/li&gt;
+&lt;li&gt;The blockchain data structure based on &lt;strong&gt;Hyperledger&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Services including patent trading, patent loan and insurance&lt;/li&gt;
+&lt;li&gt;Users including buyers, buyees, banks, insurance companies, patent legacies and government&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Developed the back end with Springboot and MySql.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

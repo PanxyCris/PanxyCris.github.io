@@ -18,9 +18,32 @@
       <pubDate>Sat, 03 Nov 2018 18:33:07 +0800</pubDate>
       <guid>https://panxycris.github.io/zh/project/ipnet/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;基于区块链的专利交易平台&lt;/li&gt;
-&lt;li&gt;包含专利交易、专利质押贷款、专利质押贷款保证保险以及专利自动化评估等服务&lt;/li&gt;
-&lt;li&gt;这是一个竞赛项目，整个小组有23人组成，我主要负责需求设计和区块链的开发部分&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基于区块链的专利交易平台&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基于&lt;strong&gt;Hyperledger&lt;/strong&gt;开发区块链的数据结构&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;业务囊括专利交易、专利质押贷款及其保险&lt;/li&gt;
+&lt;li&gt;用户包括买方、卖方、银行、保险公司、专利机构和政府&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;后端开发基于Springboot和MySql&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A platform for patent trading based on blockchain and figure out the business model about patent financial services with patent lawyers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Hyperledger&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Services including patent trading, patent loan and insurance&lt;/li&gt;
+&lt;li&gt;Users including buyers, buyees, banks, insurance companies, patent legacies and government&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Developed the back end with Springboot and MySql.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
