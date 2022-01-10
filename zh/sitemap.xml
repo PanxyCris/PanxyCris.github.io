@@ -74,16 +74,6 @@
       href="https://panxycris.github.io/zh/project/utag/"
     /></url>
   <url>
-    <loc>https://panxycris.github.io/zh/authors/admin/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod><xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://panxycris.github.io/authors/admin/"
-    /><xhtml:link
-      rel="alternate"
-      hreflang="zh"
-      href="https://panxycris.github.io/zh/authors/admin/"
-    /></url>
-  <url>
     <loc>https://panxycris.github.io/zh/categories/</loc><xhtml:link
       rel="alternate"
       hreflang="en"
@@ -144,4 +134,14 @@
       rel="alternate"
       hreflang="zh"
       href="https://panxycris.github.io/zh/tags/"
+    /></url>
+  <url>
+    <loc>https://panxycris.github.io/zh/authors/admin/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod><xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://panxycris.github.io/authors/admin/"
+    /><xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://panxycris.github.io/zh/authors/admin/"
     /></url></urlset>
