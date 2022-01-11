@@ -5,7 +5,7 @@
     <link>https://panxycris.github.io/</link>
       <atom:link href="https://panxycris.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>PanxyCris</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 30 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 11 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>PanxyCris</title>
@@ -748,6 +748,45 @@ and other network devices.&lt;/p&gt;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;The leaf &lt;em&gt;tcpMaxConn&lt;/em&gt; can be defined as &lt;strong&gt;1.3.6.1.2.1.6.4&lt;/strong&gt; or &lt;strong&gt;iso.org.dod.internet.mgmt.mib-2.tcp.tcpMaxConn&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Minimum Swaps to Group All 1&#39;s Together</title>
+      <link>https://panxycris.github.io/note/leetcode/sliding-window/minimum-swaps-to-group-all-1s-together/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/leetcode/sliding-window/minimum-swaps-to-group-all-1s-together/</guid>
+      <description>&lt;h3 id=&#34;problem-description&#34;&gt;Problem description&lt;/h3&gt;
+&lt;p&gt;Given a binary array &lt;code&gt;data&lt;/code&gt;, return the minimum number of swaps required to group all 1’s present in the array together in &lt;strong&gt;any place&lt;/strong&gt; in the array.&lt;/p&gt;
+&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;$1 \leq$ &lt;code&gt;data.length&lt;/code&gt; $ \leq 10^5$&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data[i]&lt;/code&gt; is either &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+&lt;p&gt;This problem asks us to return minimum number of swaps, which means that we do not need to take real swap actions for given array. And we can find that the value in this array is either &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt; within the constraints, so we could keep a sliding window of the length that is equal to the number of &lt;code&gt;1&lt;/code&gt; in the array.&lt;/p&gt;
+&lt;p&gt;$Len_{window} = Num_{1}$&lt;/p&gt;
+&lt;p&gt;In this way, for those positions of value &lt;code&gt;0&lt;/code&gt;, which means that we could swap them with &lt;code&gt;1&lt;/code&gt;, so this problems turns to that we need to find a sliding window with minimum number of &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We can set two pointers of left and right boundary to control this sliding window.&lt;/p&gt;
+&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; minSwaps(vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; data) {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; ones &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, len &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data.size();
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; cnt_one &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, max_one &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, right &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; num:data) &lt;span style=&#34;color:#75715e&#34;&gt;// get the sum of the number of 1
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            ones &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; num;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(right &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; n){
+            cnt_one &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; data[right&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;];
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(right &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; ones){ &lt;span style=&#34;color:#75715e&#34;&gt;//maintain the length of the window to ones
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                cnt_one &lt;span style=&#34;color:#f92672&#34;&gt;-=&lt;/span&gt; data[left&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;];
+            }
+            max_one &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; max(max_one, cnt_one);
+        }
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; ones &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; max_one;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>

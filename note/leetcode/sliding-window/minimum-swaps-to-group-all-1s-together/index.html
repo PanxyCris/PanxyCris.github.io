@@ -60,10 +60,10 @@
   
     
   
-  <meta name="description" content="Master" />
+  <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/leetcode/design/" />
+  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/leetcode/sliding-window/minimum-swaps-to-group-all-1s-together/" />
 
   
   
@@ -269,8 +269,6 @@
   
 
   
-    <link rel="alternate" href="/note/leetcode/design/index.xml" type="application/rss+xml" title="PanxyCris" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -279,7 +277,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://panxycris.github.io/note/leetcode/design/" />
+  <link rel="canonical" href="https://panxycris.github.io/note/leetcode/sliding-window/minimum-swaps-to-group-all-1s-together/" />
 
   
   
@@ -302,14 +300,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="PanxyCris" />
-  <meta property="og:url" content="https://panxycris.github.io/note/leetcode/design/" />
-  <meta property="og:title" content="Design | PanxyCris" />
-  <meta property="og:description" content="Master" /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://panxycris.github.io/note/leetcode/sliding-window/minimum-swaps-to-group-all-1s-together/" />
+  <meta property="og:title" content="Minimum Swaps to Group All 1&#39;s Together | PanxyCris" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2021-12-30T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2022-01-11T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2022-01-11T00:00:00&#43;00:00">
   
 
   
@@ -320,15 +322,17 @@
 
   
 
+  
 
 
 
 
-  <title>Design | PanxyCris</title>
+
+  <title>Minimum Swaps to Group All 1&#39;s Together | PanxyCris</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="b0eed3e97c1f6c62aefed7285d9403fa" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="0ca1bb801369b2e748a2891ffc9e5e67" >
 
   
   
@@ -634,7 +638,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          Leetcode
+          Sliding Window
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -710,7 +714,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/note/leetcode/design/">Design</a>
+        <a class="docs-toc-link " href="/note/leetcode/design/">Design</a>
     
       
         <ul class="nav docs-sidenav">
@@ -752,7 +756,7 @@
       
 
 
-  <li class=""><a href="/note/leetcode/sliding-window/minimum-swaps-to-group-all-1s-together/">Minimum Swaps to Group All 1&#39;s Together</a></li>
+  <li class="active"><a href="/note/leetcode/sliding-window/minimum-swaps-to-group-all-1s-together/">Minimum Swaps to Group All 1&#39;s Together</a></li>
 
       
         </ul>
@@ -789,7 +793,14 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction">Introduction</a></li>
+    <li>
+      <ul>
+        <li><a href="#problem-description">Problem description</a></li>
+        <li><a href="#constraints">Constraints</a></li>
+        <li><a href="#solution">Solution</a></li>
+        <li><a href="#code">Code</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -807,6 +818,7 @@
   <nav class="d-none d-md-flex" aria-label="breadcrumb">
     <ol class="breadcrumb">
       
+  
   
   
   
@@ -838,8 +850,17 @@
   </li>
 
 
+  <li class="breadcrumb-item">
+    <a href="/note/leetcode/sliding-window/">
+      
+        Sliding Window
+      
+    </a>
+  </li>
+
+
       <li class="breadcrumb-item active" aria-current="page">
-        Design
+        Minimum Swaps to Group All 1's Together
       </li>
     </ol>
   </nav>
@@ -847,27 +868,41 @@
 
           
 
-          <h1>Design</h1>
+          <h1>Minimum Swaps to Group All 1&#39;s Together</h1>
 
           <div class="article-style">
-            <p>Design a data structure to deal with the data, usually with special algorithm complexity.</p>
-<h2 id="introduction">Introduction</h2>
-<p>This sort of problems always require us to set a part of data structures to deal with the data. We usually uses like array, map, set, stack, queue&hellip;&hellip; to meet our design requirements. In most cases we always need to assure better time complexity so that we need to have more varieties of data structures. Here I will list several problems of this field.</p>
-
-
-  <ul class="list-unstyled">
-    
-      <li>
-        <h5><a href="/note/leetcode/design/design-a-leaderboard/">Design a Leaderboard</a></h5>
-        
-      </li>
-    
-      <li>
-        <h5><a href="/note/leetcode/design/randomly-pick-an-element/">Randomly pick an element</a></h5>
-        
-      </li>
-    
-  </ul>
+            <h3 id="problem-description">Problem description</h3>
+<p>Given a binary array <code>data</code>, return the minimum number of swaps required to group all 1’s present in the array together in <strong>any place</strong> in the array.</p>
+<h3 id="constraints">Constraints</h3>
+<ul>
+<li>$1 \leq$ <code>data.length</code> $ \leq 10^5$</li>
+<li><code>data[i]</code> is either <code>0</code> or <code>1</code>.</li>
+</ul>
+<h3 id="solution">Solution</h3>
+<p>This problem asks us to return minimum number of swaps, which means that we do not need to take real swap actions for given array. And we can find that the value in this array is either <code>0</code> or <code>1</code> within the constraints, so we could keep a sliding window of the length that is equal to the number of <code>1</code> in the array.</p>
+<p>$Len_{window} = Num_{1}$</p>
+<p>In this way, for those positions of value <code>0</code>, which means that we could swap them with <code>1</code>, so this problems turns to that we need to find a sliding window with minimum number of <code>0</code>.</p>
+<p>We can set two pointers of left and right boundary to control this sliding window.</p>
+<h3 id="code">Code</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">int</span> minSwaps(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> data) {
+        <span style="color:#66d9ef">int</span> ones <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len <span style="color:#f92672">=</span> data.size();
+        <span style="color:#66d9ef">int</span> cnt_one <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, max_one <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> num:data) <span style="color:#75715e">// get the sum of the number of 1
+</span><span style="color:#75715e"></span>            ones <span style="color:#f92672">+=</span> num;
+        <span style="color:#66d9ef">while</span>(right <span style="color:#f92672">&lt;</span> n){
+            cnt_one <span style="color:#f92672">+=</span> data[right<span style="color:#f92672">++</span>];
+            <span style="color:#66d9ef">if</span>(right <span style="color:#f92672">-</span> left <span style="color:#f92672">&gt;</span> ones){ <span style="color:#75715e">//maintain the length of the window to ones
+</span><span style="color:#75715e"></span>                cnt_one <span style="color:#f92672">-=</span> data[left<span style="color:#f92672">++</span>];
+            }
+            max_one <span style="color:#f92672">=</span> max(max_one, cnt_one);
+        }
+        <span style="color:#66d9ef">return</span> ones <span style="color:#f92672">-</span> max_one;
+    }
+};
+</code></pre></div>
           </div>
 
           
@@ -888,7 +923,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Dec 30, 2021</p>
+          <p>Last updated on Jan 11, 2022</p>
 
           
 

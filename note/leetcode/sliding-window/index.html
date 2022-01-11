@@ -63,7 +63,7 @@
   <meta name="description" content="Master" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/leetcode/design/" />
+  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/leetcode/sliding-window/" />
 
   
   
@@ -269,7 +269,7 @@
   
 
   
-    <link rel="alternate" href="/note/leetcode/design/index.xml" type="application/rss+xml" title="PanxyCris" />
+    <link rel="alternate" href="/note/leetcode/sliding-window/index.xml" type="application/rss+xml" title="PanxyCris" />
   
 
   
@@ -279,7 +279,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://panxycris.github.io/note/leetcode/design/" />
+  <link rel="canonical" href="https://panxycris.github.io/note/leetcode/sliding-window/" />
 
   
   
@@ -302,13 +302,13 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="PanxyCris" />
-  <meta property="og:url" content="https://panxycris.github.io/note/leetcode/design/" />
-  <meta property="og:title" content="Design | PanxyCris" />
+  <meta property="og:url" content="https://panxycris.github.io/note/leetcode/sliding-window/" />
+  <meta property="og:title" content="Sliding Window | PanxyCris" />
   <meta property="og:description" content="Master" /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2021-12-30T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2022-01-11T00:00:00&#43;00:00" />
     
   
 
@@ -324,11 +324,11 @@
 
 
 
-  <title>Design | PanxyCris</title>
+  <title>Sliding Window | PanxyCris</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="b0eed3e97c1f6c62aefed7285d9403fa" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="f59b326e5d3192974397fd0e815a0d7a" >
 
   
   
@@ -710,7 +710,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/note/leetcode/design/">Design</a>
+        <a class="docs-toc-link " href="/note/leetcode/design/">Design</a>
     
       
         <ul class="nav docs-sidenav">
@@ -745,7 +745,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/note/leetcode/sliding-window/">Sliding Window</a>
+        <a class="docs-toc-link  active" href="/note/leetcode/sliding-window/">Sliding Window</a>
     
       
         <ul class="nav docs-sidenav">
@@ -790,6 +790,7 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#time-complexity">Time Complexity</a></li>
   </ul>
 </nav>
 
@@ -839,7 +840,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        Design
+        Sliding Window
       </li>
     </ol>
   </nav>
@@ -847,23 +848,20 @@
 
           
 
-          <h1>Design</h1>
+          <h1>Sliding Window</h1>
 
           <div class="article-style">
-            <p>Design a data structure to deal with the data, usually with special algorithm complexity.</p>
+            <p>Set left and right boundary of a window to control the variables</p>
 <h2 id="introduction">Introduction</h2>
-<p>This sort of problems always require us to set a part of data structures to deal with the data. We usually uses like array, map, set, stack, queue&hellip;&hellip; to meet our design requirements. In most cases we always need to assure better time complexity so that we need to have more varieties of data structures. Here I will list several problems of this field.</p>
+<p>This sort of problem requires us to set a window with left and right boundary to keep relative variables constant or compare the value of left and right index. Sometimes left and right boundary of this window keeps same direction from <code>0</code> $\rightarrow$ <code>n-1</code>, sometimes left and right boundary with from <code>0</code>, <code>n-1</code> to meet together.</p>
+<h2 id="time-complexity">Time Complexity</h2>
+<p>$O(n)$</p>
 
 
   <ul class="list-unstyled">
     
       <li>
-        <h5><a href="/note/leetcode/design/design-a-leaderboard/">Design a Leaderboard</a></h5>
-        
-      </li>
-    
-      <li>
-        <h5><a href="/note/leetcode/design/randomly-pick-an-element/">Randomly pick an element</a></h5>
+        <h5><a href="/note/leetcode/sliding-window/minimum-swaps-to-group-all-1s-together/">Minimum Swaps to Group All 1&#39;s Together</a></h5>
         
       </li>
     
@@ -888,7 +886,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Dec 30, 2021</p>
+          <p>Last updated on Jan 11, 2022</p>
 
           
 
