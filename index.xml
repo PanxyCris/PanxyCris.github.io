@@ -778,7 +778,7 @@ and other network devices.&lt;/p&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            ones &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; num;
         &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(right &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; n){
             cnt_one &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; data[right&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;];
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(right &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; ones){ &lt;span style=&#34;color:#75715e&#34;&gt;//maintain the length of the window to ones
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(right &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; ones){ &lt;span style=&#34;color:#75715e&#34;&gt;// maintain the length of the window to ones
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                cnt_one &lt;span style=&#34;color:#f92672&#34;&gt;-=&lt;/span&gt; data[left&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;];
             }
             max_one &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; max(max_one, cnt_one);
@@ -786,7 +786,7 @@ and other network devices.&lt;/p&gt;
         &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; ones &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; max_one;
     }
 };
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The problem is cited from &lt;a href=&#34;https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leetcode 1151. Minimum Swaps to Group All 1&amp;rsquo;s Together&lt;/a&gt;. And the solution is cited from &lt;a href=&#34;https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/solution/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LeetCode Official Solution Approach 1: Sliding Window with Two Pointers&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>

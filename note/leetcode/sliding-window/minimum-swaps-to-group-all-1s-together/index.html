@@ -894,7 +894,7 @@
 </span><span style="color:#75715e"></span>            ones <span style="color:#f92672">+=</span> num;
         <span style="color:#66d9ef">while</span>(right <span style="color:#f92672">&lt;</span> n){
             cnt_one <span style="color:#f92672">+=</span> data[right<span style="color:#f92672">++</span>];
-            <span style="color:#66d9ef">if</span>(right <span style="color:#f92672">-</span> left <span style="color:#f92672">&gt;</span> ones){ <span style="color:#75715e">//maintain the length of the window to ones
+            <span style="color:#66d9ef">if</span>(right <span style="color:#f92672">-</span> left <span style="color:#f92672">&gt;</span> ones){ <span style="color:#75715e">// maintain the length of the window to ones
 </span><span style="color:#75715e"></span>                cnt_one <span style="color:#f92672">-=</span> data[left<span style="color:#f92672">++</span>];
             }
             max_one <span style="color:#f92672">=</span> max(max_one, cnt_one);
@@ -902,7 +902,7 @@
         <span style="color:#66d9ef">return</span> ones <span style="color:#f92672">-</span> max_one;
     }
 };
-</code></pre></div>
+</code></pre></div><p>The problem is cited from <a href="https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/" target="_blank" rel="noopener">Leetcode 1151. Minimum Swaps to Group All 1&rsquo;s Together</a>. And the solution is cited from <a href="https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/solution/" target="_blank" rel="noopener">LeetCode Official Solution Approach 1: Sliding Window with Two Pointers</a>.</p>
           </div>
 
           
