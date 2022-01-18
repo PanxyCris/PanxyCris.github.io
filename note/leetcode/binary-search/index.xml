@@ -57,7 +57,6 @@ ll target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n&lt;span sty
                 r &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
         }
         &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; l;
-        
     }
     
     ll &lt;span style=&#34;color:#a6e22e&#34;&gt;canFit&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n, ll k, vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; batteries){
