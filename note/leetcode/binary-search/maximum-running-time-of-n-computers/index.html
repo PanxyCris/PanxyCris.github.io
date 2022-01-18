@@ -60,10 +60,10 @@
   
     
   
-  <meta name="description" content="Master" />
+  <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/leetcode/sliding-window/" />
+  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/leetcode/binary-search/maximum-running-time-of-n-computers/" />
 
   
   
@@ -269,8 +269,6 @@
   
 
   
-    <link rel="alternate" href="/note/leetcode/sliding-window/index.xml" type="application/rss+xml" title="PanxyCris" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -279,7 +277,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://panxycris.github.io/note/leetcode/sliding-window/" />
+  <link rel="canonical" href="https://panxycris.github.io/note/leetcode/binary-search/maximum-running-time-of-n-computers/" />
 
   
   
@@ -302,14 +300,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="PanxyCris" />
-  <meta property="og:url" content="https://panxycris.github.io/note/leetcode/sliding-window/" />
-  <meta property="og:title" content="Sliding Window | PanxyCris" />
-  <meta property="og:description" content="Master" /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://panxycris.github.io/note/leetcode/binary-search/maximum-running-time-of-n-computers/" />
+  <meta property="og:title" content="Maximum Running Time of N Computers | PanxyCris" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2022-01-11T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2022-01-18T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2022-01-18T00:00:00&#43;00:00">
   
 
   
@@ -320,15 +322,17 @@
 
   
 
+  
 
 
 
 
-  <title>Sliding Window | PanxyCris</title>
+
+  <title>Maximum Running Time of N Computers | PanxyCris</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="f59b326e5d3192974397fd0e815a0d7a" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="9d2d7180b4ec03c3dac0e57284cb5ff0" >
 
   
   
@@ -634,7 +638,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          Leetcode
+          Binary Search
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -713,7 +717,7 @@
       
 
 
-  <li class=""><a href="/note/leetcode/binary-search/maximum-running-time-of-n-computers/">Maximum Running Time of N Computers</a></li>
+  <li class="active"><a href="/note/leetcode/binary-search/maximum-running-time-of-n-computers/">Maximum Running Time of N Computers</a></li>
 
       
         </ul>
@@ -772,7 +776,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/note/leetcode/sliding-window/">Sliding Window</a>
+        <a class="docs-toc-link " href="/note/leetcode/sliding-window/">Sliding Window</a>
     
       
         <ul class="nav docs-sidenav">
@@ -816,8 +820,13 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#time-complexity">Time Complexity</a></li>
+    <li>
+      <ul>
+        <li><a href="#problem-description">Problem description</a></li>
+        <li><a href="#constraints">Constraints</a></li>
+        <li><a href="#solution">Solution</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -835,6 +844,7 @@
   <nav class="d-none d-md-flex" aria-label="breadcrumb">
     <ol class="breadcrumb">
       
+  
   
   
   
@@ -866,8 +876,17 @@
   </li>
 
 
+  <li class="breadcrumb-item">
+    <a href="/note/leetcode/binary-search/">
+      
+        Binary Search
+      
+    </a>
+  </li>
+
+
       <li class="breadcrumb-item active" aria-current="page">
-        Sliding Window
+        Maximum Running Time of N Computers
       </li>
     </ol>
   </nav>
@@ -875,24 +894,64 @@
 
           
 
-          <h1>Sliding Window</h1>
+          <h1>Maximum Running Time of N Computers</h1>
 
           <div class="article-style">
-            <p>Set left and right boundary of a window to control the variables</p>
-<h2 id="introduction">Introduction</h2>
-<p>This sort of problem requires us to set a window with left and right boundary to keep relative variables constant or compare the value of left and right index. Sometimes left and right boundary of this window keeps same direction from <code>0</code> $\rightarrow$ <code>n-1</code>, sometimes left and right boundary with from <code>0</code>, <code>n-1</code> to meet together.</p>
-<h2 id="time-complexity">Time Complexity</h2>
-<p>$O(n)$</p>
-
-
-  <ul class="list-unstyled">
-    
-      <li>
-        <h5><a href="/note/leetcode/sliding-window/minimum-swaps-to-group-all-1s-together/">Minimum Swaps to Group All 1&#39;s Together</a></h5>
+            <h3 id="problem-description">Problem description</h3>
+<p>You have <code>n</code> computers. You are given the integer <code>n</code> and a <strong>0-indexed</strong> integer array <code>batteries</code> where the $i^{th}$ battery can <strong>run</strong> a computer for <code>batteries[i]</code> minutes. You are interested in running <strong>all</strong> <code>n</code> computers <strong>simultaneously</strong> using the given batteries.</p>
+<p>Initially, you can insert <strong>at most one battery</strong> into each computer. After that and at any integer time moment, you can remove a battery from a computer and insert another battery <strong>any number of times</strong>. The inserted battery can be a totally new battery or a battery from another computer. You may assume that the removing and inserting processes take no time.</p>
+<p>Note that the batteries cannot be recharged.</p>
+<p>Return the <strong>maximum</strong> number of minutes you can run all the <code>n</code> computers simultaneously.</p>
+<h3 id="constraints">Constraints</h3>
+<ul>
+<li><code>1 &lt;= n &lt;= batteries.length &lt;= </code>$10^5$</li>
+<li><code>1 &lt;= batteries[i] &lt;= </code>$10^9$</li>
+</ul>
+<h3 id="solution">Solution</h3>
+<p>For this kind of problem, we always find it hard to get this extreme value. But if we change a thought, when given the result, can we implement this method? Like in this problem, when given an amount of minutes, can we run all the <code>n</code> computers simultaneously? When the situation changes, this problem is converted into a binary search problem. We can set a left and right boundary of this amount of minutes, and we use binary search to get the final value of our solution.</p>
+<p>Thus, how can we determine whether we can run <code>n</code> computers simultaneously when given a special number of minutes? We can set <code>k</code> as the given number of minutes. And for <code>target</code> as the summation number of minutes of <code>n</code> computers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#define ll long long
+</span><span style="color:#75715e"></span>
+ll target <span style="color:#f92672">=</span> n<span style="color:#f92672">*</span>k;
+</code></pre></div><p>And for each battery, it can only choose its maximum volumne of electricity, so each one choose either its volume or <code>k</code> number of minutes for running time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">ll res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> battery: batteries){
+    res <span style="color:#f92672">+=</span> battery <span style="color:#f92672">&lt;</span> k <span style="color:#f92672">?</span> battery : k;
+        <span style="color:#66d9ef">if</span>(res <span style="color:#f92672">&gt;=</span> target)
+            <span style="color:#66d9ef">return</span> true;
+}
+</code></pre></div><p>When the result reaches the <code>target</code> number of minutes, it proves that <code>k</code> number of minutes can fit the solution. All of the code shows like this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#define ll long long
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    ll maxRunTime(<span style="color:#66d9ef">int</span> n, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> batteries) {
+        ll sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> battery: batteries)
+            sum <span style="color:#f92672">+=</span> battery;
+        ll l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, r <span style="color:#f92672">=</span> sum<span style="color:#f92672">/</span>n;
+        <span style="color:#66d9ef">while</span>(l <span style="color:#f92672">&lt;</span> r){
+            ll mid <span style="color:#f92672">=</span> l <span style="color:#f92672">+</span> (r<span style="color:#f92672">-</span>l)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// target value rounds up to an integer
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span>(canFit(n, mid, batteries)){
+                l <span style="color:#f92672">=</span> mid;
+            }<span style="color:#66d9ef">else</span>
+                r <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+        }
+        <span style="color:#66d9ef">return</span> l;
         
-      </li>
+    }
     
-  </ul>
+    ll <span style="color:#a6e22e">canFit</span>(<span style="color:#66d9ef">int</span> n, ll k, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> batteries){
+        ll target <span style="color:#f92672">=</span> n <span style="color:#f92672">*</span> k;
+        ll res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> battery: batteries){
+            res <span style="color:#f92672">+=</span> battery <span style="color:#f92672">&lt;</span> k <span style="color:#f92672">?</span> battery : k;
+                <span style="color:#66d9ef">if</span>(res <span style="color:#f92672">&gt;=</span> target)
+                    <span style="color:#66d9ef">return</span> true;
+        }
+        <span style="color:#66d9ef">return</span> res <span style="color:#f92672">&gt;=</span> target;
+    }
+};
+</code></pre></div><p>The problem is cited from <a href="https://leetcode.com/problems/maximum-running-time-of-n-computers/" target="_blank" rel="noopener">Leetcode 2141. Maximum Running Time of N Computers</a>. And the solution is cited from <a href="https://leetcode.com/problems/maximum-running-time-of-n-computers/discuss/1692979/Java-Simple-Solution-w.-Explanation" target="_blank" rel="noopener">[Java] Simple Solution w. Explanation - Chen-Yiyang</a>.</p>
           </div>
 
           
@@ -913,7 +972,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Jan 11, 2022</p>
+          <p>Last updated on Jan 18, 2022</p>
 
           
 
