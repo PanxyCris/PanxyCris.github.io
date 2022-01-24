@@ -912,7 +912,7 @@
 <p>Thus, how can we determine whether we can run <code>n</code> computers simultaneously when given a special number of minutes? We can set <code>k</code> as the given number of minutes. And for <code>target</code> as the summation number of minutes of <code>n</code> computers.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#define ll long long
 </span><span style="color:#75715e"></span>
-ll target <span style="color:#f92672">=</span> n<span style="color:#f92672">*</span>k;
+ll target <span style="color:#f92672">=</span> n <span style="color:#f92672">*</span> k;
 </code></pre></div><p>And for each battery, it can only choose its maximum volumne of electricity, so each one choose either its volume or <code>k</code> number of minutes for running time.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">ll res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> battery: batteries){

@@ -32,7 +32,7 @@
 &lt;p&gt;Thus, how can we determine whether we can run &lt;code&gt;n&lt;/code&gt; computers simultaneously when given a special number of minutes? We can set &lt;code&gt;k&lt;/code&gt; as the given number of minutes. And for &lt;code&gt;target&lt;/code&gt; as the summation number of minutes of &lt;code&gt;n&lt;/code&gt; computers.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define ll long long
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-ll target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;k;
+ll target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; k;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And for each battery, it can only choose its maximum volumne of electricity, so each one choose either its volume or &lt;code&gt;k&lt;/code&gt; number of minutes for running time.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;ll res &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; battery: batteries){
