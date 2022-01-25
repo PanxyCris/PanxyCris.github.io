@@ -46,11 +46,11 @@
     </item>
     
     <item>
-      <title>Avalability</title>
-      <link>https://panxycris.github.io/note/system-design/cap/avalability/</link>
+      <title>Availability</title>
+      <link>https://panxycris.github.io/note/system-design/cap/availability/</link>
       <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://panxycris.github.io/note/system-design/cap/avalability/</guid>
-      <description>&lt;p&gt;To support a high avalability, there are two complemenrary problems.&lt;/p&gt;
+      <guid>https://panxycris.github.io/note/system-design/cap/availability/</guid>
+      <description>&lt;p&gt;To support a high availability, there are two complemenrary problems.&lt;/p&gt;
 &lt;h3 id=&#34;fail-over&#34;&gt;Fail-Over&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;

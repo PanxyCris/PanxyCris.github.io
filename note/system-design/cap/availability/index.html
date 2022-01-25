@@ -60,10 +60,11 @@
   
     
   
-  <meta name="description" content="Some notes of large-scale web development system design." />
+  <meta name="description" content="To support a high availability, there are two complemenrary problems.
+Fail-Over     Active-passive Active-active     Entity An active server and a passive server Two active servers   Running Pattern heartbeats are sent between the active and the passive server on standby both servers are managing traffic, spreading the load between them.   Feature When the heartbeat is interrupted, the passive server takes over the active&rsquo;s IP address and resumes service." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/system-design/" />
+  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/system-design/cap/availability/" />
 
   
   
@@ -269,8 +270,6 @@
   
 
   
-    <link rel="alternate" href="/note/system-design/index.xml" type="application/rss+xml" title="PanxyCris" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -279,7 +278,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://panxycris.github.io/note/system-design/" />
+  <link rel="canonical" href="https://panxycris.github.io/note/system-design/cap/availability/" />
 
   
   
@@ -302,14 +301,19 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="PanxyCris" />
-  <meta property="og:url" content="https://panxycris.github.io/note/system-design/" />
-  <meta property="og:title" content="📊 System Design | PanxyCris" />
-  <meta property="og:description" content="Some notes of large-scale web development system design." /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://panxycris.github.io/note/system-design/cap/availability/" />
+  <meta property="og:title" content="Availability | PanxyCris" />
+  <meta property="og:description" content="To support a high availability, there are two complemenrary problems.
+Fail-Over     Active-passive Active-active     Entity An active server and a passive server Two active servers   Running Pattern heartbeats are sent between the active and the passive server on standby both servers are managing traffic, spreading the load between them.   Feature When the heartbeat is interrupted, the passive server takes over the active&rsquo;s IP address and resumes service." /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2021-12-07T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2022-01-25T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2022-01-25T00:00:00&#43;00:00">
   
 
   
@@ -320,15 +324,17 @@
 
   
 
+  
 
 
 
 
-  <title>📊 System Design | PanxyCris</title>
+
+  <title>Availability | PanxyCris</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="2a0808b8a4564248b728a586e1b71270" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="5c1e598362fb42b36af68918da4e2fc1" >
 
   
   
@@ -634,7 +640,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          📚 Notes
+          CAP
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -671,6 +677,10 @@
 
       
       
+        
+          
+        
+      
 
 
   
@@ -684,7 +694,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/note/system-design/">System Design</a>
+        <a class="docs-toc-link " href="/note/system-design/">System Design</a>
     
       
         <ul class="nav docs-sidenav">
@@ -717,7 +727,7 @@
 
 
 
-  <li class=""><a href="/note/system-design/cap/availability/">Availability</a></li>
+  <li class="active"><a href="/note/system-design/cap/availability/">Availability</a></li>
 
       
         </ul>
@@ -754,7 +764,13 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#topics">Topics</a></li>
+    <li>
+      <ul>
+        <li><a href="#fail-over">Fail-Over</a></li>
+        <li><a href="#replication">Replication</a></li>
+        <li><a href="#sequence-vs-parallel">Sequence vs Parallel</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -772,6 +788,8 @@
   <nav class="d-none d-md-flex" aria-label="breadcrumb">
     <ol class="breadcrumb">
       
+  
+  
   
   
 
@@ -793,8 +811,26 @@
   </li>
 
 
-      <li class="breadcrumb-item active" aria-current="page">
+  <li class="breadcrumb-item">
+    <a href="/note/system-design/">
+      
         System Design
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/note/system-design/cap/">
+      
+        CAP
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Availability
       </li>
     </ol>
   </nav>
@@ -802,29 +838,55 @@
 
           
 
-          <h1>📊 System Design</h1>
+          <h1>Availability</h1>
 
           <div class="article-style">
-            <h2 id="topics">Topics</h2>
-
-
-  <ul class="list-unstyled">
-    
-      <li>
-        <h5><a href="/note/system-design/scalability/">Scalability</a></h5>
-        <p>Handle an amount of work that resources can be added to the system.
-</p>
-      </li>
-    
-      <li>
-        <h5><a href="/note/system-design/cap/">CAP</a></h5>
-        <p>Three attributes support a distributed system.
-</p>
-      </li>
-    
-  </ul>
-
-
+            <p>To support a high availability, there are two complemenrary problems.</p>
+<h3 id="fail-over">Fail-Over</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Active-passive</th>
+<th>Active-active</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entity</td>
+<td>An active server and a passive server</td>
+<td>Two active servers</td>
+</tr>
+<tr>
+<td>Running Pattern</td>
+<td>heartbeats are sent between the active and the passive server on standby</td>
+<td>both servers are managing traffic, spreading the load between them.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>When the heartbeat is interrupted, the passive server takes over the active&rsquo;s IP address and resumes service.</td>
+<td>If the servers are public-facing, the DNS would need to know about the public IPs of both servers. If the servers are internal-facing, application logic would need to know about both servers.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Disadvantage
+<ul>
+<li>Fail-over adds more hardware and additional complexity.</li>
+<li>There is a potential for loss of data if the active system fails before any newly written data can be replicated to the passive.</li>
+</ul>
+</li>
+</ul>
+<h3 id="replication">Replication</h3>
+<p>Master-slave vs master-master</p>
+<h3 id="sequence-vs-parallel">Sequence vs Parallel</h3>
+<p>For sequence</p>
+<p>$Availability_{Total}= Availability_{Foo} \times Availability_{Bar}$</p>
+<p>If both <code>Foo</code> and <code>Bar</code> each had 99.9% availability, their total availability in sequence would be 99.8%.</p>
+<p>For parallel</p>
+<p>$Availability_{Total} = 1 - (1 - Availability_{Foo}) \times (1 - Availability_{Bar})$</p>
+<p>If both <code>Foo</code> and <code>Bar</code> each had 99.9% availability, their total availability in parallel would be 99.9999%.</p>
+<p><em>The content is cited from <a href="https://github.com/donnemartin/system-design-primer#availability-patterns" target="_blank" rel="noopener">System design primer &ndash; Avalability Patterns</a>.</em></p>
 
           </div>
 
@@ -839,6 +901,13 @@
 <div class="post-nav">
   
   
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/note/system-design/cap/consistency/" rel="next">Consistency</a>
+  </div>
+  
+  
 </div>
 
           </div>
@@ -846,7 +915,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Dec 7, 2021</p>
+          <p>Last updated on Jan 25, 2022</p>
 
           
 
