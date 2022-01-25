@@ -635,6 +635,33 @@ multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span 
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3 id=&#34;push-cdn-and-pull-cdn&#34;&gt;Push CDN and Pull CDN&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Push CDN&lt;/th&gt;
+&lt;th&gt;Pull CDN&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;feature&lt;/td&gt;
+&lt;td&gt;Receive it whenever changes occur&lt;/td&gt;
+&lt;td&gt;grad new content when the first user requests the content&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Timeliness&lt;/td&gt;
+&lt;td&gt;Can configure when content expires and when it is updated&lt;/td&gt;
+&lt;td&gt;A TTL determines how long content is cached&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Applicable scene&lt;/td&gt;
+&lt;td&gt;Frequently updated, less users requests&lt;/td&gt;
+&lt;td&gt;High Traffic, Small download&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h3 id=&#34;benefits&#34;&gt;Benefits&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Faster delivery&lt;/li&gt;
@@ -650,6 +677,12 @@ multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span 
 &lt;li&gt;Help in collecting logs and analyzing user-generated data&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Costs depends on traffic&lt;/li&gt;
+&lt;li&gt;Content may be stale if it is updated before TTL expires&lt;/li&gt;
+&lt;li&gt;CDNs require changing URLs for static content to point to the CDN&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;The content cited from &lt;a href=&#34;https://www.cdnetworks.com/web-performance-blog/how-content-delivery-networks-work/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CDNetworks&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</description>
     </item>

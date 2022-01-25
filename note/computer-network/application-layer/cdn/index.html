@@ -864,7 +864,9 @@
       <ul>
         <li><a href="#how-does-cdn-work">How does CDN work</a></li>
         <li><a href="#work-process">Work process</a></li>
+        <li><a href="#push-cdn-and-pull-cdn">Push CDN and Pull CDN</a></li>
         <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#disadvantages">Disadvantages</a></li>
       </ul>
     </li>
   </ul>
@@ -982,6 +984,33 @@
 </ul>
 </li>
 </ol>
+<h3 id="push-cdn-and-pull-cdn">Push CDN and Pull CDN</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Push CDN</th>
+<th>Pull CDN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>feature</td>
+<td>Receive it whenever changes occur</td>
+<td>grad new content when the first user requests the content</td>
+</tr>
+<tr>
+<td>Timeliness</td>
+<td>Can configure when content expires and when it is updated</td>
+<td>A TTL determines how long content is cached</td>
+</tr>
+<tr>
+<td>Applicable scene</td>
+<td>Frequently updated, less users requests</td>
+<td>High Traffic, Small download</td>
+</tr>
+</tbody>
+</table>
 <h3 id="benefits">Benefits</h3>
 <ul>
 <li>Faster delivery</li>
@@ -997,6 +1026,12 @@
 <li>Help in collecting logs and analyzing user-generated data</li>
 </ul>
 </li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>Costs depends on traffic</li>
+<li>Content may be stale if it is updated before TTL expires</li>
+<li>CDNs require changing URLs for static content to point to the CDN</li>
 </ul>
 <p><em>The content cited from <a href="https://www.cdnetworks.com/web-performance-blog/how-content-delivery-networks-work/" target="_blank" rel="noopener">CDNetworks</a>.</em></p>
           </div>
