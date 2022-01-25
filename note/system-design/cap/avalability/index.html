@@ -60,10 +60,11 @@
   
     
   
-  <meta name="description" content="Master" />
+  <meta name="description" content="To support a high avalability, there are two complemenrary problems.
+Fail-Over     Active-passive Active-active     Entity An active server and a passive server Two active servers   Running Pattern heartbeats are sent between the active and the passive server on standby both servers are managing traffic, spreading the load between them.   Feature When the heartbeat is interrupted, the passive server takes over the active&rsquo;s IP address and resumes service." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/system-design/cap/" />
+  <link rel="alternate" hreflang="en-us" href="https://panxycris.github.io/note/system-design/cap/avalability/" />
 
   
   
@@ -269,8 +270,6 @@
   
 
   
-    <link rel="alternate" href="/note/system-design/cap/index.xml" type="application/rss+xml" title="PanxyCris" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -279,7 +278,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://panxycris.github.io/note/system-design/cap/" />
+  <link rel="canonical" href="https://panxycris.github.io/note/system-design/cap/avalability/" />
 
   
   
@@ -302,14 +301,19 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="PanxyCris" />
-  <meta property="og:url" content="https://panxycris.github.io/note/system-design/cap/" />
-  <meta property="og:title" content="CAP | PanxyCris" />
-  <meta property="og:description" content="Master" /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://panxycris.github.io/note/system-design/cap/avalability/" />
+  <meta property="og:title" content="Avalability | PanxyCris" />
+  <meta property="og:description" content="To support a high avalability, there are two complemenrary problems.
+Fail-Over     Active-passive Active-active     Entity An active server and a passive server Two active servers   Running Pattern heartbeats are sent between the active and the passive server on standby both servers are managing traffic, spreading the load between them.   Feature When the heartbeat is interrupted, the passive server takes over the active&rsquo;s IP address and resumes service." /><meta property="og:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2022-01-25T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2022-01-25T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2022-01-25T00:00:00&#43;00:00">
   
 
   
@@ -320,15 +324,17 @@
 
   
 
+  
 
 
 
 
-  <title>CAP | PanxyCris</title>
+
+  <title>Avalability | PanxyCris</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="c17f2b5d7221a174bc35638bb3622b46" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="2923ec111562c70496befdf9d6fa7464" >
 
   
   
@@ -634,7 +640,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          System Design
+          CAP
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -710,7 +716,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/note/system-design/cap/">CAP</a>
+        <a class="docs-toc-link " href="/note/system-design/cap/">CAP</a>
     
       
         <ul class="nav docs-sidenav">
@@ -721,7 +727,7 @@
 
 
 
-  <li class=""><a href="/note/system-design/cap/avalability/">Avalability</a></li>
+  <li class="active"><a href="/note/system-design/cap/avalability/">Avalability</a></li>
 
       
         </ul>
@@ -760,8 +766,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#cpconsistency-and-partition-tolerance">CP(Consistency and Partition Tolerance)</a></li>
-        <li><a href="#apavailability-and-partition-tolerance">AP(Availability and Partition Tolerance)</a></li>
+        <li><a href="#fail-over">Fail-Over</a></li>
+        <li><a href="#replication">Replication</a></li>
+        <li><a href="#sequence-vs-parallel">Sequence vs Parallel</a></li>
       </ul>
     </li>
   </ul>
@@ -781,6 +788,7 @@
   <nav class="d-none d-md-flex" aria-label="breadcrumb">
     <ol class="breadcrumb">
       
+  
   
   
   
@@ -812,8 +820,17 @@
   </li>
 
 
-      <li class="breadcrumb-item active" aria-current="page">
+  <li class="breadcrumb-item">
+    <a href="/note/system-design/cap/">
+      
         CAP
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Avalability
       </li>
     </ol>
   </nav>
@@ -821,22 +838,56 @@
 
           
 
-          <h1>CAP</h1>
+          <h1>Avalability</h1>
 
           <div class="article-style">
-            <p>Three attributes support a distributed system.</p>
-<p>In a general case, we can only support two of the attributes of a system at most:</p>
+            <p>To support a high avalability, there are two complemenrary problems.</p>
+<h3 id="fail-over">Fail-Over</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Active-passive</th>
+<th>Active-active</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entity</td>
+<td>An active server and a passive server</td>
+<td>Two active servers</td>
+</tr>
+<tr>
+<td>Running Pattern</td>
+<td>heartbeats are sent between the active and the passive server on standby</td>
+<td>both servers are managing traffic, spreading the load between them.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>When the heartbeat is interrupted, the passive server takes over the active&rsquo;s IP address and resumes service.</td>
+<td>If the servers are public-facing, the DNS would need to know about the public IPs of both servers. If the servers are internal-facing, application logic would need to know about both servers.</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><a href="consistency/">Consistency</a>:  Every read receives the most recent write or an error.</li>
-<li><a href="availability/">Availability</a>: Every request receives a response, without guarantee that it contains the most recent version of the information.</li>
-<li>Partition Tolerent: The system continues to operate despite arbitrary partitioning due to network failures.</li>
+<li>Disadvantage
+<ul>
+<li>Fail-over adds more hardware and additional complexity.</li>
+<li>There is a potential for loss of data if the active system fails before any newly written data can be replicated to the passive.</li>
 </ul>
-<p>However, the networks are unreliable. So in order to keep the system could continuously operate on a network system, we have to support the partiton tolerance to assure that sufficient individual system can operate while another one fails.
-We have a make a trade-off between Consistency and Availability.</p>
-<h3 id="cpconsistency-and-partition-tolerance">CP(Consistency and Partition Tolerance)</h3>
-<p>Waiting for a response might have a timeout error. If the businesss needs require atomic reads and writes, CP is a good choice.</p>
-<h3 id="apavailability-and-partition-tolerance">AP(Availability and Partition Tolerance)</h3>
-<p>Responses return the most readily available version of the data available on the node, which might not be the latest. Writes might take some time to propagate when the partition is resolved.</p>
+</li>
+</ul>
+<h3 id="replication">Replication</h3>
+<p>Master-slave vs master-master</p>
+<h3 id="sequence-vs-parallel">Sequence vs Parallel</h3>
+<p>For sequence</p>
+<p>$Availability_{Total}= Availability_{Foo} \times Availability_{Bar}$</p>
+<p>If both <code>Foo</code> and <code>Bar</code> each had 99.9% availability, their total availability in sequence would be 99.8%.</p>
+<p>For parallel</p>
+<p>$Availability_{Total} = 1 - (1 - Availability_{Foo}) \times (1 - Availability_{Bar})$</p>
+<p>If both <code>Foo</code> and <code>Bar</code> each had 99.9% availability, their total availability in parallel would be 99.9999%.</p>
+<p><em>The content is cited from <a href="https://github.com/donnemartin/system-design-primer#availability-patterns" target="_blank" rel="noopener">System design primer &ndash; Avalability Patterns</a>.</em></p>
+
           </div>
 
           
@@ -848,6 +899,13 @@ We have a make a trade-off between Consistency and Availability.</p>
           <div class="article-widget">
             
 <div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/note/system-design/cap/consistency/" rel="next">Consistency</a>
+  </div>
   
   
 </div>

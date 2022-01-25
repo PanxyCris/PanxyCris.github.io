@@ -5,7 +5,7 @@
     <link>https://panxycris.github.io/note/system-design/cap/</link>
       <atom:link href="https://panxycris.github.io/note/system-design/cap/index.xml" rel="self" type="application/rss+xml" />
     <description>CAP</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 28 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 25 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://panxycris.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>CAP</title>
@@ -42,6 +42,60 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Avalability</title>
+      <link>https://panxycris.github.io/note/system-design/cap/avalability/</link>
+      <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://panxycris.github.io/note/system-design/cap/avalability/</guid>
+      <description>&lt;p&gt;To support a high avalability, there are two complemenrary problems.&lt;/p&gt;
+&lt;h3 id=&#34;fail-over&#34;&gt;Fail-Over&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Active-passive&lt;/th&gt;
+&lt;th&gt;Active-active&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Entity&lt;/td&gt;
+&lt;td&gt;An active server and a passive server&lt;/td&gt;
+&lt;td&gt;Two active servers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Running Pattern&lt;/td&gt;
+&lt;td&gt;heartbeats are sent between the active and the passive server on standby&lt;/td&gt;
+&lt;td&gt;both servers are managing traffic, spreading the load between them.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Feature&lt;/td&gt;
+&lt;td&gt;When the heartbeat is interrupted, the passive server takes over the active&amp;rsquo;s IP address and resumes service.&lt;/td&gt;
+&lt;td&gt;If the servers are public-facing, the DNS would need to know about the public IPs of both servers. If the servers are internal-facing, application logic would need to know about both servers.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Disadvantage
+&lt;ul&gt;
+&lt;li&gt;Fail-over adds more hardware and additional complexity.&lt;/li&gt;
+&lt;li&gt;There is a potential for loss of data if the active system fails before any newly written data can be replicated to the passive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;replication&#34;&gt;Replication&lt;/h3&gt;
+&lt;p&gt;Master-slave vs master-master&lt;/p&gt;
+&lt;h3 id=&#34;sequence-vs-parallel&#34;&gt;Sequence vs Parallel&lt;/h3&gt;
+&lt;p&gt;For sequence&lt;/p&gt;
+&lt;p&gt;$Availability_{Total}= Availability_{Foo} \times Availability_{Bar}$&lt;/p&gt;
+&lt;p&gt;If both &lt;code&gt;Foo&lt;/code&gt; and &lt;code&gt;Bar&lt;/code&gt; each had 99.9% availability, their total availability in sequence would be 99.8%.&lt;/p&gt;
+&lt;p&gt;For parallel&lt;/p&gt;
+&lt;p&gt;$Availability_{Total} = 1 - (1 - Availability_{Foo}) \times (1 - Availability_{Bar})$&lt;/p&gt;
+&lt;p&gt;If both &lt;code&gt;Foo&lt;/code&gt; and &lt;code&gt;Bar&lt;/code&gt; each had 99.9% availability, their total availability in parallel would be 99.9999%.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The content is cited from &lt;a href=&#34;https://github.com/donnemartin/system-design-primer#availability-patterns&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;System design primer &amp;ndash; Avalability Patterns&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

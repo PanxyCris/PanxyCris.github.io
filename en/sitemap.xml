@@ -16,9 +16,9 @@
   <url>
     <loc>https://panxycris.github.io/note/leetcode/binary-search/maximum-running-time-of-n-computers/</loc><lastmod>2022-01-18T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/note/leetcode/design/</loc><lastmod>2021-12-30T00:00:00+00:00</lastmod></url>
+    <loc>https://panxycris.github.io/note/system-design/cap/</loc><lastmod>2022-01-25T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/note/system-design/cap/</loc><lastmod>2021-12-28T00:00:00+00:00</lastmod></url>
+    <loc>https://panxycris.github.io/note/leetcode/design/</loc><lastmod>2021-12-30T00:00:00+00:00</lastmod></url>
   <url>
     <loc>https://panxycris.github.io/note/computer-network/application-layer/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod></url>
   <url>
@@ -27,6 +27,8 @@
     <loc>https://panxycris.github.io/note/system-design/cap/consistency/</loc><lastmod>2021-12-28T00:00:00+00:00</lastmod></url>
   <url>
     <loc>https://panxycris.github.io/note/computer-network/application-layer/http/</loc><lastmod>2021-12-10T00:00:00+00:00</lastmod></url>
+  <url>
+    <loc>https://panxycris.github.io/note/system-design/cap/avalability/</loc><lastmod>2022-01-25T00:00:00+00:00</lastmod></url>
   <url>
     <loc>https://panxycris.github.io/note/leetcode/design/randomly-pick-an-element/</loc><lastmod>2021-12-30T00:00:00+00:00</lastmod></url>
   <url>
@@ -56,7 +58,7 @@
   <url>
     <loc>https://panxycris.github.io/note/computer-network/multicast/</loc><lastmod>2021-12-17T00:00:00+00:00</lastmod></url>
   <url>
-    <loc>https://panxycris.github.io/</loc><lastmod>2022-01-18T00:00:00+00:00</lastmod><xhtml:link
+    <loc>https://panxycris.github.io/</loc><lastmod>2022-01-25T00:00:00+00:00</lastmod><xhtml:link
       rel="alternate"
       hreflang="zh"
       href="https://panxycris.github.io/zh/"
@@ -66,7 +68,7 @@
       href="https://panxycris.github.io/"
     /></url>
   <url>
-    <loc>https://panxycris.github.io/note/</loc><lastmod>2022-01-18T00:00:00+00:00</lastmod></url>
+    <loc>https://panxycris.github.io/note/</loc><lastmod>2022-01-25T00:00:00+00:00</lastmod></url>
   <url>
     <loc>https://panxycris.github.io/authors/</loc><lastmod>2021-09-14T20:46:50-04:00</lastmod><xhtml:link
       rel="alternate"
