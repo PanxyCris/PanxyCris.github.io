@@ -343,7 +343,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.b6ac29faab89ee14db88f0bed7aa6622.js"></script>
+  <script src="/js/wowchemy-init.min.81c97db460a2777caa20174a3f5a5693.js"></script>
 
   
 
@@ -750,10 +750,6 @@
 
   <li class="active"><a href="/note/leetcode/design/design-a-leaderboard/">Design a Leaderboard</a></li>
 
-
-
-  <li class=""><a href="/note/leetcode/design/randomly-pick-an-element/">Randomly pick an element</a></li>
-
       
         </ul>
       
@@ -921,47 +917,47 @@
 <h3 id="cpp">Cpp</h3>
 <p>There is a <code>multiset</code> data structure that can save same values and also is a sorted data structure, which meets our requirements.</p>
 <p>We keep an unordered_map <code>player_score</code> to save the <code>playerId</code> and <code>score</code>. And for a sorted multiset to store the scores.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> player_score;
-multiset<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> scores;
-</code></pre></div><p>For <code>reset(playerId)</code> function, we set a <code>multiset.find</code> to get the index of one of this score. And we erase this score and the player.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">reset</span>(<span style="color:#66d9ef">int</span> playerId) {
-    <span style="color:#66d9ef">auto</span> it <span style="color:#f92672">=</span> scores.find(player_score[playerId]);
-    scores.erase(it);
-    player_score.erase(playerId);
-}
-</code></pre></div><p>For remnant part, it is quick and easy to see. Let&rsquo;s show all of it.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Leaderboard</span> {
-<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-    Leaderboard() {}
-    
-    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addScore</span>(<span style="color:#66d9ef">int</span> playerId, <span style="color:#66d9ef">int</span> score) {
-        <span style="color:#66d9ef">if</span>(player_score.find(playerId)<span style="color:#f92672">!=</span>player_score.end()){
-            score <span style="color:#f92672">+=</span> player_score[playerId];
-            reset(playerId);
-        }
-        player_score[playerId] <span style="color:#f92672">=</span> score;
-        scores.insert(score);
-    }
-    
-    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">top</span>(<span style="color:#66d9ef">int</span> K) {
-        <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> it<span style="color:#f92672">=</span>scores.rbegin();K<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>;K<span style="color:#f92672">--</span>,it<span style="color:#f92672">++</span>){
-            sum <span style="color:#f92672">+=</span> <span style="color:#f92672">*</span>it;
-        }
-        <span style="color:#66d9ef">return</span> sum;
-    }
-    
-    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">reset</span>(<span style="color:#66d9ef">int</span> playerId) {
-        <span style="color:#66d9ef">auto</span> it <span style="color:#f92672">=</span> scores.find(player_score[playerId]);
-        scores.erase(it);
-        player_score.erase(playerId);
-    }
-  
-<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
-    unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> player_score;
-    multiset<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> scores;
-};
-</code></pre></div><p>The problem is cited from <a href="https://leetcode.com/problems/design-a-leaderboard/" target="_blank" rel="noopener">Leetcode 1244. Design A Leaderboard</a>. And the solution is cited from <a href="https://leetcode.com/problems/design-a-leaderboard/discuss/845866/C%2B%2B-Multiset-%2B-Map-Solution" target="_blank" rel="noopener">mtobeiyf —— C++ Multiset + Map Solution</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> player_score;
+</span></span><span style="display:flex;"><span>multiset<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> scores;
+</span></span></code></pre></div><p>For <code>reset(playerId)</code> function, we set a <code>multiset.find</code> to get the index of one of this score. And we erase this score and the player.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">reset</span>(<span style="color:#66d9ef">int</span> playerId) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">auto</span> it <span style="color:#f92672">=</span> scores.find(player_score[playerId]);
+</span></span><span style="display:flex;"><span>    scores.erase(it);
+</span></span><span style="display:flex;"><span>    player_score.erase(playerId);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>For remnant part, it is quick and easy to see. Let&rsquo;s show all of it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Leaderboard</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    Leaderboard() {}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addScore</span>(<span style="color:#66d9ef">int</span> playerId, <span style="color:#66d9ef">int</span> score) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(player_score.find(playerId)<span style="color:#f92672">!=</span>player_score.end()){
+</span></span><span style="display:flex;"><span>            score <span style="color:#f92672">+=</span> player_score[playerId];
+</span></span><span style="display:flex;"><span>            reset(playerId);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        player_score[playerId] <span style="color:#f92672">=</span> score;
+</span></span><span style="display:flex;"><span>        scores.insert(score);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">top</span>(<span style="color:#66d9ef">int</span> K) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> it<span style="color:#f92672">=</span>scores.rbegin();K<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>;K<span style="color:#f92672">--</span>,it<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            sum <span style="color:#f92672">+=</span> <span style="color:#f92672">*</span>it;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> sum;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">reset</span>(<span style="color:#66d9ef">int</span> playerId) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">auto</span> it <span style="color:#f92672">=</span> scores.find(player_score[playerId]);
+</span></span><span style="display:flex;"><span>        scores.erase(it);
+</span></span><span style="display:flex;"><span>        player_score.erase(playerId);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> player_score;
+</span></span><span style="display:flex;"><span>    multiset<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> scores;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>The problem is cited from <a href="https://leetcode.com/problems/design-a-leaderboard/" target="_blank" rel="noopener">Leetcode 1244. Design A Leaderboard</a>. And the solution is cited from <a href="https://leetcode.com/problems/design-a-leaderboard/discuss/845866/C%2B%2B-Multiset-%2B-Map-Solution" target="_blank" rel="noopener">mtobeiyf —— C++ Multiset + Map Solution</a>.</p>
           </div>
 
           
@@ -974,12 +970,6 @@ multiset<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</
             
 <div class="post-nav">
   
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/note/leetcode/design/randomly-pick-an-element/" rel="prev">Randomly pick an element</a>
-  </div>
   
 </div>
 
@@ -1089,7 +1079,7 @@ multiset<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</
       
 
     
-    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+    <script src="/js/vendor-bundle.min.9592335d574f7a97010f99b90ad0f310.js"></script>
 
     
     
@@ -1178,7 +1168,7 @@ multiset<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</
       
     
     
-    <script src="/en/js/wowchemy.min.c804dec5397792fc1f9b03f8824b78c8.js"></script>
+    <script src="/en/js/wowchemy.min.ae52fc9b11df77c0e1bff86ca1e1daf6.js"></script>
 
     
 

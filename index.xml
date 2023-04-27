@@ -167,47 +167,47 @@
 &lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
 &lt;p&gt;For this kind of problem, we always find it hard to get this extreme value. But if we change a thought, when given the result, can we implement this method? Like in this problem, when given an amount of minutes, can we run all the &lt;code&gt;n&lt;/code&gt; computers simultaneously? When the situation changes, this problem is converted into a binary search problem. We can set a left and right boundary of this amount of minutes, and we use binary search to get the final value of our solution.&lt;/p&gt;
 &lt;p&gt;Thus, how can we determine whether we can run &lt;code&gt;n&lt;/code&gt; computers simultaneously when given a special number of minutes? We can set &lt;code&gt;k&lt;/code&gt; as the given number of minutes. And for &lt;code&gt;target&lt;/code&gt; as the summation number of minutes of &lt;code&gt;n&lt;/code&gt; computers.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define ll long long
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-ll target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; k;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And for each battery, it can only choose its maximum volumne of electricity, so each one choose either its volume or &lt;code&gt;k&lt;/code&gt; number of minutes for running time.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;ll res &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; battery: batteries){
-    res &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; battery &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; k &lt;span style=&#34;color:#f92672&#34;&gt;?&lt;/span&gt; battery : k;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(res &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; target)
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; true;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When the result reaches the &lt;code&gt;target&lt;/code&gt; number of minutes, it proves that &lt;code&gt;k&lt;/code&gt; number of minutes can fit the solution. All of the code shows like this&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define ll long long
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-    ll maxRunTime(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n, vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; batteries) {
-        ll sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; battery: batteries)
-            sum &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; battery;
-        ll l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, r &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sum&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;n;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; r){
-            ll mid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; l &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; (r&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l)&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// target value rounds up to an integer
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(canFit(n, mid, batteries)){
-                l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid;
-            }&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
-                r &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
-        }
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; l;
-    }
-    
-    ll &lt;span style=&#34;color:#a6e22e&#34;&gt;canFit&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n, ll k, vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; batteries){
-        ll target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; k;
-        ll res &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; battery: batteries){
-            res &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; battery &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; k &lt;span style=&#34;color:#f92672&#34;&gt;?&lt;/span&gt; battery : k;
-                &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(res &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; target)
-                    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; true;
-        }
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; res &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; target;
-    }
-};
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The problem is cited from &lt;a href=&#34;https://leetcode.com/problems/maximum-running-time-of-n-computers/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leetcode 2141. Maximum Running Time of N Computers&lt;/a&gt;. And the solution is cited from &lt;a href=&#34;https://leetcode.com/problems/maximum-running-time-of-n-computers/discuss/1692979/Java-Simple-Solution-w.-Explanation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[Java] Simple Solution w. Explanation - Chen-Yiyang&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define ll long long
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ll target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; k;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And for each battery, it can only choose its maximum volumne of electricity, so each one choose either its volume or &lt;code&gt;k&lt;/code&gt; number of minutes for running time.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ll res &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; battery: batteries){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    res &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; battery &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; k &lt;span style=&#34;color:#f92672&#34;&gt;?&lt;/span&gt; battery : k;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(res &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; target)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; true;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When the result reaches the &lt;code&gt;target&lt;/code&gt; number of minutes, it proves that &lt;code&gt;k&lt;/code&gt; number of minutes can fit the solution. All of the code shows like this&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define ll long long
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ll maxRunTime(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n, vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; batteries) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ll sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; battery: batteries)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            sum &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; battery;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ll l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, r &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sum&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;n;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(l &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; r){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            ll mid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; l &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; (r&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l)&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// target value rounds up to an integer
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(canFit(n, mid, batteries)){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                r &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; l;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ll &lt;span style=&#34;color:#a6e22e&#34;&gt;canFit&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n, ll k, vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; batteries){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ll target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; k;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ll res &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; battery: batteries){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            res &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; battery &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; k &lt;span style=&#34;color:#f92672&#34;&gt;?&lt;/span&gt; battery : k;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(res &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; target)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; true;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; res &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; target;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The problem is cited from &lt;a href=&#34;https://leetcode.com/problems/maximum-running-time-of-n-computers/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leetcode 2141. Maximum Running Time of N Computers&lt;/a&gt;. And the solution is cited from &lt;a href=&#34;https://leetcode.com/problems/maximum-running-time-of-n-computers/discuss/1692979/Java-Simple-Solution-w.-Explanation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[Java] Simple Solution w. Explanation - Chen-Yiyang&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -238,47 +238,47 @@ ll target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n &lt;span st
 &lt;h3 id=&#34;cpp&#34;&gt;Cpp&lt;/h3&gt;
 &lt;p&gt;There is a &lt;code&gt;multiset&lt;/code&gt; data structure that can save same values and also is a sorted data structure, which meets our requirements.&lt;/p&gt;
 &lt;p&gt;We keep an unordered_map &lt;code&gt;player_score&lt;/code&gt; to save the &lt;code&gt;playerId&lt;/code&gt; and &lt;code&gt;score&lt;/code&gt;. And for a sorted multiset to store the scores.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;unordered_map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; player_score;
-multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; scores;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For &lt;code&gt;reset(playerId)&lt;/code&gt; function, we set a &lt;code&gt;multiset.find&lt;/code&gt; to get the index of one of this score. And we erase this score and the player.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reset&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; playerId) {
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scores.find(player_score[playerId]);
-    scores.erase(it);
-    player_score.erase(playerId);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For remnant part, it is quick and easy to see. Let&amp;rsquo;s show all of it.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Leaderboard&lt;/span&gt; {
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-    Leaderboard() {}
-    
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;addScore&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; playerId, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; score) {
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(player_score.find(playerId)&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;player_score.end()){
-            score &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; player_score[playerId];
-            reset(playerId);
-        }
-        player_score[playerId] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; score;
-        scores.insert(score);
-    }
-    
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;top&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; K) {
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;scores.rbegin();K&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;K&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;,it&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-            sum &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;it;
-        }
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sum;
-    }
-    
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reset&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; playerId) {
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scores.find(player_score[playerId]);
-        scores.erase(it);
-        player_score.erase(playerId);
-    }
-  
-&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-    unordered_map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; player_score;
-    multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; scores;
-};
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The problem is cited from &lt;a href=&#34;https://leetcode.com/problems/design-a-leaderboard/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leetcode 1244. Design A Leaderboard&lt;/a&gt;. And the solution is cited from &lt;a href=&#34;https://leetcode.com/problems/design-a-leaderboard/discuss/845866/C%2B%2B-Multiset-%2B-Map-Solution&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mtobeiyf —— C++ Multiset + Map Solution&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;unordered_map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; player_score;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; scores;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For &lt;code&gt;reset(playerId)&lt;/code&gt; function, we set a &lt;code&gt;multiset.find&lt;/code&gt; to get the index of one of this score. And we erase this score and the player.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reset&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; playerId) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scores.find(player_score[playerId]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    scores.erase(it);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    player_score.erase(playerId);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For remnant part, it is quick and easy to see. Let&amp;rsquo;s show all of it.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Leaderboard&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Leaderboard() {}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;addScore&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; playerId, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; score) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(player_score.find(playerId)&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;player_score.end()){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            score &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; player_score[playerId];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            reset(playerId);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        player_score[playerId] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; score;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        scores.insert(score);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;top&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; K) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;scores.rbegin();K&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;K&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;,it&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            sum &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;it;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sum;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reset&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; playerId) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scores.find(player_score[playerId]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        scores.erase(it);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        player_score.erase(playerId);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    unordered_map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; player_score;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; scores;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The problem is cited from &lt;a href=&#34;https://leetcode.com/problems/design-a-leaderboard/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leetcode 1244. Design A Leaderboard&lt;/a&gt;. And the solution is cited from &lt;a href=&#34;https://leetcode.com/problems/design-a-leaderboard/discuss/845866/C%2B%2B-Multiset-%2B-Map-Solution&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mtobeiyf —— C++ Multiset + Map Solution&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -532,61 +532,6 @@ multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span 
 &lt;p&gt;If both &lt;code&gt;Foo&lt;/code&gt; and &lt;code&gt;Bar&lt;/code&gt; each had 99.9% availability, their total availability in parallel would be 99.9999%.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The content is cited from &lt;a href=&#34;https://github.com/donnemartin/system-design-primer#availability-patterns&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;System design primer &amp;ndash; Avalability Patterns&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Randomly pick an element</title>
-      <link>https://panxycris.github.io/note/leetcode/design/randomly-pick-an-element/</link>
-      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://panxycris.github.io/note/leetcode/design/randomly-pick-an-element/</guid>
-      <description>&lt;h3 id=&#34;problem-description&#34;&gt;Problem description&lt;/h3&gt;
-&lt;p&gt;Design a data structure, which has 3 functions:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;add(element)&lt;/code&gt;: Update the data structure by adding an integer.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;delete(element)&lt;/code&gt;: Update the data structure by deleting an integer, if there are lots of integers, just delete one, if this element does not exist, do nothing.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;getRandom()&lt;/code&gt;: Return an element of the data structure randomly, the probability of each element should be equal.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;constraints&#34;&gt;Constraints&lt;/h3&gt;
-&lt;p&gt;3 functions in $O(1)$ time complexity.&lt;/p&gt;
-&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
-&lt;p&gt;The difficulty of this problem is $O(1)$ time complexity. Due to multiple same values in this problem, we can design a set that can save same values.&lt;/p&gt;
-&lt;h3 id=&#34;cpp&#34;&gt;Cpp&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;unordered_multiset&lt;/code&gt; can be used. Not only for function &lt;code&gt;add(element)&lt;/code&gt;, &lt;code&gt;delete(element)&lt;/code&gt;, we can add and delete the element in $O(1)$ time complexity, but also for function &lt;code&gt;getRandom()&lt;/code&gt;, we can easily use its size to return a value randomly.&lt;/p&gt;
-&lt;p&gt;The data strcture is like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;unordered_multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; elements;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For &lt;code&gt;delete(element)&lt;/code&gt; function, we can find one of this element and delete it.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;delete&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; element){
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; elements.find(element);
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(it&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;elements.end())
-        elements.erase(it);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For &lt;code&gt;getRandom()&lt;/code&gt; function, we can use the size of multiset to get a random one.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;getRandom&lt;/span&gt;(){
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(elements.begin()&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;rand()&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;elements.size());
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Let&amp;rsquo;s show all of the code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MagicSet&lt;/span&gt;{
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-    MagicSet(){}
-
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; element){
-        elements.insert(element);
-    }
-
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;delete&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; element){
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; it &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; elements.find(element);
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(it&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;elements.end())
-            elements.erase(it);
-    }
-
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;getRandom&lt;/span&gt;(){
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(elements.begin()&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;rand()&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;elements.size());
-    }
-
-&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-    unordered_multiset&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; elements;
-};
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -899,25 +844,25 @@ and other network devices.&lt;/p&gt;
 &lt;p&gt;In this way, for those positions of value &lt;code&gt;0&lt;/code&gt;, which means that we could swap them with &lt;code&gt;1&lt;/code&gt;, so this problems turns to that we need to find a sliding window with minimum number of &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;We can set two pointers of left and right boundary to control this sliding window.&lt;/p&gt;
 &lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; minSwaps(vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; data) {
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; ones &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, len &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data.size();
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; cnt_one &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, max_one &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, right &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; num:data) &lt;span style=&#34;color:#75715e&#34;&gt;// get the sum of the number of 1
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            ones &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; num;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(right &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; n){
-            cnt_one &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; data[right&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;];
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(right &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; ones){ &lt;span style=&#34;color:#75715e&#34;&gt;// maintain the length of the window to ones
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                cnt_one &lt;span style=&#34;color:#f92672&#34;&gt;-=&lt;/span&gt; data[left&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;];
-            }
-            max_one &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; max(max_one, cnt_one);
-        }
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; ones &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; max_one;
-    }
-};
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The problem is cited from &lt;a href=&#34;https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leetcode 1151. Minimum Swaps to Group All 1&amp;rsquo;s Together&lt;/a&gt;. And the solution is cited from &lt;a href=&#34;https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/solution/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LeetCode Official Solution Approach 1: Sliding Window with Two Pointers&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Solution&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; minSwaps(vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; data) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; ones &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, len &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data.size();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; cnt_one &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, max_one &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, right &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; num:data) &lt;span style=&#34;color:#75715e&#34;&gt;// get the sum of the number of 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            ones &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; num;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(right &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; n){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            cnt_one &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; data[right&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(right &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; ones){ &lt;span style=&#34;color:#75715e&#34;&gt;// maintain the length of the window to ones
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                cnt_one &lt;span style=&#34;color:#f92672&#34;&gt;-=&lt;/span&gt; data[left&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            max_one &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; max(max_one, cnt_one);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; ones &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; max_one;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The problem is cited from &lt;a href=&#34;https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leetcode 1151. Minimum Swaps to Group All 1&amp;rsquo;s Together&lt;/a&gt;. And the solution is cited from &lt;a href=&#34;https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/solution/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LeetCode Official Solution Approach 1: Sliding Window with Two Pointers&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>

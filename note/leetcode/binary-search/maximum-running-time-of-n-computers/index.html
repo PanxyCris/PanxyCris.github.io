@@ -343,7 +343,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.b6ac29faab89ee14db88f0bed7aa6622.js"></script>
+  <script src="/js/wowchemy-init.min.81c97db460a2777caa20174a3f5a5693.js"></script>
 
   
 
@@ -750,10 +750,6 @@
 
   <li class=""><a href="/note/leetcode/design/design-a-leaderboard/">Design a Leaderboard</a></li>
 
-
-
-  <li class=""><a href="/note/leetcode/design/randomly-pick-an-element/">Randomly pick an element</a></li>
-
       
         </ul>
       
@@ -910,47 +906,47 @@
 <h3 id="solution">Solution</h3>
 <p>For this kind of problem, we always find it hard to get this extreme value. But if we change a thought, when given the result, can we implement this method? Like in this problem, when given an amount of minutes, can we run all the <code>n</code> computers simultaneously? When the situation changes, this problem is converted into a binary search problem. We can set a left and right boundary of this amount of minutes, and we use binary search to get the final value of our solution.</p>
 <p>Thus, how can we determine whether we can run <code>n</code> computers simultaneously when given a special number of minutes? We can set <code>k</code> as the given number of minutes. And for <code>target</code> as the summation number of minutes of <code>n</code> computers.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#define ll long long
-</span><span style="color:#75715e"></span>
-ll target <span style="color:#f92672">=</span> n <span style="color:#f92672">*</span> k;
-</code></pre></div><p>And for each battery, it can only choose its maximum volumne of electricity, so each one choose either its volume or <code>k</code> number of minutes for running time.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">ll res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> battery: batteries){
-    res <span style="color:#f92672">+=</span> battery <span style="color:#f92672">&lt;</span> k <span style="color:#f92672">?</span> battery : k;
-        <span style="color:#66d9ef">if</span>(res <span style="color:#f92672">&gt;=</span> target)
-            <span style="color:#66d9ef">return</span> true;
-}
-</code></pre></div><p>When the result reaches the <code>target</code> number of minutes, it proves that <code>k</code> number of minutes can fit the solution. All of the code shows like this</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#define ll long long
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
-<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-    ll maxRunTime(<span style="color:#66d9ef">int</span> n, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> batteries) {
-        ll sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> battery: batteries)
-            sum <span style="color:#f92672">+=</span> battery;
-        ll l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, r <span style="color:#f92672">=</span> sum<span style="color:#f92672">/</span>n;
-        <span style="color:#66d9ef">while</span>(l <span style="color:#f92672">&lt;</span> r){
-            ll mid <span style="color:#f92672">=</span> l <span style="color:#f92672">+</span> (r<span style="color:#f92672">-</span>l)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// target value rounds up to an integer
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span>(canFit(n, mid, batteries)){
-                l <span style="color:#f92672">=</span> mid;
-            }<span style="color:#66d9ef">else</span>
-                r <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
-        }
-        <span style="color:#66d9ef">return</span> l;
-    }
-    
-    ll <span style="color:#a6e22e">canFit</span>(<span style="color:#66d9ef">int</span> n, ll k, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> batteries){
-        ll target <span style="color:#f92672">=</span> n <span style="color:#f92672">*</span> k;
-        ll res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> battery: batteries){
-            res <span style="color:#f92672">+=</span> battery <span style="color:#f92672">&lt;</span> k <span style="color:#f92672">?</span> battery : k;
-                <span style="color:#66d9ef">if</span>(res <span style="color:#f92672">&gt;=</span> target)
-                    <span style="color:#66d9ef">return</span> true;
-        }
-        <span style="color:#66d9ef">return</span> res <span style="color:#f92672">&gt;=</span> target;
-    }
-};
-</code></pre></div><p>The problem is cited from <a href="https://leetcode.com/problems/maximum-running-time-of-n-computers/" target="_blank" rel="noopener">Leetcode 2141. Maximum Running Time of N Computers</a>. And the solution is cited from <a href="https://leetcode.com/problems/maximum-running-time-of-n-computers/discuss/1692979/Java-Simple-Solution-w.-Explanation" target="_blank" rel="noopener">[Java] Simple Solution w. Explanation - Chen-Yiyang</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#define ll long long
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>ll target <span style="color:#f92672">=</span> n <span style="color:#f92672">*</span> k;
+</span></span></code></pre></div><p>And for each battery, it can only choose its maximum volumne of electricity, so each one choose either its volume or <code>k</code> number of minutes for running time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>ll res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> battery: batteries){
+</span></span><span style="display:flex;"><span>    res <span style="color:#f92672">+=</span> battery <span style="color:#f92672">&lt;</span> k <span style="color:#f92672">?</span> battery : k;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(res <span style="color:#f92672">&gt;=</span> target)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>When the result reaches the <code>target</code> number of minutes, it proves that <code>k</code> number of minutes can fit the solution. All of the code shows like this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#define ll long long
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    ll maxRunTime(<span style="color:#66d9ef">int</span> n, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> batteries) {
+</span></span><span style="display:flex;"><span>        ll sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> battery: batteries)
+</span></span><span style="display:flex;"><span>            sum <span style="color:#f92672">+=</span> battery;
+</span></span><span style="display:flex;"><span>        ll l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, r <span style="color:#f92672">=</span> sum<span style="color:#f92672">/</span>n;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(l <span style="color:#f92672">&lt;</span> r){
+</span></span><span style="display:flex;"><span>            ll mid <span style="color:#f92672">=</span> l <span style="color:#f92672">+</span> (r<span style="color:#f92672">-</span>l)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// target value rounds up to an integer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span>(canFit(n, mid, batteries)){
+</span></span><span style="display:flex;"><span>                l <span style="color:#f92672">=</span> mid;
+</span></span><span style="display:flex;"><span>            }<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                r <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> l;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    ll <span style="color:#a6e22e">canFit</span>(<span style="color:#66d9ef">int</span> n, ll k, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> batteries){
+</span></span><span style="display:flex;"><span>        ll target <span style="color:#f92672">=</span> n <span style="color:#f92672">*</span> k;
+</span></span><span style="display:flex;"><span>        ll res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> battery: batteries){
+</span></span><span style="display:flex;"><span>            res <span style="color:#f92672">+=</span> battery <span style="color:#f92672">&lt;</span> k <span style="color:#f92672">?</span> battery : k;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(res <span style="color:#f92672">&gt;=</span> target)
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> res <span style="color:#f92672">&gt;=</span> target;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>The problem is cited from <a href="https://leetcode.com/problems/maximum-running-time-of-n-computers/" target="_blank" rel="noopener">Leetcode 2141. Maximum Running Time of N Computers</a>. And the solution is cited from <a href="https://leetcode.com/problems/maximum-running-time-of-n-computers/discuss/1692979/Java-Simple-Solution-w.-Explanation" target="_blank" rel="noopener">[Java] Simple Solution w. Explanation - Chen-Yiyang</a>.</p>
           </div>
 
           
@@ -1072,7 +1068,7 @@ ll target <span style="color:#f92672">=</span> n <span style="color:#f92672">*</
       
 
     
-    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+    <script src="/js/vendor-bundle.min.9592335d574f7a97010f99b90ad0f310.js"></script>
 
     
     
@@ -1161,7 +1157,7 @@ ll target <span style="color:#f92672">=</span> n <span style="color:#f92672">*</
       
     
     
-    <script src="/en/js/wowchemy.min.c804dec5397792fc1f9b03f8824b78c8.js"></script>
+    <script src="/en/js/wowchemy.min.ae52fc9b11df77c0e1bff86ca1e1daf6.js"></script>
 
     
 
